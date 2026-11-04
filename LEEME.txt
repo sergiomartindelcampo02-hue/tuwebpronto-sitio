@@ -1,0 +1,7 @@
+TuWebPronto · sitio listo para Netlify
+
+Estado: VISTA PREVIA (oculto de Google).
+Para publicar de verdad, cuando los textos legales estén completos:
+1. index.html: borrar la franja "Vista previa privada" y la línea <meta name="robots" content="noindex, nofollow">.
+2. robots.txt: cambiar "Disallow: /" por "Allow: /".
+3. Volver a subir la carpeta a Netlify.
