@@ -337,11 +337,25 @@ footer nav a,footer nav button{color:var(--on-navy-muted);font:14px var(--body);
   .steps li::before{transform:scaleX(1)}.steps:not(.on) .n{transform:none;color:var(--blue)}
   .lava i,.grain{animation:none!important}
 }
+.nav-end{display:flex;align-items:center;gap:14px;flex:none}
+.lang{display:flex;align-items:center;gap:2px;border:1px solid rgba(148,163,184,.3);border-radius:999px;padding:3px}
+.lang a{color:var(--on-navy-muted);text-decoration:none;font-weight:700;font-size:13px;letter-spacing:.04em;line-height:1;padding:6px 9px;border-radius:999px}
+.lang a:hover{color:var(--on-navy)}
+.lang a[aria-current]{background:rgba(148,163,184,.2);color:var(--on-navy)}
+@media (max-width:420px){.nav{gap:10px}.nav-end{gap:8px}.lang{padding:2px}.lang a{font-size:12px;padding:6px 6px}.nav .btn{padding:10px 14px}}
+@media (max-width:400px){.logo{font-size:21px;gap:8px}}
+@media (max-width:370px){.lang a[aria-current]{display:none}}
+@media (max-width:340px){.nav{gap:8px}.logo{font-size:18px;gap:6px}.logo svg{width:26px;height:26px}.nav .btn{padding:10px 12px}}
+@media (max-width:420px){.nav .btn{font-size:14px;padding:10px 12px}}
+@media (max-width:340px){.nav .btn{font-size:13px;padding:9px 10px}}
 </style>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="canonical" href="https://tuwebpronto.com/">
+<link rel="alternate" hreflang="es-MX" href="https://tuwebpronto.com/">
+<link rel="alternate" hreflang="en-US" href="https://tuwebpronto.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://tuwebpronto.com/">
 <meta name="robots" content="noindex, nofollow"><!-- VISTA PREVIA: quitar esta línea al publicar -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="TuWebPronto">
@@ -373,7 +387,10 @@ footer nav a,footer nav button{color:var(--on-navy-muted);font:14px var(--body);
       <li><a href="#preguntas">Preguntas</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
-    <a class="btn btn-go" href="https://wa.me/16194533137?text=Hola%2C%20quiero%20mi%20p%C3%A1gina%20web%20con%20TuWebPronto" target="_blank" rel="noopener">Escríbenos</a>
+    <div class="nav-end">
+      <div class="lang" role="group" aria-label="Idioma"><a href="/" hreflang="es" aria-current="page" aria-label="Español">ES</a><a href="/en/" hreflang="en" lang="en" aria-label="English">EN</a></div>
+      <a class="btn btn-go" href="https://wa.me/16194533137?text=Hola%2C%20quiero%20mi%20p%C3%A1gina%20web%20con%20TuWebPronto" target="_blank" rel="noopener">Escríbenos</a>
+    </div>
   </div>
   <div class="progress" id="progress" aria-hidden="true"></div>
 </header>
