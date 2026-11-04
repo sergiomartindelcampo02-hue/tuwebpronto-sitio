@@ -263,13 +263,13 @@ footer .wrap{display:flex;flex-direction:column;gap:8px;opacity:.85}
 </head>
 <body>
 
-<div class="ejemplo">Página de ejemplo de TuWebPronto para marcas de producto. Marca, reseñas y datos son ilustrativos. <a href="../index.html">← Volver a TuWebPronto</a></div>
+<div class="ejemplo" data-fill="banner">Página de ejemplo de TuWebPronto para marcas de producto. Marca, reseñas y datos son ilustrativos. <a href="../index.html">← Volver a TuWebPronto</a></div>
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#inicio"><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#E23D28"/><path d="M16 6c-1 4-6 6-6 12a6 6 0 0 0 12 0c0-3-2-4-2-7-2 2-2 3-3 4 0-4 0-6-1-9z" fill="#FF8A1F"/><path d="M16 18c-1 2-2 2-2 4a2 2 0 0 0 4 0c0-2-1-2-2-4z" fill="#fff"/></svg>Mezquite Snacks</a>
+    <a class="brand" href="#inicio" data-fill="logo name"><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#E23D28"/><path d="M16 6c-1 4-6 6-6 12a6 6 0 0 0 12 0c0-3-2-4-2-7-2 2-2 3-3 4 0-4 0-6-1-9z" fill="#FF8A1F"/><path d="M16 18c-1 2-2 2-2 4a2 2 0 0 0 4 0c0-2-1-2-2-4z" fill="#fff"/></svg>Mezquite Snacks</a>
     <ul><li><a href="#presentaciones">Presentaciones</a></li><li><a href="#sabores">Sabores</a></li><li><a href="#origen">Origen</a></li><li><a href="#comprar">Dónde comprar</a></li><li><a href="#preguntas">Preguntas</a></li></ul>
-    <a class="btn btn-orange" data-m="destello" href="#mayoreo">Pedir<span class="ls"> por WhatsApp</span></a>
+    <a class="btn btn-orange" data-m="destello" href="#mayoreo" data-fill="whatsapp">Pedir<span class="ls"> por WhatsApp</span></a>
     <div data-m="avance" aria-hidden="true"></div>
   </div>
 </header>
@@ -280,7 +280,7 @@ footer .wrap{display:flex;flex-direction:column;gap:8px;opacity:.85}
   <div class="wrap hero-grid">
     <div class="hero-copy" data-x>
       <span class="xtag"><b>SEO local</b>El título dice qué vendes y dónde: "Botanas artesanales en Mexicali". Así te encuentran las tiendas y los antojados.</span>
-      <h1 id="h1"><span class="eyebrow">Botanas artesanales en Mexicali</span><span class="big"><span>Crujen fuerte.</span><span class="dark">Pican bonito.</span></span></h1>
+      <h1 id="h1"><span class="eyebrow" data-fill="tagline">Botanas artesanales en Mexicali</span><span class="big"><span>Crujen fuerte.</span><span class="dark">Pican bonito.</span></span></h1>
       <p class="lead">Totopos y cacahuates enchilados hechos en Baja California, con chile de verdad y un toque ahumado de mezquite.</p>
       <div class="ctas">
         <a class="btn btn-main" data-m="destello" href="#comprar">¿Dónde lo compro?</a>
@@ -363,7 +363,7 @@ footer .wrap{display:flex;flex-direction:column;gap:8px;opacity:.85}
     </div>
   </div>
   <div class="wrap">
-    <div class="flavors" data-m="cascada">
+    <div class="flavors" data-m="cascada" data-fill="services">
       <article class="flv" data-m="enfoque levantar"><div class="sw" style="--c:#9BCB3C"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="20" fill="#C6E86B" stroke="#1C1C1E" stroke-width="3"/><path d="M32 12v40M12 32h40M18 18l28 28M46 18L18 46" stroke="#1C1C1E" stroke-width="2"/></svg></div><h3>Chile limón</h3><p>El clásico: ácido, saladito y con chispa.</p><span class="heat" aria-label="Picor 2 de 5">Picor <i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></article>
       <article class="flv" data-m="enfoque levantar"><div class="sw" style="--c:#E23D28"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="24" cy="30" r="8" fill="#FF6A4D" stroke="#1C1C1E" stroke-width="3"/><circle cx="40" cy="26" r="7" fill="#FF6A4D" stroke="#1C1C1E" stroke-width="3"/><circle cx="34" cy="42" r="7" fill="#FF6A4D" stroke="#1C1C1E" stroke-width="3"/></svg></div><h3>Chiltepín</h3><p>Chiquito pero bravo. Para los que aguantan.</p><span class="heat" aria-label="Picor 5 de 5">Picor <i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></article>
       <article class="flv" data-m="enfoque levantar"><div class="sw" style="--c:#3A2A24"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M24 14h16v8c6 4 8 10 8 18v8a4 4 0 0 1-4 4H20a4 4 0 0 1-4-4v-8c0-8 2-14 8-18z" fill="#5A3C30" stroke="#FF8A1F" stroke-width="3"/><rect x="22" y="34" width="20" height="10" rx="2" fill="#FF8A1F"/></svg></div><h3>Salsa negra</h3><p>Dulce, ahumado y con picor que llega después.</p><span class="heat" aria-label="Picor 3 de 5">Picor <i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></article>
@@ -419,7 +419,7 @@ footer .wrap{display:flex;flex-direction:column;gap:8px;opacity:.85}
         <span class="kicker" style="color:var(--orange);opacity:1">Pedidos por mayoreo</span>
         <h3>¿Tienes tienda? Ponnos en tu mostrador.</h3>
         <p style="opacity:.8">Para tienditas, cafeterías, gimnasios y eventos en Baja California.</p>
-        <a class="btn btn-orange" data-m="destello" href="#mayoreo">Pedir mayoreo por WhatsApp</a>
+        <a class="btn btn-orange" data-m="destello" href="#mayoreo" data-fill="whatsapp">Pedir mayoreo por WhatsApp</a>
       </div>
       <ol>
         <li><span>Escríbenos por WhatsApp<small>Dinos tu negocio y tu ciudad.</small></span></li>
@@ -467,7 +467,7 @@ footer .wrap{display:flex;flex-direction:column;gap:8px;opacity:.85}
     <div class="mini-bag" data-m="flotar" aria-hidden="true"><svg viewBox="0 0 240 320"><path class="pbody" d="M35.0 58.0 L35.0 40.0 L49.2 46.0 L63.3 40.0 L77.5 46.0 L91.7 40.0 L105.8 46.0 L120.0 40.0 L134.2 46.0 L148.3 40.0 L162.5 46.0 L176.7 40.0 L190.8 46.0 L205.0 40.0 L205.0 58.0 Q215.2 160.0 205.0 262.0 L205.0 280.0 L190.8 274.0 L176.7 280.0 L162.5 274.0 L148.3 280.0 L134.2 274.0 L120.0 280.0 L105.8 274.0 L91.7 280.0 L77.5 274.0 L63.3 280.0 L49.2 274.0 L35.0 280.0 L35.0 262.0 Q24.8 160.0 35.0 58.0Z" style="fill:#E23D28" stroke="#1C1C1E" stroke-width="3" stroke-linejoin="round"/><path class="ptop" d="M35.0 58.0 L35.0 40.0 L49.2 46.0 L63.3 40.0 L77.5 46.0 L91.7 40.0 L105.8 46.0 L120.0 40.0 L134.2 46.0 L148.3 40.0 L162.5 46.0 L176.7 40.0 L190.8 46.0 L205.0 40.0 L205.0 58.0Z" fill="#000" fill-opacity=".16"/><path class="pbot" d="M205.0 262.0 L205.0 280.0 L190.8 274.0 L176.7 280.0 L162.5 274.0 L148.3 280.0 L134.2 274.0 L120.0 280.0 L105.8 274.0 L91.7 280.0 L77.5 274.0 L63.3 280.0 L49.2 274.0 L35.0 280.0 L35.0 262.0Z" fill="#000" fill-opacity=".16"/><path class="shine" d="M62.2 68.0 h15.3 V252.0 h-15.3Z" fill="#fff" fill-opacity=".22"/><g class="plabel" transform="translate(120 164.0) scale(1.000)"><rect x="-60" y="-56" width="120" height="104" rx="18" fill="#1C1C1E"/><path d="M0 -50c-3 6-9 8-9 15a9 9 0 0 0 18 0c0-5-3-6-3-10-3 3-3 4-4 5 0-5 0-7-2-10z" fill="#FF8A1F"/><text y="4" text-anchor="middle" font-family="Unbounded,'Arial Black',sans-serif" font-weight="900" font-size="15.5" fill="#fff">MEZQUITE</text><text y="21" text-anchor="middle" font-family="Karla,sans-serif" font-weight="800" font-size="10" fill="#FF8A1F" letter-spacing="3">SNACKS</text><rect x="-40" y="28" width="80" height="14" rx="7" fill="#fff"/><text y="38.3" text-anchor="middle" font-family="Karla,sans-serif" font-weight="800" font-size="8.5" fill="#1C1C1E" letter-spacing="1">CHILE LIMÓN</text></g></svg></div>
     <h2 data-m="palabras">¿Se te <span>antojó?</span></h2>
     <p data-m="enfoque">Pide a domicilio en Mexicali o pregunta por el punto de venta más cercano. Te contestamos por WhatsApp.</p>
-    <div class="ctas" style="justify-content:center"><a class="btn btn-orange" data-m="destello" href="#pedir">Pedir por WhatsApp</a><a class="btn btn-ghost" href="#comprar">Ver dónde comprar</a></div>
+    <div class="ctas" style="justify-content:center"><a class="btn btn-orange" data-m="destello" href="#pedir" data-fill="whatsapp">Pedir por WhatsApp</a><a class="btn btn-ghost" href="#comprar">Ver dónde comprar</a></div>
   </div>
 </section>
 </main>
@@ -475,13 +475,15 @@ footer .wrap{display:flex;flex-direction:column;gap:8px;opacity:.85}
 <footer data-tema="carbon">
   <div class="wrap" data-x>
     <span class="xtag"><b>Etiquetado y legal</b>Ingredientes, información nutrimental y sellos remiten a la etiqueta. Sin promesas de salud. Aviso de privacidad incluido.</span>
-    <span>Mezquite Snacks (ejemplo) · Mexicali, Baja California</span>
+    <span><span data-fill="name">Mezquite Snacks (ejemplo)</span> · <span data-fill="city">Mexicali</span>, Baja California</span>
+    <span class="legal" data-fill="address" hidden></span>
+    <span class="legal" data-fill="phone" hidden></span>
     <span class="legal">Ingredientes, información nutrimental, alérgenos y sellos de advertencia: consulta la etiqueta del producto · Aviso de privacidad</span>
     <span class="legal">Página de ejemplo hecha por TuWebPronto.</span>
   </div>
 </footer>
 
-<a class="wa" href="#pedir" aria-label="Pedir por WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></a>
+<a class="wa" href="#pedir" aria-label="Pedir por WhatsApp" data-fill="whatsapp"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></a>
 
 <button class="xbtn" id="xbtn" type="button" aria-expanded="false" aria-controls="panel"><i></i>¿Qué tiene esta página?</button>
 <div class="panel" id="panel" hidden>

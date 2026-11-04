@@ -25,9 +25,17 @@ header .w{display:flex;justify-content:space-between;align-items:center;gap:12px
 .layout{display:grid;grid-template-columns:380px minmax(0,1fr);gap:28px;padding-block:28px 60px}
 h1{font:800 clamp(28px,3.4vw,40px)/1.05 var(--display);margin:0 0 8px;text-wrap:balance}
 .lead{color:var(--muted);margin:0 0 22px}
-form{display:flex;flex-direction:column;gap:14px}
-label.f{display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:14px}
-input,select{font:inherit;color:var(--fg);background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px;width:100%}
+form{display:flex;flex-direction:column;gap:14px;min-width:0}
+label.f{display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:14px;min-width:0}
+.opt{font-weight:400;color:var(--muted)}
+input,select,textarea{font:inherit;color:var(--fg);background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px;width:100%;min-width:0}
+textarea{resize:vertical;min-height:96px;line-height:1.4}
+fieldset{border:1px solid var(--line);border-radius:14px;padding:12px 14px 14px;margin:0;min-width:0}
+legend{font-weight:600;font-size:14px;padding:0 6px}
+.hrs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.hrs label{display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--muted);min-width:0}
+.hrs input{padding:10px;font-size:14px}
+@media (max-width:420px){.hrs{grid-template-columns:1fr}}
 .drop{border:2px dashed rgba(148,163,184,.4);border-radius:16px;padding:22px;text-align:center;cursor:pointer;transition:border-color .2s,background .2s;display:flex;flex-direction:column;align-items:center;gap:8px}
 .drop.on{border-color:var(--green);background:rgba(34,197,94,.08)}
 .drop img{max-height:90px;max-width:80%;object-fit:contain}
@@ -51,7 +59,7 @@ iframe{border:0;border-radius:10px;background:#fff;width:100%;height:760px;trans
 .after.show{display:flex}
 .after .go{text-decoration:none}
 .timer{font-variant-numeric:tabular-nums;color:var(--green);font-weight:700}
-@media (max-width:900px){.layout{grid-template-columns:1fr}.frame{min-height:0}iframe{height:640px}}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr)}.frame{min-height:0}iframe{height:640px}}
 </style>
 </head>
 <body>
@@ -61,7 +69,7 @@ iframe{border:0;border-radius:10px;background:#fff;width:100%;height:760px;trans
 <main class="g"><div class="w layout">
   <section>
     <h1>Ve tu página antes de pagar</h1>
-    <p class="lead">Arrastra tu logo, llena 4 datos y en segundos ves una muestra con tus colores. Sin pagar nada.</p>
+    <p class="lead">Arrastra tu logo, llena tus datos y en segundos ves tu página con tus colores. Sin pagar nada.</p>
     <form id="f" novalidate>
       <div class="drop" id="drop" tabindex="0" role="button" aria-label="Sube tu logo">
         <img id="lp" alt="" hidden>
@@ -70,7 +78,7 @@ iframe{border:0;border-radius:10px;background:#fff;width:100%;height:760px;trans
         <input type="file" id="file" accept="image/png,image/jpeg,image/svg+xml,image/webp" hidden>
       </div>
       <div class="sw" id="sw" hidden>Colores detectados: <i id="c1"></i><i id="c2"></i><i id="c3"></i></div>
-      <label class="f">Nombre del negocio<input id="nom" placeholder="Ej. Clínica Dental Sonrisa" required></label>
+      <label class="f">Nombre del negocio<input id="nom" placeholder="Ej. Clínica Dental Sonrisa" maxlength="80" required></label>
       <label class="f">Giro
         <select id="giro">
           <option value="salud">Salud (consultorio, clínica, dentista)</option>
@@ -83,9 +91,19 @@ iframe{border:0;border-radius:10px;background:#fff;width:100%;height:760px;trans
           <option value="despacho">Despacho (contadores, abogados)</option>
           <option value="industrial">Industrial o logística</option>
         </select></label>
-      <label class="f">Ciudad<input id="ciudad" value="Mexicali"></label>
-      <label class="f">WhatsApp del negocio<input id="wa" inputmode="tel" placeholder="686 123 4567"></label>
-      <label class="f">Dirección <span style="font-weight:400;color:var(--muted)">(opcional)</span><input id="dir" placeholder="Calle, número, colonia"></label>
+      <label class="f"><span>Especialidad o qué vendes <span class="opt">(opcional)</span></span><input id="esp" maxlength="60" placeholder="Ej. Traumatología y ortopedia"></label>
+      <label class="f"><span>Servicios <span class="opt">(opcional · uno por renglón, hasta 6)</span></span><textarea id="svc" rows="6" placeholder="Ej.&#10;Rodilla&#10;Cadera&#10;Hombro"></textarea></label>
+      <label class="f">Ciudad<input id="ciudad" value="Mexicali" maxlength="40"></label>
+      <label class="f">WhatsApp del negocio<input id="wa" inputmode="tel" placeholder="686 123 4567" maxlength="20"></label>
+      <label class="f"><span>Dirección <span class="opt">(opcional)</span></span><input id="dir" placeholder="Calle, número, colonia" maxlength="120"></label>
+      <fieldset><legend>Horario</legend>
+        <div class="hrs">
+          <label>Lunes a viernes<input id="hlv" placeholder="10:00 – 20:00" maxlength="30"></label>
+          <label>Sábado<input id="hsa" placeholder="9:00 – 13:00" maxlength="30"></label>
+          <label>Domingo<input id="hdo" value="Cerrado" maxlength="30"></label>
+        </div>
+      </fieldset>
+      <label class="f"><span>Link de Google Maps <span class="opt">(opcional)</span></span><input id="maps" inputmode="url" placeholder="https://maps.app.goo.gl/..." maxlength="300"></label>
       <button class="go" id="go" type="submit" disabled>Ver mi muestra</button>
       <p class="fine">La muestra es una idea rápida con tus colores. Tu página final la diseñamos a tu medida y la revisa una persona antes de publicarse.</p>
     </form>
@@ -94,29 +112,69 @@ iframe{border:0;border-radius:10px;background:#fff;width:100%;height:760px;trans
   <section class="stage" aria-live="polite">
     <div class="tools"><b>Tu muestra <span class="timer" id="tm"></span></b>
       <div class="seg" role="group" aria-label="Vista"><button type="button" id="vd" aria-pressed="true">Computadora</button><button type="button" id="vm" aria-pressed="false">Celular</button></div></div>
-    <div class="frame" id="fr"><div class="empty" id="em"><div><b>Aquí aparece tu página</b>Sube tu logo y escribe el nombre de tu negocio.</div></div><iframe id="pv" title="Muestra de tu página" hidden></iframe></div>
+    <div class="frame" id="fr"><div class="empty" id="em"><div><b>Aquí aparece tu página</b><span id="emt">Cargando el ejemplo…</span></div></div><iframe id="pv" title="Muestra de tu página" hidden></iframe></div>
     <div class="after" id="af"><span>¿Te gustó? Te hacemos la versión final, a tu medida, en 5 a 7 días hábiles.</span><a class="go" id="cta" target="_blank" rel="noopener" href="#">La quiero · WhatsApp</a></div>
   </section>
 </div></main>
 
 <script>
 const $=id=>document.getElementById(id);
-let logo=null,pal=null,t0=0;
-const COPY={
- salud:{tag:"Consultorio en {c}",h:"Atención que te da confianza desde la primera cita.",p:"Agenda tu consulta por WhatsApp. Te explicamos todo antes de empezar.",s:[["Consulta general","Valoración y diagnóstico con calma."],["Tratamientos","Te decimos opciones y costos por escrito."],["Seguimiento","Revisiones para ver cómo vas."]],cta:"Agendar cita",dark:false},
- taller:{tag:"Taller en {c}",h:"Tu auto en buenas manos, con precio claro.",p:"Diagnóstico antes de reparar y fotos del avance por WhatsApp.",s:[["Diagnóstico","Te decimos qué tiene antes de cobrar."],["Mantenimiento","Afinación, frenos, suspensión."],["Garantía","Por escrito en cada trabajo."]],cta:"Cotizar por WhatsApp",dark:true},
- cafeteria:{tag:"Cafetería en {c}",h:"El café de todos los días, hecho con calma.",p:"Café de especialidad, pan del día y un lugar para quedarte.",s:[["Café","Espresso, filtrados y fríos."],["Pan y brunch","Horneado cada mañana."],["Para llevar","Pide por WhatsApp y pasa por él."]],cta:"Pedir por WhatsApp",dark:true},
- restaurante:{tag:"Restaurante en {c}",h:"Mesa lista para ti y los tuyos.",p:"Reserva por WhatsApp y ve el menú antes de llegar.",s:[["Menú","Platillos de la casa y del día."],["Reservaciones","Grupos y fechas especiales."],["Para llevar","Pide y recoge sin esperar."]],cta:"Reservar mesa",dark:true},
- barberia:{tag:"Barbería en {c}",h:"Tu corte, a tu hora, sin esperar.",p:"Agenda tu lugar por WhatsApp y llega directo a la silla.",s:[["Cortes","Clásicos, fade y diseño."],["Barba","Perfilado y toalla caliente."],["Paquetes","Corte más barba con mejor precio."]],cta:"Agendar corte",dark:true},
- escuela:{tag:"Escuela en {c}",h:"Una escuela que conoces antes de inscribir.",p:"Agenda una visita y conoce instalaciones, niveles y maestros.",s:[["Niveles","Desde preescolar hasta secundaria."],["Programas","Inglés, deporte y talleres."],["Inscripciones","Fechas, requisitos y costos."]],cta:"Agendar visita",dark:false},
- producto:{tag:"Hecho en {c}",h:"Un producto que se antoja desde la foto.",p:"Conoce las presentaciones, dónde comprar y haz tu pedido por WhatsApp.",s:[["Presentaciones","Tamaños y sabores."],["Dónde comprar","Tiendas y puntos de venta."],["Mayoreo","Precios para negocios."]],cta:"Hacer pedido",dark:false},
- despacho:{tag:"Despacho en {c}",h:"Tus asuntos en orden y por escrito.",p:"Agenda una asesoría y recibe una propuesta clara antes de empezar.",s:[["Contabilidad","Declaraciones y nómina."],["Asesoría legal","Contratos y trámites."],["Empresas","Constitución y cumplimiento."]],cta:"Agendar asesoría",dark:false},
- industrial:{tag:"Empresa en {c}",h:"Cumplimos tiempos, con permisos al día.",p:"Pide una cotización y recibe respuesta el mismo día hábil.",s:[["Servicios","Lo que hacemos y para quién."],["Certificaciones","Permisos y normas a la vista."],["Cobertura","Rutas y zonas que atendemos."]],cta:"Pedir cotización",dark:true}
+let logo=null,pal=null,t0=0,filled=false;
+/* Por giro: nombre corto para el título y cómo se usa el color de marca en esa plantilla.
+   p/a = [modo, color del texto encima]. "dark": texto claro encima (el color debe ser oscuro);
+   "light": texto oscuro encima (el color debe ser claro). "P" = el primario nuevo.
+   Sin "a": el acento de esa plantilla es un neutro (texto/fondo) y no se toca.
+   sub = cómo rellenar las tarjetas de servicios clonadas. */
+const G={
+ salud:{l:"Consultorio",p:["dark","#FFFFFF"],a:["free"],sub:{}},
+ taller:{l:"Taller",p:["light","#1A1300"],sub:{num:".num"}},
+ cafeteria:{l:"Cafetería",p:["dark","#FFFFFF"],sub:{clear:".price",photo:".ph-tag"}},
+ restaurante:{l:"Restaurante",p:["light","#14201B"],a:["light","#14201B"],sub:{}},
+ barberia:{l:"Barbería",p:["dark","#FFFFFF","#0B0B0C"],sub:{num:".n",clear:".dur"}},
+ escuela:{l:"Escuela",p:["dark","#FFFFFF"],a:["light","P"],sub:{clear:".age",list:".back ul"}},
+ producto:{l:"Marca",p:["dark","#FFFFFF"],a:["light","#1C1C1E"],sub:{clear:".heat"}},
+ despacho:{l:"Despacho",p:["dark","#FFFFFF"],sub:{title:"b",desc:"span"}},
+ industrial:{l:"Empresa",p:["light","#0D1B2A"],sub:{num:".code",clear:"ul"}}
 };
-function hex(r,g,b){return"#"+[r,g,b].map(v=>v.toString(16).padStart(2,"0")).join("")}
-function lum(h){const v=[1,3,5].map(i=>{let c=parseInt(h.substr(i,2),16)/255;return c<=.03928?c/12.92:Math.pow((c+.055)/1.055,2.4)});return .2126*v[0]+.7152*v[1]+.0722*v[2]}
+const DESC="Pregúntanos por este servicio.";
+
+/* ---------- color ---------- */
+function hex(r,g,b){return"#"+[r,g,b].map(v=>Math.max(0,Math.min(255,Math.round(v))).toString(16).padStart(2,"0")).join("")}
+function rgb(h){h=h.replace("#","");if(h.length===3)h=h.split("").map(c=>c+c).join("");return[0,2,4].map(i=>parseInt(h.substr(i,2),16))}
+function lum(h){const v=rgb(h).map(c=>{c/=255;return c<=.03928?c/12.92:Math.pow((c+.055)/1.055,2.4)});return .2126*v[0]+.7152*v[1]+.0722*v[2]}
+function cr(a,b){const x=lum(a),y=lum(b);return(Math.max(x,y)+.05)/(Math.min(x,y)+.05)}
 function sat(r,g,b){const mx=Math.max(r,g,b),mn=Math.min(r,g,b);return mx===0?0:(mx-mn)/mx}
-function mix(h,w,t){const a=[1,3,5].map(i=>parseInt(h.substr(i,2),16)),b=[1,3,5].map(i=>parseInt(w.substr(i,2),16));return hex(...a.map((v,i)=>Math.round(v+(b[i]-v)*t)))}
+function mix(h,w,t){const a=rgb(h),b=rgb(w);return hex(...a.map((v,i)=>v+(b[i]-v)*t))}
+function hsl(h){let[r,g,b]=rgb(h).map(v=>v/255);const mx=Math.max(r,g,b),mn=Math.min(r,g,b),l=(mx+mn)/2,d=mx-mn;let H=0,S=0;
+  if(d){S=d/(1-Math.abs(2*l-1));H=mx===r?((g-b)/d)%6:mx===g?(b-r)/d+2:(r-g)/d+4;H*=60;if(H<0)H+=360}return[H,S,l,d]}
+function fromHsl(H,S,L){const c=(1-Math.abs(2*L-1))*S,x=c*(1-Math.abs((H/60)%2-1)),m=L-c/2;const[r,g,b]=H<60?[c,x,0]:H<120?[x,c,0]:H<180?[0,c,x]:H<240?[0,x,c]:H<300?[x,0,c]:[c,0,x];return hex((r+m)*255,(g+m)*255,(b+m)*255)}
+function hueDist(a,b){const d=Math.abs(a-b)%360;return d>180?360-d:d}
+/* Ajusta un color hasta que su texto encima se lea (4.5:1): lo oscurece o aclara sin cambiar el tono. */
+function fit(c,fg,min=4.5){if(cr(c,fg)>=min)return c;const to=lum(fg)>.4?"#000000":"#FFFFFF";
+  for(let t=.04;t<=1;t+=.04){const m=mix(c,to,t);if(cr(m,fg)>=min)return m}return to}
+/* bg (opcional): fondo de página donde el color también se usa como texto grande (3:1). */
+function pick(cands,fg,bg){const ok=cands.find(c=>cr(c,fg)>=4.5&&(!bg||cr(c,bg)>=3));if(ok)return ok;
+  if(!bg)return fit(cands[0],fg);
+  return cands.map(c=>fit(c,fg)).sort((x,y)=>cr(y,bg)-cr(x,bg))[0]}
+/* Colores de marca para una plantilla: devuelve {p,a} o a:null si el acento de la plantilla no se toca. */
+function brand(g,pl){const C=G[g],cands=[pl.p,pl.q];
+  const p=pick(cands,C.p[1],C.p[2]);
+  let a=null;if(C.a){const rest=cands.filter(c=>c!==p).concat(cands);
+    a=C.a[0]==="free"?rest[0]:pick(rest,C.a[1]==="P"?p:C.a[1])}
+  return{p,a}}
+/* Recolorea la plantilla: el primario/acento originales y los tonos de su misma familia (mismo matiz)
+   pasan al matiz del logo conservando su luminosidad; los neutros no se tocan. */
+function recolor(html,oP,oA,nP,nA){
+  const fam=[{o:oP,n:nP,h:hsl(oP)}];if(nA)fam.push({o:oA,n:nA,h:hsl(oA)});
+  fam.forEach(f=>f.nh=hsl(f.n));
+  const map=h=>{const k=h.toLowerCase();for(const f of fam)if(k===f.o.toLowerCase())return f.n;
+    const[H,S,L,d]=hsl(h);if(d<.12)return null;
+    let best=null,bd=21;for(const f of fam){const dd=hueDist(H,f.h[0]);if(dd<bd){bd=dd;best=f}}
+    if(!best)return null;const s=Math.min(1,best.nh[1]*(best.h[1]?S/best.h[1]:1));return fromHsl(best.nh[0],s,L)};
+  html=html.replace(/(href="|id="|&)?#([0-9a-fA-F]{6}|[0-9a-fA-F]{3})\b/g,(m,pre,h)=>{if(pre)return m;const n=map("#"+h);return n||m});
+  html=html.replace(/rgba?\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*(,\s*[\d.]+\s*)?\)/g,(m,r,g,b,al)=>{const n=map(hex(+r,+g,+b));if(!n)return m;const[R,G2,B]=rgb(n);return al?`rgba(${R},${G2},${B}${al})`:`rgb(${R},${G2},${B})`});
+  return html}
+
 function palette(img){
   const c=document.createElement("canvas"),s=64;c.width=c.height=s;const x=c.getContext("2d");x.drawImage(img,0,0,s,s);
   const d=x.getImageData(0,0,s,s).data,bins={};
@@ -131,6 +189,8 @@ function palette(img){
   if(lum(dk)>.06)dk=mix(dk,"#000000",.6);
   return{p,q,dk};
 }
+
+/* ---------- logo ---------- */
 function load(file){
   if(!file||!/^image\//.test(file.type)){$("ds").textContent="Ese archivo no es una imagen. Prueba con PNG, JPG o SVG.";return}
   t0=performance.now();
@@ -146,46 +206,159 @@ $("file").addEventListener("change",e=>load(e.target.files[0]));
 ["dragleave","drop"].forEach(ev=>dr.addEventListener(ev,e=>{e.preventDefault();dr.classList.remove("on")}));
 dr.addEventListener("drop",e=>load(e.dataTransfer.files[0]));
 $("nom").addEventListener("input",check);
-function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
-function build(){
-  const g=$("giro").value,C=COPY[g],nom=esc($("nom").value.trim()),city=esc($("ciudad").value.trim()||"tu ciudad"),dir=esc($("dir").value.trim()),wa=$("wa").value.replace(/\D/g,"");
-  const waNum=wa.length===10?"52"+wa:wa,waLink=waNum?"https://wa.me/"+waNum:"#";
-  const {q,dk}=pal,p=lum(pal.p)<=lum(pal.q)?pal.p:pal.q,onP=lum(p)>.45?"#0B1220":"#FFFFFF",heroBg=C.dark?dk:mix(q,"#ffffff",.82),heroFg=C.dark?"#F8FAFC":"#0B1220",acc=C.dark?q:p;
-  const svc=C.s.map(s=>`<div class="c"><h3>${s[0]}</h3><p>${s[1]}</p></div>`).join("");
-  return `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Figtree:wght@400;600&display=swap"><style>
-*{box-sizing:border-box}body{margin:0;font:17px/1.6 Figtree,system-ui,sans-serif;color:#0B1220;background:#fff}
-.tag{background:#FFE9A8;color:#4A3500;text-align:center;font:600 12px/1.4 Figtree;padding:7px 12px}
-.w{max-width:1080px;margin:0 auto;padding:0 20px}
-nav{background:${heroBg};color:${heroFg}}nav .w{display:flex;justify-content:space-between;align-items:center;padding-block:14px;gap:12px}
-nav img{height:44px;max-width:160px;object-fit:contain}nav b{font:700 16px 'Bricolage Grotesque',system-ui,sans-serif}
-.b{display:inline-block;background:${p};color:${onP};text-decoration:none;font:700 15px Figtree;padding:12px 20px;border-radius:999px;white-space:nowrap}
-.hero{background:${heroBg};color:${heroFg};padding:56px 0 72px}.hero .w{display:grid;grid-template-columns:1.2fr .8fr;gap:36px;align-items:center}
-.k{font:600 12px Figtree;letter-spacing:.18em;text-transform:uppercase;color:${acc}}
-h1{font:800 clamp(32px,5vw,54px)/1.05 'Bricolage Grotesque',system-ui,sans-serif;margin:14px 0 16px;text-wrap:balance}
-.hero p{opacity:.85;margin:0 0 24px;max-width:32em}
-.ph{aspect-ratio:4/5;border-radius:22px;background:repeating-linear-gradient(135deg,${mix(q,"#ffffff",.5)} 0 12px,${mix(q,"#ffffff",.7)} 12px 24px);display:grid;place-items:center;color:#334155;font:600 14px Figtree;text-align:center;padding:20px}
-section{padding:64px 0}h2{font:800 32px/1.1 'Bricolage Grotesque',system-ui,sans-serif;margin:0 0 24px}
-.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.c{border:1px solid #E2E8F0;border-radius:16px;padding:22px;border-top:4px solid ${p}}.c h3{margin:0 0 6px;font:700 19px 'Bricolage Grotesque',system-ui,sans-serif}.c p{margin:0;color:#475569;font-size:15.5px}
-.v{background:${dk};color:#F8FAFC}.v .w{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}.v p{margin:6px 0 0;opacity:.8}
-footer{padding:22px 0;color:#64748B;font-size:14px}
-@media(max-width:720px){.hero .w,.g3{grid-template-columns:1fr}.ph{aspect-ratio:16/10}nav b{display:none}}
-</style></head><body>
-<div class="tag">Muestra de TuWebPronto · sin publicar · las fotos son de ejemplo</div>
-<nav><div class="w"><img src="${logo}" alt="${nom}"><b>${nom}</b><a class="b" href="${waLink}" target="_blank">${C.cta}</a></div></nav>
-<div class="hero"><div class="w"><div><div class="k">${C.tag.replace("{c}",city)}</div><h1>${C.h}</h1><p>${C.p}</p><a class="b" href="${waLink}" target="_blank">${C.cta}</a></div><div class="ph">Tu foto va aquí</div></div></div>
-<section><div class="w"><h2>Lo que hacemos</h2><div class="g3">${svc}</div></div></section>
-<div class="v"><section style="padding:48px 0"><div class="w"><div><h2 style="margin:0">Visítanos</h2><p>${dir?dir+", ":""}${city}</p></div><a class="b" href="${waLink}" target="_blank">${C.cta}</a></div></section></div>
-<footer><div class="w">© ${nom} · Página hecha por TuWebPronto</div></footer></body></html>`;
-}
-$("f").addEventListener("submit",e=>{e.preventDefault();if($("go").disabled)return;
-  const html=build();$("pv").srcdoc=html;$("pv").hidden=false;$("em").hidden=true;
+
+/* ---------- plantilla ---------- */
+const cache={};
+async function tpl(g){if(!G[g])throw new Error("giro");if(!cache[g]){const r=await fetch(`/ejemplos/${g}.html`,{credentials:"same-origin"});if(!r.ok)throw new Error(r.status);cache[g]=await r.text()}return cache[g]}
+const parse=h=>new DOMParser().parseFromString(h,"text/html");
+const all=(d,s)=>[...d.querySelectorAll(s)];
+/* Rutas relativas (../motion/...) a absolutas: el srcdoc no tiene URL propia.
+   (Se evita <base href>: haría que los enlaces "#seccion" naveguen fuera de la muestra.) */
+function absolutize(d){all(d,"[href],[src]").forEach(el=>{["href","src"].forEach(at=>{const v=el.getAttribute(at);
+  if(!v||/^(#|[a-z][a-z0-9+.-]*:|\/)/i.test(v))return;el.setAttribute(at,new URL(v,location.origin+"/ejemplos/").pathname)})})}
+function serialize(d){return"<!doctype html>\n"+d.documentElement.outerHTML}
+function show(html){const f=$("pv");f.srcdoc=html;f.hidden=false;$("em").hidden=true}
+
+async function preview(){ // la plantilla tal cual, antes de subir nada
+  const g=$("giro").value;
+  try{const d=parse(await tpl(g));absolutize(d);
+    const b=d.querySelector('[data-fill~="banner"]');if(b)b.textContent="Así se verá tu página · sube tu logo para verla con tus colores";
+    show(serialize(d))}catch(e){$("emt").textContent="No pudimos cargar el ejemplo. Recarga la página.";$("em").hidden=false;$("pv").hidden=true}}
+
+function textNodes(root){const w=root.ownerDocument.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:n=>/^(SCRIPT|STYLE)$/.test(n.parentNode.nodeName)?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT}),o=[];while(w.nextNode())o.push(w.currentNode);return o}
+function replaceText(root,from,to){if(!from||from===to)return;textNodes(root).forEach(n=>{if(n.nodeValue.includes(from))n.nodeValue=n.nodeValue.split(from).join(to)})}
+function setName(el,name){
+  const d=el.ownerDocument;let at=null;
+  [...el.childNodes].forEach(n=>{if(n.nodeType===3&&n.nodeValue.trim()||n.nodeType===1&&n.matches('[data-fill-part~="name"]')){if(!at)at=d.createComment("n");if(!at.parentNode)el.insertBefore(at,n);n.remove()}else if(n.nodeType===3)n.remove()});
+  const node=el.matches('[data-fill~="logo"]')?Object.assign(d.createElement("span"),{className:"tw-name",textContent:name}):d.createTextNode(name);
+  if(at){at.replaceWith(node)}else el.appendChild(node)}
+function fmtPhone(w){return w.length===10?w.replace(/(\d{3})(\d{3})(\d{4})/,"$1 $2 $3"):w}
+function times(s){const m=String(s).match(/(\d{1,2})(?::(\d{2}))?\s*(a\.?\s*m\.?|p\.?\s*m\.?)?\s*[-–—a]+\s*(\d{1,2})(?::(\d{2}))?\s*(a\.?\s*m\.?|p\.?\s*m\.?)?/i);if(!m)return null;
+  const t=(h,mi,ap)=>{h=+h;if(ap&&/p/i.test(ap)&&h<12)h+=12;if(ap&&/a/i.test(ap)&&h===12)h=0;return String(h).padStart(2,"0")+":"+(mi||"00")};
+  return[t(m[1],m[2],m[3]),t(m[4],m[5],m[6])]}
+function safeMaps(u){try{const x=new URL(u.trim());if(x.protocol!=="https:")return"";return/(^|\.)google\.[a-z.]+$|(^|\.)goo\.gl$/i.test(x.hostname)?x.href:""}catch(e){return""}}
+
+function data(){
+  const svc=$("svc").value.split(/\n/).map(s=>s.trim()).filter(Boolean).slice(0,6).map(s=>s.slice(0,60));
+  const w=$("wa").value.replace(/\D/g,"");
+  return{g:$("giro").value,name:$("nom").value.trim(),esp:$("esp").value.trim(),svc,city:$("ciudad").value.trim()||"Mexicali",
+    wa:w,waNum:w.length===10?"52"+w:w,dir:$("dir").value.trim(),
+    h:[["Lunes a viernes",$("hlv").value.trim()||"Por confirmar"],["Sábado",$("hsa").value.trim()||"Cerrado"],["Domingo",$("hdo").value.trim()||"Cerrado"]],
+    maps:safeMaps($("maps").value)}}
+
+async function build(){
+  const D=data(),C=G[D.g];
+  let src=await tpl(D.g);
+  const oP=(src.match(/--color-primario:\s*(#[0-9a-fA-F]{6})/)||[])[1],oA=(src.match(/--color-acento:\s*(#[0-9a-fA-F]{6})/)||[])[1];
+  const col=brand(D.g,pal);
+  if(oP)src=recolor(src,oP,oA,col.p,col.a);
+  const d=parse(src),body=d.body;absolutize(d);
+  const kind=D.esp||C.l;
+
+  // nombres de ejemplo que hay que borrar (de la ficha y del encabezado)
+  const fakes=new Set();
+  all(d,'[data-fill~="name"]').forEach(el=>{const t=[...el.childNodes].filter(n=>n.nodeType===3||n.matches&&n.matches('[data-fill-part~="name"]')).map(n=>n.textContent).join("").trim();if(t)fakes.add(t)});
+  const lds=all(d,'script[type="application/ld+json"]');
+  lds.forEach(s=>{try{const j=JSON.parse(s.textContent);(j["@graph"]||[j]).forEach(o=>{if(o.name&&o["@type"]!=="FAQPage"&&o["@type"]!=="Product")fakes.add(o.name)})}catch(e){}});
+  const fakeList=[...fakes].flatMap(f=>[f,f.replace(/\s*\(ejemplo\)\s*$/,"")]).filter(Boolean).sort((a,b)=>b.length-a.length);
+
+  // ciudad: la plantilla habla de Mexicali en muchos textos
+  if(D.city!=="Mexicali")replaceText(body,"Mexicali",D.city);
+
+  const fill=(k,fn)=>all(d,`[data-fill~="${k}"]`).forEach(fn);
+  fill("banner",el=>{el.textContent="Muestra de TuWebPronto · sin publicar · fotos de ejemplo"});
+  fill("city",el=>{el.textContent=D.city});
+  fill("tagline",el=>{el.textContent=D.esp?`${D.esp} en ${D.city}`:el.textContent});
+  fill("logo",el=>{all(el,":scope > svg, :scope > img").forEach(n=>n.remove());const im=d.createElement("img");im.className="tw-logo";im.src=logo;im.alt="";el.prepend(im)});
+  fill("name",el=>setName(el,D.name));
+  if(D.esp)fill("kind",el=>{el.textContent=D.esp});
+  if(D.esp){fill("lead",el=>{el.textContent=(D.svc.length?D.svc.slice(0,4).join(", ")+" y más":D.esp)+", con un equipo que te explica todo antes de empezar."});fill("tagline-em",el=>{el.textContent="con atención cercana."})}
+  fill("address",el=>{el.textContent=D.dir||"Dirección por confirmar";if(D.dir)el.hidden=false});
+  fill("phone",el=>{if(!D.wa)return;el.textContent="WhatsApp "+fmtPhone(D.wa);el.hidden=false});
+  fill("hours",el=>{const kids=[...el.children];if(kids.length<2)return;const lab=kids[0].cloneNode(false),val=kids[1].cloneNode(false);el.replaceChildren();
+    D.h.forEach(([k,v])=>{const a=lab.cloneNode(false),b=val.cloneNode(false);a.textContent=k;b.textContent=v;el.append(a,b)})});
+  if(D.svc.length){
+    fill("services-hide",el=>{el.hidden=true;el.style.setProperty("display","none","important")});
+    fill("services",el=>{const cards=[...el.children];if(!cards.length)return;const S=C.sub||{};
+      const out=D.svc.map((s,i)=>{const src=cards[i%cards.length],c=src.cloneNode(true);
+        const old=(c.querySelector(S.title||"h3")||{}).textContent||"";
+        all(c,S.title||"h3").forEach(t=>t.textContent=s);
+        if(!S.title&&!c.querySelector("h3")){const b=c.querySelector("b,strong");if(b)b.textContent=s}
+        const ds=c.querySelector(S.desc||"p");if(ds&&!(S.list&&ds.closest(S.list)))ds.textContent=DESC;
+        if(S.list)all(c,S.list).forEach(u=>{const li=d.createElement("li");li.textContent=DESC;u.replaceChildren(li)});
+        if(S.num)all(c,S.num).forEach(n=>n.textContent=String(i+1).padStart(2,"0"));
+        if(S.clear)all(c,S.clear).forEach(n=>n.remove());
+        if(S.photo)all(c,S.photo).forEach(p=>{const b=p.querySelector("b");p.replaceChildren(...(b?[b]:[]),d.createTextNode("Foto de "+s))});
+        all(c,"[aria-label]").forEach(n=>{if(old)n.setAttribute("aria-label",n.getAttribute("aria-label").split(old.trim()).join(s))});
+        return c});
+      el.replaceChildren(...out)});
+  }
+  // WhatsApp del negocio
+  if(D.waNum){const href="https://wa.me/"+D.waNum;
+    all(d,'[data-fill~="whatsapp"], a[href*="wa.me/"], a.wa').forEach(a=>{a.setAttribute("href",href);a.setAttribute("target","_blank");a.setAttribute("rel","noopener")})}
+  // mapa
+  const q=[D.name,D.dir,D.city].filter(Boolean).join(", ");
+  const go=D.maps||"https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(q);
+  const ml=all(d,'[data-fill~="maplink"]');
+  fill("map",el=>{const btnClass=(el.querySelector('[data-fill~="maplink"]')||ml[0]||{}).className||"btn";
+    const fr=d.createElement("iframe");fr.src="https://www.google.com/maps?q="+encodeURIComponent(q)+"&output=embed";fr.setAttribute("loading","lazy");fr.title="Mapa de "+D.name;fr.setAttribute("referrerpolicy","no-referrer-when-downgrade");
+    el.replaceChildren(fr);el.classList.add("tw-map-on");el.removeAttribute("aria-label");
+    if(!d.querySelector('[data-fill~="maplink"]')){const a=d.createElement("a");a.className=btnClass;a.setAttribute("data-fill","maplink");a.textContent="Cómo llegar";el.append(a)}});
+  all(d,'[data-fill~="maplink"]').forEach(a=>{a.setAttribute("href",go);a.setAttribute("target","_blank");a.setAttribute("rel","noopener")});
+  // cualquier rastro del nombre de ejemplo
+  fakeList.filter(f=>!D.name.includes(f)).forEach(f=>replaceText(body,f,D.name));
+
+  // <head>: título, descripción, datos estructurados
+  d.title=`${D.name} · ${kind} en ${D.city}`;
+  const md=d.querySelector('meta[name="description"]');
+  if(md)md.setAttribute("content",`${D.name}: ${kind} en ${D.city}.${D.svc.length?" "+D.svc.join(", ")+".":""}${D.wa?" Escríbenos por WhatsApp.":""}`);
+  const spec=D.h.map(([k,v],i)=>{const t=times(v);if(!t)return null;return{"@type":"OpeningHoursSpecification","dayOfWeek":[["Monday","Tuesday","Wednesday","Thursday","Friday"],"Saturday","Sunday"][i],"opens":t[0],"closes":t[1]}}).filter(Boolean);
+  const deep=v=>typeof v==="string"?fakeList.filter(f=>!D.name.includes(f)).reduce((s,f)=>s.split(f).join(D.name),D.city!=="Mexicali"?v.split("Mexicali").join(D.city):v).replace(/\s*\(ejemplo\)/g,"").replace(/ de ejemplo/g,""):Array.isArray(v)?v.map(deep):v&&typeof v==="object"?Object.fromEntries(Object.entries(v).map(([k,x])=>[k,deep(x)])):v;
+  lds.forEach(s=>{try{let j=deep(JSON.parse(s.textContent));
+    (j["@graph"]||[j]).forEach(o=>{if(o["@type"]==="FAQPage"||!o.address)return;
+      if(D.g==="salud"&&D.esp&&o["@type"]==="Dentist"&&!/dent|odont/i.test(D.esp))o["@type"]="MedicalClinic";
+      o.name=D.name;o.description=`${kind} en ${D.city}.`;
+      if(D.wa)o.telephone="+"+(D.waNum.length===12?D.waNum:D.wa);else delete o.telephone;
+      o.address=Object.assign({},o.address,{"@type":"PostalAddress","addressLocality":D.city});
+      if(D.dir)o.address.streetAddress=D.dir;else delete o.address.streetAddress;
+      o.areaServed={"@type":"City","name":D.city};
+      if(o.openingHoursSpecification||d.querySelector('[data-fill~="hours"]')){if(spec.length)o.openingHoursSpecification=spec;else delete o.openingHoursSpecification}
+      if(D.svc.length){
+        if(o.availableService){const t=(o.availableService[0]||{})["@type"]||"Service";o.availableService=D.svc.map(n=>({"@type":t,name:n}))}
+        if(o.hasOfferCatalog)o.hasOfferCatalog={"@type":"OfferCatalog","name":"Servicios","itemListElement":D.svc.map(n=>({"@type":"Offer","itemOffered":{"@type":"Service","name":n}}))};
+        if(o.hasMenu)o.hasMenu={"@type":"Menu","hasMenuSection":[{"@type":"MenuSection","name":"Menú","hasMenuItem":D.svc.map(n=>({"@type":"MenuItem","name":n}))}]};
+      }});
+    s.textContent=JSON.stringify(j).replace(/</g,"\\u003c")}catch(e){}});
+
+  // estilos del relleno (logo, mapa, colores de marca)
+  const st=d.createElement("style");st.id="tw-fill";
+  st.textContent=`:root{--color-primario:${col.p};--color-acento:${col.a||col.p}}
+.tw-logo{display:block;flex:none;height:40px;width:auto;max-width:140px;object-fit:contain;border-radius:6px}
+[data-fill~="logo"]{display:flex;align-items:center;gap:10px;min-width:0;white-space:normal}
+[data-fill~="logo"] .tw-name{min-width:0;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;line-height:1.1}
+@media (max-width:600px){.tw-logo{height:34px;max-width:96px}[data-fill~="logo"]{font-size:15px}[data-fill~="logo"] .tw-name{-webkit-line-clamp:3}}
+[data-fill~="map"].tw-map-on{display:flex!important;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:12px;padding:0!important;min-height:0!important;background:none!important;border:0!important;box-shadow:none!important;overflow:visible!important;aspect-ratio:auto!important}
+[data-fill~="map"].tw-map-on::before,[data-fill~="map"].tw-map-on::after{content:none!important;display:none!important}
+.tw-map-on iframe{display:block;width:100%;height:260px;border:0;border-radius:16px;position:relative;z-index:1;background:#E5E3DF}
+.tw-map-on>a{align-self:flex-start;position:relative;z-index:1}
+header .btn{white-space:nowrap;flex:none}`;
+  d.head.append(st);
+  return{html:serialize(d),col,D}}
+
+$("f").addEventListener("submit",async e=>{e.preventDefault();if($("go").disabled)return;
+  let r;try{r=await build()}catch(err){$("tm").textContent="· no se pudo generar, intenta de nuevo";return}
+  show(r.html);filled=true;
   const secs=((performance.now()-t0)/1000).toFixed(0);$("tm").textContent="· lista en "+secs+" s";
-  const msg="Hola, hice mi muestra en TuWebPronto y me gustó. Negocio: "+$("nom").value.trim()+". Giro: "+$("giro").selectedOptions[0].text+". Ciudad: "+($("ciudad").value.trim()||"-")+". Te mando mi logo por aquí.";
+  const D=r.D,msg="Hola, hice mi muestra en TuWebPronto y me gustó. Negocio: "+D.name+". Giro: "+$("giro").selectedOptions[0].text+(D.esp?". Especialidad: "+D.esp:"")+". Ciudad: "+D.city+(D.svc.length?". Servicios: "+D.svc.join(", "):"")+". Te mando mi logo por aquí.";
   $("cta").href="https://wa.me/16194533137?text="+encodeURIComponent(msg);$("af").classList.add("show");
   if(window.innerWidth<900)$("fr").scrollIntoView({behavior:"smooth"});
 });
 function view(m){$("fr").classList.toggle("m",m);$("vm").setAttribute("aria-pressed",m);$("vd").setAttribute("aria-pressed",!m)}
 $("vd").onclick=()=>view(false);$("vm").onclick=()=>view(true);
+$("giro").addEventListener("change",()=>{if(filled&&!$("go").disabled)$("f").requestSubmit();else preview()});
+const qg=new URLSearchParams(location.search).get("giro");
+if(qg&&Object.prototype.hasOwnProperty.call(G,qg))$("giro").value=qg;
+preview();
 </script>
 </body>
 </html>

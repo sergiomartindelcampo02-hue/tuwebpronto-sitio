@@ -247,11 +247,11 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
 </head>
 <body>
 
-<div class="ejemplo">Página de ejemplo de TuWebPronto para despachos contables y legales. Negocio, personas y reseñas son ilustrativos. <a href="../index.html">← Volver a TuWebPronto</a></div>
+<div class="ejemplo" data-fill="banner">Página de ejemplo de TuWebPronto para despachos contables y legales. Negocio, personas y reseñas son ilustrativos. <a href="../index.html">← Volver a TuWebPronto</a></div>
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#inicio"><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="16" fill="#7A1F2B"/><circle cx="17" cy="17" r="12.5" fill="none" stroke="#F3F1EE" stroke-width=".8"/><text x="17" y="21.5" text-anchor="middle" font-family="Libre Caslon Text,Georgia,serif" font-size="12" fill="#F3F1EE">R&amp;A</text></svg><span>Ríos &amp; Asociados<small>Contadores y abogados</small></span></a>
+    <a class="brand" href="#inicio" data-fill="logo"><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="16" fill="#7A1F2B"/><circle cx="17" cy="17" r="12.5" fill="none" stroke="#F3F1EE" stroke-width=".8"/><text x="17" y="21.5" text-anchor="middle" font-family="Libre Caslon Text,Georgia,serif" font-size="12" fill="#F3F1EE">R&amp;A</text></svg><span data-fill="name">Ríos &amp; Asociados<small data-fill="kind">Contadores y abogados</small></span></a>
     <ul><li><a href="#servicios">Servicios</a></li><li><a href="#para-quien">Para quién</a></li><li><a href="#como-trabajamos">Cómo trabajamos</a></li><li><a href="#nosotros">Nosotros</a></li><li><a href="#preguntas">Preguntas</a></li></ul>
     <a class="btn btn-main" href="#consulta">Agendar consulta</a>
     <div data-m="avance" aria-hidden="true"></div>
@@ -263,7 +263,7 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
   <div class="wrap hero-grid">
     <div class="hero-copy" data-x>
       <span class="xtag"><b>SEO local</b>El título dice qué eres y dónde: "Contadores y abogados en Mexicali". Es justo lo que la gente escribe en Google.</span>
-      <span class="where">Contadores y abogados en Mexicali</span>
+      <span class="where" data-fill="tagline">Contadores y abogados en Mexicali</span>
       <h1>Tus impuestos, tus contratos y tu empresa, en orden y por escrito.</h1>
       <p class="lead">Contabilidad, asesoría fiscal, legal corporativo y laboral en un mismo despacho. Te explicamos cada paso antes de firmar nada.</p>
       <div class="ctas">
@@ -308,7 +308,7 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
       <h2 data-m="palabras">Un despacho para lo contable y lo legal</h2>
     </div>
     <div class="tabs" data-m="enfoque">
-      <div class="tablist" role="tablist" aria-label="Áreas de servicio">
+      <div class="tablist" role="tablist" data-fill="services-hide" aria-label="Áreas de servicio">
         <button role="tab" id="t1" aria-controls="p1" aria-selected="true">Contabilidad</button>
         <button role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1">Fiscal</button>
         <button role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1">Legal corporativo</button>
@@ -316,18 +316,18 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
       </div>
       <div class="stack">
         <div class="tp on" role="tabpanel" id="p1" aria-labelledby="t1">
-          <div class="intro"><h3>Contabilidad</h3><p>Llevamos tus números cada mes para que sepas cómo va tu negocio y cumplas a tiempo.</p></div>
-          <ul><li><b>Contabilidad mensual</b><span>Registro de ingresos, gastos y facturas.</span></li><li><b>Estados financieros</b><span>Reportes claros para decidir y para el banco.</span></li><li><b>Nómina</b><span>Cálculo de sueldos, recibos y cuotas.</span></li><li><b>Facturación</b><span>Te ayudamos a emitir y revisar tus CFDI.</span></li></ul>
+          <div class="intro" data-fill="services-hide"><h3>Contabilidad</h3><p>Llevamos tus números cada mes para que sepas cómo va tu negocio y cumplas a tiempo.</p></div>
+          <ul data-fill="services"><li><b>Contabilidad mensual</b><span>Registro de ingresos, gastos y facturas.</span></li><li><b>Estados financieros</b><span>Reportes claros para decidir y para el banco.</span></li><li><b>Nómina</b><span>Cálculo de sueldos, recibos y cuotas.</span></li><li><b>Facturación</b><span>Te ayudamos a emitir y revisar tus CFDI.</span></li></ul>
         </div>
-        <div class="tp" role="tabpanel" id="p2" aria-labelledby="t2" aria-hidden="true" inert>
+        <div class="tp" role="tabpanel" id="p2" data-fill="services-hide" aria-labelledby="t2" aria-hidden="true" inert>
           <div class="intro"><h3>Fiscal</h3><p>Cumple con el SAT sin sorpresas y paga lo que corresponde, ni más ni menos.</p></div>
           <ul><li><b>Declaraciones</b><span>Mensuales y anual, de personas y empresas.</span></li><li><b>Planeación fiscal</b><span>Opciones legales según tu régimen.</span></li><li><b>Requerimientos del SAT</b><span>Te acompañamos a responder cartas y revisiones.</span></li><li><b>Cambio de régimen</b><span>Revisamos cuál te conviene y lo tramitamos.</span></li></ul>
         </div>
-        <div class="tp" role="tabpanel" id="p3" aria-labelledby="t3" aria-hidden="true" inert>
+        <div class="tp" role="tabpanel" id="p3" data-fill="services-hide" aria-labelledby="t3" aria-hidden="true" inert>
           <div class="intro"><h3>Legal corporativo</h3><p>Que tu empresa esté bien constituida y tus acuerdos queden protegidos por escrito.</p></div>
           <ul><li><b>Constitución de sociedades</b><span>Desde el acta hasta el registro.</span></li><li><b>Contratos</b><span>Redacción y revisión antes de firmar.</span></li><li><b>Asambleas y actas</b><span>Actas al día y libros corporativos.</span></li><li><b>Marcas</b><span>Orientación para proteger el nombre de tu negocio.</span></li></ul>
         </div>
-        <div class="tp" role="tabpanel" id="p4" aria-labelledby="t4" aria-hidden="true" inert>
+        <div class="tp" role="tabpanel" id="p4" data-fill="services-hide" aria-labelledby="t4" aria-hidden="true" inert>
           <div class="intro"><h3>Laboral</h3><p>Relaciones de trabajo claras, para tu equipo y para ti.</p></div>
           <ul><li><b>Contratos de trabajo</b><span>Individuales y por obra o tiempo determinado.</span></li><li><b>Reglamento interior</b><span>Reglas claras para todo el equipo.</span></li><li><b>Terminaciones</b><span>Asesoría para hacerlo conforme a la ley.</span></li><li><b>Conciliación</b><span>Te representamos en audiencias de conciliación.</span></li></ul>
         </div>
@@ -412,12 +412,13 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
     </div>
     <div class="loc">
       <div class="box" data-m="enfoque">
-        <h3>Despacho Ríos &amp; Asociados (ejemplo)</h3>
-        <span style="color:var(--muted)">Dirección de ejemplo, Mexicali, Baja California</span>
-        <div class="hours"><span>Lunes a viernes</span><span>9:00 a. m. – 6:00 p. m.</span><span>Sábado</span><span>Solo con cita</span><span>Domingo</span><span>Cerrado</span></div>
-        <a class="btn btn-line" style="align-self:flex-start" href="#">Cómo llegar en Google Maps</a>
+        <h3 data-fill="name">Despacho Ríos &amp; Asociados (ejemplo)</h3>
+        <span style="color:var(--muted)"><span data-fill="address">Dirección de ejemplo</span>, <span data-fill="city">Mexicali</span>, Baja California</span>
+        <span style="color:var(--muted)" data-fill="phone" hidden></span>
+        <div class="hours" data-fill="hours"><span>Lunes a viernes</span><span>9:00 a. m. – 6:00 p. m.</span><span>Sábado</span><span>Solo con cita</span><span>Domingo</span><span>Cerrado</span></div>
+        <a class="btn btn-line" style="align-self:flex-start" href="#" data-fill="maplink">Cómo llegar en Google Maps</a>
       </div>
-      <div class="map" data-m="enfoque"><span class="pin" aria-hidden="true"></span><div><b>Mapa de Google</b><small>Ubicación del despacho</small></div></div>
+      <div class="map" data-m="enfoque" data-fill="map"><span class="pin" aria-hidden="true"></span><div><b>Mapa de Google</b><small>Ubicación del despacho</small></div></div>
     </div>
   </div>
 </section>
@@ -447,7 +448,7 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
       <div style="min-width:0">
         <h2 data-m="palabras">Agenda tu primera consulta</h2>
         <p>Escríbenos por WhatsApp, cuéntanos tu asunto en dos líneas y te damos el primer horario disponible.</p>
-        <div class="ctas" style="margin-top:26px"><a class="btn btn-main" href="#consulta">Agendar por WhatsApp</a></div>
+        <div class="ctas" style="margin-top:26px"><a class="btn btn-main" href="#consulta" data-fill="whatsapp">Agendar por WhatsApp</a></div>
       </div>
       <svg viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="96" fill="none" stroke="#7A1F2B" stroke-width="3"/><circle cx="100" cy="100" r="86" fill="none" stroke="#7A1F2B" stroke-width="1.5"/><text x="100" y="112" text-anchor="middle" font-family="Libre Caslon Text,Georgia,serif" font-size="34" fill="#C9737F">R&amp;A</text></svg>
     </div>
@@ -457,13 +458,13 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
 
 <footer>
   <div class="wrap">
-    <span>Despacho Ríos &amp; Asociados (ejemplo) · Mexicali, Baja California</span>
+    <span><span data-fill="name">Despacho Ríos &amp; Asociados (ejemplo)</span> · <span data-fill="city">Mexicali</span>, Baja California</span>
     <span class="legal">Cédulas profesionales: datos del cliente · Aviso de privacidad · El contenido de esta página es informativo y no constituye asesoría legal ni fiscal.</span>
     <span class="legal">Página de ejemplo hecha por TuWebPronto.</span>
   </div>
 </footer>
 
-<a class="wa" href="#consulta" aria-label="Agendar por WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></a>
+<a class="wa" href="#consulta" aria-label="Agendar por WhatsApp" data-fill="whatsapp"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></a>
 
 <button class="xbtn" id="xbtn" type="button" aria-expanded="false" aria-controls="panel"><i></i>¿Qué tiene esta página?</button>
 <div class="panel" id="panel" hidden>

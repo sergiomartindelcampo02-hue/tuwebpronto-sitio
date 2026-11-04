@@ -253,11 +253,11 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
 </head>
 <body>
 
-<div class="ejemplo">Página de ejemplo de TuWebPronto para servicios técnicos. Negocio, reseñas y cifras son ilustrativos. <a href="../index.html">← Volver a TuWebPronto</a></div>
+<div class="ejemplo" data-fill="banner">Página de ejemplo de TuWebPronto para servicios técnicos. Negocio, reseñas y cifras son ilustrativos. <a href="../index.html">← Volver a TuWebPronto</a></div>
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#inicio"><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#F5A524"/><rect x="9" y="6" width="14" height="11" rx="2" fill="#1A1300"/><path d="M9 10h14M9 13h14" stroke="#F5A524" stroke-width="1.4"/><path d="M16 17v6" stroke="#1A1300" stroke-width="3"/><circle cx="16" cy="24.5" r="3" fill="none" stroke="#1A1300" stroke-width="2.4"/></svg>Pistón</a>
+    <a class="brand" href="#inicio" data-fill="logo name"><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#F5A524"/><rect x="9" y="6" width="14" height="11" rx="2" fill="#1A1300"/><path d="M9 10h14M9 13h14" stroke="#F5A524" stroke-width="1.4"/><path d="M16 17v6" stroke="#1A1300" stroke-width="3"/><circle cx="16" cy="24.5" r="3" fill="none" stroke="#1A1300" stroke-width="2.4"/></svg>Pistón</a>
     <ul><li><a href="#servicios">Servicios</a></li><li><a href="#proceso">Cómo trabajamos</a></li><li><a href="#flotillas">Flotillas</a></li><li><a href="#ubicacion">Ubicación</a></li><li><a href="#preguntas">Preguntas</a></li></ul>
     <a class="btn btn-main" data-m="destello" href="#contacto">Cotizar</a>
     <div data-m="avance" aria-hidden="true"></div>
@@ -270,10 +270,10 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
     <div class="hero-copy" data-x>
       <span class="xtag"><b>SEO local</b>El título dice qué eres y dónde: "Taller mecánico en Mexicali". Es justo lo que la gente escribe en Google cuando se le descompone el carro.</span>
       <span class="pill"><i></i>Diagnóstico por computadora · Mexicali</span>
-      <h1>Taller mecánico en Mexicali <em>sin letras chiquitas.</em></h1>
+      <h1><span data-fill="tagline">Taller mecánico en Mexicali</span> <em>sin letras chiquitas.</em></h1>
       <p class="lead">Revisamos tu auto, te mandamos la cotización por escrito antes de tocar nada y te enseñamos con fotos cada pieza que cambiamos.</p>
       <div class="ctas">
-        <a class="btn btn-main" href="#contacto">Cotizar por WhatsApp</a>
+        <a class="btn btn-main" href="#contacto" data-fill="whatsapp">Cotizar por WhatsApp</a>
         <a class="btn btn-soft" href="#servicios">Ver servicios</a>
       </div>
       <div class="trust"><span><b>Lun a Sáb</b></span><span><b>Cotización</b> por escrito</span><span><b>Flotillas</b> empresariales</span></div>
@@ -301,7 +301,7 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
       <span class="kicker" data-m="linea">Servicios</span>
       <h2 data-m="palabras">Lo que reparamos todos los días</h2>
     </div>
-    <div class="services" data-m="cascada">
+    <div class="services" data-m="cascada" data-fill="services">
       <article class="svc" data-m="enfoque inclinar"><span class="num">01</span><span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#F5A524" stroke-width="1.9" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.5"/><path d="M12 4v3M20 12h-3M12 20v-3M4 12h3"/></svg></span><h3>Frenos</h3><p>Balatas, discos, tambores y líquido. Te decimos cuánto les queda antes de cambiar algo.</p></article>
       <article class="svc" data-m="enfoque inclinar"><span class="num">02</span><span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#F5A524" stroke-width="1.9" stroke-linecap="round"><path d="M12 3v3M12 18v3M8 6h8M8 18h8M9 9l6 1.5M9 12l6 1.5M9 15l6-1.5"/></svg></span><h3>Suspensión y dirección</h3><p>Amortiguadores, bujes, rótulas y alineación para que tu auto deje de golpear y jalar.</p></article>
       <article class="svc" data-m="enfoque inclinar"><span class="num">03</span><span class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#F5A524" stroke-width="1.9" stroke-linecap="round"><path d="M10 3h4v4h-4zM12 7v4M8 11h8l-1 4H9zM12 15v6"/></svg></span><h3>Afinación</h3><p>Bujías, filtros, inyectores y revisión general para que tu motor rinda y gaste menos.</p></article>
@@ -411,13 +411,13 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
     <div class="loc">
       <div class="card" data-m="enfoque">
         <span class="today" id="today">Horario</span>
-        <b style="font-size:19px">Taller Mecánico Pistón (ejemplo)</b>
-        <span style="color:var(--steel)">Dirección de ejemplo, Mexicali, Baja California<br>Teléfono del cliente</span>
-        <div class="hours"><span>Lunes a viernes</span><span>8:00 a. m. – 6:00 p. m.</span><span>Sábado</span><span>8:00 a. m. – 2:00 p. m.</span><span>Domingo</span><span>Cerrado</span></div>
-        <a class="btn btn-soft" style="align-self:flex-start" href="#">Cómo llegar en Google Maps</a>
+        <b style="font-size:19px" data-fill="name">Taller Mecánico Pistón (ejemplo)</b>
+        <span style="color:var(--steel)"><span data-fill="address">Dirección de ejemplo</span>, <span data-fill="city">Mexicali</span>, Baja California<br><span data-fill="phone">Teléfono del cliente</span></span>
+        <div class="hours" data-fill="hours"><span>Lunes a viernes</span><span>8:00 a. m. – 6:00 p. m.</span><span>Sábado</span><span>8:00 a. m. – 2:00 p. m.</span><span>Domingo</span><span>Cerrado</span></div>
+        <a class="btn btn-soft" style="align-self:flex-start" href="#" data-fill="maplink">Cómo llegar en Google Maps</a>
       </div>
       <div class="mapcol">
-        <div class="map" data-m="enfoque" aria-label="Espacio para el mapa de Google del taller">
+        <div class="map" data-m="enfoque" data-fill="map" aria-label="Espacio para el mapa de Google del taller">
           <svg viewBox="0 0 600 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
             <g stroke="#262B32" stroke-width="14" fill="none"><path d="M-10 70h620M-10 190h620M90-10v320M260-10v320M430-10v320M-10 300L600 20"/></g>
             <g stroke="#3A414B" stroke-width="2" stroke-dasharray="10 10" fill="none"><path d="M-10 190h620M260-10v320"/></g>
@@ -455,7 +455,7 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
     <div class="cta">
       <h2 data-m="palabras">¿Tu auto hace un ruido raro?</h2>
       <p>Mándanos un audio o un video por WhatsApp. Te decimos qué puede ser y cuándo traerlo.</p>
-      <a class="btn btn-main" data-m="destello" href="#contacto">Escribir por WhatsApp</a>
+      <a class="btn btn-main" data-m="destello" href="#contacto" data-fill="whatsapp">Escribir por WhatsApp</a>
     </div>
   </div>
 </section>
@@ -464,13 +464,13 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
 <footer>
   <div class="wrap" data-x>
     <span class="xtag"><b>Datos estructurados</b>Escondida en el código va una ficha "AutoRepair" con servicios, horario y ubicación, más tus preguntas frecuentes. Google y la IA la leen directo.</span>
-    <span>Taller Mecánico Pistón (ejemplo) · Mexicali, Baja California</span>
+    <span><span data-fill="name">Taller Mecánico Pistón (ejemplo)</span> · <span data-fill="city">Mexicali</span>, Baja California</span>
     <span class="legal">Aviso de privacidad · Garantía por escrito según el servicio: términos del cliente · Precios, cifras y reseñas de ejemplo.</span>
     <span class="legal">Página de ejemplo hecha por TuWebPronto.</span>
   </div>
 </footer>
 
-<a class="wa" href="#contacto" aria-label="Cotizar por WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></a>
+<a class="wa" href="#contacto" aria-label="Cotizar por WhatsApp" data-fill="whatsapp"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></a>
 
 <button class="xbtn" id="xbtn" type="button" aria-expanded="false" aria-controls="panel"><i></i>¿Qué tiene esta página?</button>
 <div class="panel" id="panel" hidden>

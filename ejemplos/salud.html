@@ -165,11 +165,11 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
 </head>
 <body>
 
-<div class="ejemplo">Página de ejemplo de TuWebPronto para el sector salud. Negocio, reseñas y datos son ilustrativos. <a href="../index.html">← Volver a TuWebPronto</a></div>
+<div class="ejemplo" data-fill="banner">Página de ejemplo de TuWebPronto para el sector salud. Negocio, reseñas y datos son ilustrativos. <a href="../index.html">← Volver a TuWebPronto</a></div>
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#inicio"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="10" fill="#0E9F94"/><path d="M10 11c0-2 2-3 3.5-2.4L16 9.6l2.5-1c1.5-.6 3.5.4 3.5 2.4 0 3-1 4.5-1.6 7.5-.4 2-1 4.5-2 4.5s-1-3-2.4-3-1.4 3-2.4 3-1.6-2.5-2-4.5C11 15.5 10 14 10 11z" fill="#fff"/></svg>Sonrisa Clara</a>
+    <a class="brand" href="#inicio" data-fill="logo name"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="10" fill="#0E9F94"/><path d="M10 11c0-2 2-3 3.5-2.4L16 9.6l2.5-1c1.5-.6 3.5.4 3.5 2.4 0 3-1 4.5-1.6 7.5-.4 2-1 4.5-2 4.5s-1-3-2.4-3-1.4 3-2.4 3-1.6-2.5-2-4.5C11 15.5 10 14 10 11z" fill="#fff"/></svg>Sonrisa Clara</a>
     <ul><li><a href="#servicios">Servicios</a></li><li><a href="#nosotros">Nosotros</a></li><li><a href="#resenas">Reseñas</a></li><li><a href="#ubicacion">Ubicación</a></li><li><a href="#preguntas">Preguntas</a></li></ul>
     <a class="btn btn-main" data-m="destello" href="#cita">Agendar cita</a>
     <div data-m="avance" aria-hidden="true"></div>
@@ -182,10 +182,10 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
     <div class="hero-copy" data-x>
       <span class="xtag"><b>SEO local</b>El título dice qué eres y dónde: "Dentista en Mexicali". Es lo que la gente escribe en Google.</span>
       <span class="pill"><i></i>Citas disponibles esta semana</span>
-      <h1>Tu dentista en Mexicali, <em>sin miedo y sin prisas.</em></h1>
-      <p class="lead">Limpieza, blanqueamiento, ortodoncia e implantes con un equipo que te explica todo antes de empezar.</p>
+      <h1><span data-fill="tagline">Tu dentista en Mexicali</span>, <em data-fill="tagline-em">sin miedo y sin prisas.</em></h1>
+      <p class="lead" data-fill="lead">Limpieza, blanqueamiento, ortodoncia e implantes con un equipo que te explica todo antes de empezar.</p>
       <div class="ctas">
-        <a class="btn btn-main" data-m="destello" href="#cita">Agendar por WhatsApp</a>
+        <a class="btn btn-main" data-m="destello" href="#cita" data-fill="whatsapp">Agendar por WhatsApp</a>
         <a class="btn btn-soft" href="#servicios">Ver servicios</a>
       </div>
       <div class="trust"><span><b>Lun a Sáb</b> · horario extendido</span><span><b>Niños y adultos</b></span><span><b>Estacionamiento</b></span></div>
@@ -211,7 +211,7 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
       <span class="kicker" data-m="linea">Servicios</span>
       <h2 data-m="palabras">Todo lo que tu sonrisa necesita, en un solo lugar</h2>
     </div>
-    <div class="services" data-m="cascada">
+    <div class="services" data-m="cascada" data-fill="services">
       <article class="svc" data-m="enfoque levantar"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0E9F94" stroke-width="2" stroke-linecap="round"><path d="M4 20l7-7M14 4l6 6-7 7-6-6z"/></svg></span><h3>Limpieza dental</h3><p>Quitamos sarro y manchas para cuidar tus encías. Recomendada cada 6 meses.</p></article>
       <article class="svc" data-m="enfoque levantar"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0E9F94" stroke-width="2" stroke-linecap="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg></span><h3>Blanqueamiento</h3><p>Un tono más claro con un procedimiento supervisado y seguro.</p></article>
       <article class="svc" data-m="enfoque levantar"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0E9F94" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M6 9v6M10 9v6M14 9v6M18 9v6"/></svg></span><h3>Ortodoncia</h3><p>Brackets y alineadores. Te mostramos las opciones y el plan desde la primera cita.</p></article>
@@ -288,12 +288,13 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
     </div>
     <div class="loc">
       <div class="box" data-m="enfoque">
-        <b>Clínica Sonrisa Clara (ejemplo)</b>
-        <span style="color:var(--muted)">Dirección de ejemplo, Mexicali, Baja California</span>
-        <div class="hours"><span>Lunes a viernes</span><span>9:00 a. m. – 7:00 p. m.</span><span>Sábado</span><span>9:00 a. m. – 2:00 p. m.</span><span>Domingo</span><span>Cerrado</span></div>
-        <a class="btn btn-soft" style="align-self:flex-start" href="#ubicacion">Cómo llegar en Google Maps</a>
+        <b data-fill="name">Clínica Sonrisa Clara (ejemplo)</b>
+        <span style="color:var(--muted)"><span data-fill="address">Dirección de ejemplo</span>, <span data-fill="city">Mexicali</span>, Baja California</span>
+        <span style="color:var(--muted)" data-fill="phone" hidden></span>
+        <div class="hours" data-fill="hours"><span>Lunes a viernes</span><span>9:00 a. m. – 7:00 p. m.</span><span>Sábado</span><span>9:00 a. m. – 2:00 p. m.</span><span>Domingo</span><span>Cerrado</span></div>
+        <a class="btn btn-soft" style="align-self:flex-start" href="#ubicacion" data-fill="maplink">Cómo llegar en Google Maps</a>
       </div>
-      <div class="map" data-m="enfoque"><span>Tu mapa va aquí<small>Botón a Google Maps</small></span></div>
+      <div class="map" data-m="enfoque" data-fill="map"><span>Tu mapa va aquí<small>Botón a Google Maps</small></span></div>
     </div>
   </div>
 </section>
@@ -320,7 +321,7 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
       <span class="xtag"><b>Medición</b>Cada clic en WhatsApp se cuenta (Google Analytics). Así sabes cuántos pacientes llegan por la página.</span>
       <h2 data-m="palabras">Agenda tu cita hoy</h2>
       <p style="max-width:52ch;opacity:.9">Escríbenos por WhatsApp y te damos el primer horario disponible.</p>
-      <a class="btn btn-main" data-m="destello" href="#cita">Agendar por WhatsApp</a>
+      <a class="btn btn-main" data-m="destello" href="#cita" data-fill="whatsapp">Agendar por WhatsApp</a>
     </div>
   </div>
 </section>
@@ -329,13 +330,13 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
 <footer>
   <div class="wrap" data-x>
     <span class="xtag"><b>Legal y salud</b>Aviso de privacidad, cédulas y permiso de publicidad de COFEPRIS cuando aplica. Sin promesas de resultados.</span>
-    <span>Clínica Sonrisa Clara (ejemplo) · Mexicali, Baja California</span>
+    <span><span data-fill="name">Clínica Sonrisa Clara (ejemplo)</span> · <span data-fill="city">Mexicali</span>, Baja California</span>
     <span class="legal">Responsable sanitario y cédula: datos del cliente · Aviso de publicidad COFEPRIS: número del cliente, si aplica · Aviso de privacidad</span>
     <span class="legal">Página de ejemplo hecha por TuWebPronto.</span>
   </div>
 </footer>
 
-<a class="wa" href="#cita" aria-label="Agendar por WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></a>
+<a class="wa" href="#cita" aria-label="Agendar por WhatsApp" data-fill="whatsapp"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></a>
 
 <button class="xbtn" id="xbtn" type="button" aria-expanded="false" aria-controls="panel"><i></i>¿Qué tiene esta página?</button>
 <div class="panel" id="panel" hidden>

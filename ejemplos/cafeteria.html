@@ -251,11 +251,11 @@ footer .legal{font-size:13px}
 </head>
 <body>
 
-<div class="ejemplo">Página de ejemplo de TuWebPronto para cafeterías. Negocio, precios y reseñas son ilustrativos. <a href="../index.html">← Volver a TuWebPronto</a></div>
+<div class="ejemplo" data-fill="banner">Página de ejemplo de TuWebPronto para cafeterías. Negocio, precios y reseñas son ilustrativos. <a href="../index.html">← Volver a TuWebPronto</a></div>
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#inicio"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#EFE6DA"/><ellipse cx="16" cy="16" rx="7" ry="10" fill="#22140E" transform="rotate(25 16 16)"/><path d="M18.5 7.5c-4 4-.5 12.5-5 17" stroke="#EFE6DA" stroke-width="1.8" fill="none"/></svg>Grano Norte</a>
+    <a class="brand" href="#inicio" data-fill="logo name"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#EFE6DA"/><ellipse cx="16" cy="16" rx="7" ry="10" fill="#22140E" transform="rotate(25 16 16)"/><path d="M18.5 7.5c-4 4-.5 12.5-5 17" stroke="#EFE6DA" stroke-width="1.8" fill="none"/></svg>Grano Norte</a>
     <ul><li><a href="#menu">Menú</a></li><li><a href="#origen">Origen</a></li><li><a href="#pedido">Para llevar</a></li><li><a href="#horario">Horario</a></li><li><a href="#preguntas">Preguntas</a></li></ul>
     <a class="btn btn-main" data-m="destello" href="#pedido">Pedir</a>
     <div data-m="avance" aria-hidden="true"></div>
@@ -272,7 +272,7 @@ footer .legal{font-size:13px}
     <div class="hero-copy" data-x>
       <span class="xtag"><b>SEO local</b>El título dice qué eres y dónde: "Cafetería en Mexicali". Así te encuentran cuando alguien busca un café cerca.</span>
       <span class="open"><i></i><span id="openNow">Abierto hoy desde las 7:00 a. m.</span></span>
-      <h1>Cafetería en Mexicali para tomarse <em>el café con calma.</em></h1>
+      <h1><span data-fill="tagline">Cafetería en Mexicali</span> para tomarse <em>el café con calma.</em></h1>
       <p class="lead">Café de especialidad, bebidas frías para el calor y pan dulce de la casa. Quédate a trabajar o pide para llevar por WhatsApp.</p>
       <div class="ctas">
         <a class="btn btn-main" data-m="destello" href="#pedido">Pedir para llevar</a>
@@ -327,7 +327,7 @@ footer .legal{font-size:13px}
       <span class="kicker" data-m="linea">Menú destacado</span>
       <h2 data-m="palabras">Los favoritos de la barra</h2>
     </div>
-    <div class="menu" data-m="cascada">
+    <div class="menu" data-m="cascada" data-fill="services">
       <article class="item" data-m="enfoque inclinar">
         <div class="ill" style="background:#E3D3BF">
           <svg viewBox="0 0 120 120" aria-hidden="true"><ellipse cx="60" cy="98" rx="40" ry="8" fill="#C9B49B"/><path d="M34 54h52c0 22-8 38-26 38S34 76 34 54z" fill="#FFFDF9" stroke="#22140E" stroke-width="2.5"/><path d="M85 60c12 0 12 16 0 16" fill="none" stroke="#22140E" stroke-width="2.5"/><ellipse cx="60" cy="54" rx="26" ry="5" fill="#B5764A" stroke="#22140E" stroke-width="2.5"/><path d="M52 40c-6-6 4-10-2-16M66 40c-6-6 4-10-2-16" stroke="#9A8676" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
@@ -394,13 +394,13 @@ footer .legal{font-size:13px}
         <li><span><b>Mándalo por WhatsApp</b><small>Te confirmamos el total y la hora.</small></span></li>
         <li><span><b>Pasa sin hacer fila</b><small>Tu pedido te espera listo en barra.</small></span></li>
       </ol>
-      <a class="btn btn-main" href="#pedido">Mandar pedido por WhatsApp</a>
+      <a class="btn btn-main" href="#pedido" data-fill="whatsapp">Mandar pedido por WhatsApp</a>
     </div>
     <div class="printer" id="printer" role="img" aria-label="Ticket de ejemplo: latte frío, cold brew y dos conchas, con precios de ejemplo">
-      <div class="pbody"><b>Grano Norte</b><span class="pled"></span><span class="slot"></span></div>
+      <div class="pbody"><b data-fill="name">Grano Norte</b><span class="pled"></span><span class="slot"></span></div>
       <div class="feed">
         <div class="paper">
-          <div class="shop">Café Grano Norte</div>
+          <div class="shop" data-fill="name">Café Grano Norte</div>
           <div class="c">(ejemplo) · Mexicali</div>
           <div class="c">Pedido para llevar · #000</div>
           <hr>
@@ -451,7 +451,7 @@ footer .legal{font-size:13px}
         <h2 data-m="palabras">Desde el primer café hasta el último</h2>
         <p class="lead">Baja la página y mira el reloj: así va nuestro día.</p>
       </div>
-      <dl class="hlist">
+      <dl class="hlist" data-fill="hours">
         <dt>Lunes a viernes</dt><dd>7:00 a. m. – 9:00 p. m.</dd>
         <dt>Sábado y domingo</dt><dd>8:00 a. m. – 8:00 p. m.</dd>
         <dt>Días festivos</dt><dd>Horario del cliente</dd>
@@ -467,7 +467,7 @@ footer .legal{font-size:13px}
       <h2 data-m="palabras">Encuéntranos en Mexicali</h2>
     </div>
     <div class="loc">
-      <div class="map" data-m="enfoque" aria-label="Espacio para el mapa de Google de la cafetería">
+      <div class="map" data-m="enfoque" data-fill="map" aria-label="Espacio para el mapa de Google de la cafetería">
         <svg viewBox="0 0 600 340" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
           <rect width="600" height="340" fill="#E2DDD6"/>
           <g fill="#D6CFC6"><rect x="20" y="20" width="150" height="90" rx="10"/><rect x="200" y="20" width="180" height="90" rx="10"/><rect x="410" y="20" width="170" height="90" rx="10"/><rect x="20" y="140" width="150" height="180" rx="10"/><rect x="410" y="140" width="170" height="180" rx="10"/><rect x="200" y="230" width="180" height="90" rx="10"/></g>
@@ -476,10 +476,10 @@ footer .legal{font-size:13px}
           <path d="M290 172c-14-16-22-26-22-38a22 22 0 0 1 44 0c0 12-8 22-22 38z" fill="#2F5BEA"/>
           <circle cx="290" cy="134" r="7" fill="#fff"/>
         </svg>
-        <div class="lbl"><span>Aquí va el mapa de Google de la cafetería</span><a class="btn btn-main" style="padding:10px 16px;font-size:14px" href="#">Cómo llegar en Google Maps</a></div>
+        <div class="lbl"><span>Aquí va el mapa de Google de la cafetería</span><a class="btn btn-main" style="padding:10px 16px;font-size:14px" href="#" data-fill="maplink">Cómo llegar en Google Maps</a></div>
       </div>
       <div class="side">
-        <div class="addr" data-m="enfoque"><b>Café Grano Norte (ejemplo)</b><span>Dirección de ejemplo, Mexicali, Baja California</span><span>Teléfono del cliente</span><span>Estacionamiento: dato del cliente</span></div>
+        <div class="addr" data-m="enfoque"><b data-fill="name">Café Grano Norte (ejemplo)</b><span><span data-fill="address">Dirección de ejemplo</span>, <span data-fill="city">Mexicali</span>, Baja California</span><span data-fill="phone">Teléfono del cliente</span><span>Estacionamiento: dato del cliente</span></div>
         <div class="ph" data-m="enfoque"><b>Tu foto va aquí</b><small>Foto de la fachada y la entrada</small></div>
       </div>
     </div>
@@ -532,7 +532,7 @@ footer .legal{font-size:13px}
       <div>
         <h2 data-m="palabras">Tu café ya puede ir saliendo</h2>
         <p>Escríbenos lo que se te antoja y te avisamos cuando esté listo en barra.</p>
-        <a class="btn btn-main" data-m="destello" href="#contacto">Pedir por WhatsApp</a>
+        <a class="btn btn-main" data-m="destello" href="#contacto" data-fill="whatsapp">Pedir por WhatsApp</a>
       </div>
       <svg class="ice" viewBox="0 0 120 160" aria-hidden="true"><path d="M78 6l-8 50" stroke="#fff" stroke-width="6" stroke-linecap="round"/><path d="M28 40h64l-8 112H36z" fill="rgba(255,255,255,.14)" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><path d="M31.5 84h57L84 152H36z" fill="#C08A5B"/><path d="M30.5 60h59l-1.6 26c-14 6-42-6-56 0z" fill="#F1E3D1"/><rect x="40" y="50" width="20" height="18" rx="4" fill="rgba(255,255,255,.5)" transform="rotate(-12 50 59)"/><rect x="60" y="64" width="18" height="16" rx="4" fill="rgba(255,255,255,.5)" transform="rotate(12 69 72)"/></svg>
     </div>
@@ -543,13 +543,13 @@ footer .legal{font-size:13px}
 <footer>
   <div class="wrap" data-x>
     <span class="xtag"><b>Datos estructurados</b>Escondida en el código va una ficha de "cafetería" con menú, horario y ubicación, más tus preguntas frecuentes. Google y la IA la leen directo.</span>
-    <span>Café Grano Norte (ejemplo) · Mexicali, Baja California</span>
+    <span><span data-fill="name">Café Grano Norte (ejemplo)</span> · <span data-fill="city">Mexicali</span>, Baja California</span>
     <span class="legal">Aviso de privacidad · Precios, horarios y reseñas de ejemplo · Formas de pago: datos del cliente.</span>
     <span class="legal">Página de ejemplo hecha por TuWebPronto.</span>
   </div>
 </footer>
 
-<a class="wa" href="#pedido" aria-label="Pedir por WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></a>
+<a class="wa" href="#pedido" aria-label="Pedir por WhatsApp" data-fill="whatsapp"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></a>
 
 <button class="xbtn" id="xbtn" type="button" aria-expanded="false" aria-controls="panel"><i></i>¿Qué tiene esta página?</button>
 <div class="panel" id="panel" hidden>

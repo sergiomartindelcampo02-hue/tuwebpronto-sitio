@@ -274,11 +274,11 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
 </head>
 <body>
 
-<div class="ejemplo">Página de ejemplo de TuWebPronto para escuelas y colegios. Escuela, reseñas y datos son ilustrativos. <a href="../index.html">← Volver a TuWebPronto</a></div>
+<div class="ejemplo" data-fill="banner">Página de ejemplo de TuWebPronto para escuelas y colegios. Escuela, reseñas y datos son ilustrativos. <a href="../index.html">← Volver a TuWebPronto</a></div>
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#inicio"><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15.5" fill="#FFC83D" stroke="#13306B" stroke-width="2.5"/><path d="M17 6l3.6 11L17 28l-3.6-11z" fill="#13306B"/><path d="M17 6l3.6 11h-7.2z" fill="#FF6B57"/><circle cx="17" cy="17" r="2" fill="#fff"/></svg>Colegio Brújula</a>
+    <a class="brand" href="#inicio" data-fill="logo name"><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15.5" fill="#FFC83D" stroke="#13306B" stroke-width="2.5"/><path d="M17 6l3.6 11L17 28l-3.6-11z" fill="#13306B"/><path d="M17 6l3.6 11h-7.2z" fill="#FF6B57"/><circle cx="17" cy="17" r="2" fill="#fff"/></svg>Colegio Brújula</a>
     <ul><li><a href="#niveles">Niveles</a></li><li><a href="#modelo">Modelo</a></li><li><a href="#instalaciones">Instalaciones</a></li><li><a href="#inscripciones">Inscripciones</a></li><li><a href="#preguntas">Preguntas</a></li></ul>
     <a class="btn btn-main" data-m="destello" href="#visita">Agenda tu visita</a>
     <div data-m="avance" aria-hidden="true"></div>
@@ -299,7 +299,7 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
   <div class="wrap">
     <div class="hero-copy" data-x>
       <span class="xtag"><b>SEO local</b>El título dice qué es y dónde: "Colegio bilingüe en Mexicali". Es justo lo que escriben los papás en Google.</span>
-      <h1 id="h1" class="hero-in"><span class="sub">Colegio bilingüe en Mexicali</span><span class="big">Aprender aquí se siente como una <span class="hl">aventura<svg viewBox="0 0 200 20" preserveAspectRatio="none" class="dd" style="position:absolute"><path pathLength="1" d="M4 14C50 4 120 2 196 10" stroke="#FFC83D" stroke-width="14" style="--dl:.6s"/></svg></span></span></h1>
+      <h1 id="h1" class="hero-in"><span class="sub" data-fill="tagline">Colegio bilingüe en Mexicali</span><span class="big">Aprender aquí se siente como una <span class="hl">aventura<svg viewBox="0 0 200 20" preserveAspectRatio="none" class="dd" style="position:absolute"><path pathLength="1" d="M4 14C50 4 120 2 196 10" stroke="#FFC83D" stroke-width="14" style="--dl:.6s"/></svg></span></span></h1>
       <p class="lead hero-in d2">Maternal, preescolar, primaria y secundaria. Inglés todos los días, proyectos STEAM y valores que se viven en el salón y en el patio.</p>
       <div class="ctas hero-in d3">
         <a class="btn btn-main" data-m="destello" href="#visita">Agenda tu visita</a>
@@ -318,7 +318,7 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
       <h2 data-m="palabras">Una escuela para cada etapa</h2>
       <p class="lead">Toca cada tarjeta para ver lo que vive tu hijo en ese nivel.</p>
     </div>
-    <div class="flips" data-m="cascada">
+    <div class="flips" data-m="cascada" data-fill="services">
       <article class="nivel n1" data-m="enfoque">
         <div class="inner">
           <div class="face front">
@@ -478,13 +478,14 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
     </div>
     <div class="loc">
       <div class="box" data-m="enfoque">
-        <h3>Colegio Brújula (ejemplo)</h3>
-        <span style="color:var(--muted)">Dirección de ejemplo, Mexicali, Baja California</span>
-        <div class="hours"><span>Lunes a viernes</span><span>7:30 a. m. – 3:00 p. m.</span><span>Sábado</span><span>Visitas con cita</span><span>Domingo</span><span>Cerrado</span></div>
+        <h3 data-fill="name">Colegio Brújula (ejemplo)</h3>
+        <span style="color:var(--muted)"><span data-fill="address">Dirección de ejemplo</span>, <span data-fill="city">Mexicali</span>, Baja California</span>
+        <span style="color:var(--muted)" data-fill="phone" hidden></span>
+        <div class="hours" data-fill="hours"><span>Lunes a viernes</span><span>7:30 a. m. – 3:00 p. m.</span><span>Sábado</span><span>Visitas con cita</span><span>Domingo</span><span>Cerrado</span></div>
         <p style="font-size:14px;color:var(--muted)">Horario de oficina para informes e inscripciones. El horario de clases depende del nivel.</p>
-        <a class="btn btn-soft" style="align-self:flex-start" href="#">Cómo llegar en Google Maps</a>
+        <a class="btn btn-soft" style="align-self:flex-start" href="#" data-fill="maplink">Cómo llegar en Google Maps</a>
       </div>
-      <div class="map" data-m="enfoque" aria-label="Mapa ilustrativo">
+      <div class="map" data-m="enfoque" data-fill="map" aria-label="Mapa ilustrativo">
         <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
           <rect width="400" height="300" fill="#E6F0FF"/>
           <path d="M-10 90H410M-10 210H410M120 -10V310M290 -10V310" stroke="#fff" stroke-width="22"/>
@@ -527,7 +528,7 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
       <span class="kicker" style="color:var(--navy)">Inscripciones abiertas</span>
       <h2 data-m="palabras">Agenda tu visita</h2>
       <p>Ven con tu hijo, recorre la escuela y resuelve todas tus dudas. Te contestamos por WhatsApp.</p>
-      <a class="btn btn-navy" data-m="destello" href="#visita">Agendar visita por WhatsApp</a>
+      <a class="btn btn-navy" data-m="destello" href="#visita" data-fill="whatsapp">Agendar visita por WhatsApp</a>
     </div>
   </div>
 </section>
@@ -536,13 +537,13 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
 <footer>
   <div class="wrap" data-x>
     <span class="xtag"><b>Legal y privacidad de menores</b>Aviso de privacidad que cubre datos de alumnos, clave oficial de la escuela y reglas claras sobre fotos.</span>
-    <span>Colegio Brújula (ejemplo) · Mexicali, Baja California</span>
+    <span><span data-fill="name">Colegio Brújula (ejemplo)</span> · <span data-fill="city">Mexicali</span>, Baja California</span>
     <span class="legal">Clave de centro de trabajo (SEP): dato del cliente · Aviso de privacidad (incluye datos de menores) · Fotos de alumnos solo con permiso por escrito de sus papás o tutores.</span>
     <span class="legal">Página de ejemplo hecha por TuWebPronto.</span>
   </div>
 </footer>
 
-<a class="wa" href="#visita" aria-label="Agendar visita por WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></a>
+<a class="wa" href="#visita" aria-label="Agendar visita por WhatsApp" data-fill="whatsapp"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></a>
 
 <button class="xbtn" id="xbtn" type="button" aria-expanded="false" aria-controls="panel"><i></i>¿Qué tiene esta página?</button>
 <div class="panel" id="panel" hidden>

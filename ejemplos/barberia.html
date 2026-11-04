@@ -249,11 +249,11 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
 </head>
 <body>
 
-<div class="ejemplo">Página de ejemplo de TuWebPronto para barberías y belleza. Negocio, precios y reseñas son ilustrativos. <a href="../index.html">← Volver a TuWebPronto</a></div>
+<div class="ejemplo" data-fill="banner">Página de ejemplo de TuWebPronto para barberías y belleza. Negocio, precios y reseñas son ilustrativos. <a href="../index.html">← Volver a TuWebPronto</a></div>
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#inicio"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D7263D" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/><path d="M8.2 16 19 3M15.8 16 5 3"/></svg>Navaja</a>
+    <a class="brand" href="#inicio" data-fill="logo name"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D7263D" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/><path d="M8.2 16 19 3M15.8 16 5 3"/></svg>Navaja</a>
     <ul><li><a href="#servicios">Servicios</a></li><li><a href="#trabajos">Trabajos</a></li><li><a href="#equipo">Equipo</a></li><li><a href="#ubicacion">Horario</a></li><li><a href="#preguntas">Preguntas</a></li></ul>
     <a class="btn btn-main" href="#agenda">Agendar</a>
   </div>
@@ -265,7 +265,7 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
     <div class="hero-main" data-x>
       <span class="xtag"><b>SEO local</b>El título dice qué eres y dónde: "Barbería en Mexicali". Es lo que la gente escribe en Google cuando busca dónde cortarse.</span>
       <div class="hero-top">
-        <h1><span class="h1s">Barbería en Mexicali</span>Corte<br>limpio.<br><span class="out">Sin</span> <span class="red">vueltas.</span></h1>
+        <h1><span class="h1s" data-fill="tagline">Barbería en Mexicali</span>Corte<br>limpio.<br><span class="out">Sin</span> <span class="red">vueltas.</span></h1>
         <div class="pole" id="pole" aria-hidden="true"><span class="cap"></span><div class="tube"><div class="stripes base"></div><div class="stripes live"></div><div class="gloss"></div></div><span class="cap bot"></span><span class="pole-pct" id="polePct">0%</span></div>
       </div>
     </div>
@@ -298,7 +298,7 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
       <span class="kicker" data-m="linea"><b>01</b> Servicios</span>
       <h2 data-m="palabras">Lo que hacemos <span class="red">bien</span></h2>
     </div>
-    <ul class="svc-list" data-m="cascada">
+    <ul class="svc-list" data-m="cascada" data-fill="services">
       <li class="svc" data-m="enfoque"><span class="n">01</span><h3>Corte clásico</h3><p>Tijera y máquina, lavado y peinado. El corte de siempre, bien hecho.</p><span class="dur">40 min</span><span class="pr">precio de ejemplo</span></li>
       <li class="svc" data-m="enfoque"><span class="n">02</span><h3>Fade</h3><p>Degradado bajo, medio o alto, con navaja en el contorno.</p><span class="dur">45 min</span><span class="pr">precio de ejemplo</span></li>
       <li class="svc" data-m="enfoque"><span class="n">03</span><h3>Barba</h3><p>Perfilado, rebaje y aceite. Toalla caliente incluida.</p><span class="dur">30 min</span><span class="pr">precio de ejemplo</span></li>
@@ -352,7 +352,7 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
         <span class="kicker"><b>04</b> Agenda tu cita</span>
         <h2 data-m="palabras" style="margin-top:14px">Tu hora, <span class="red">sin esperar</span></h2>
         <div class="ctas">
-          <a class="btn btn-main" data-m="destello" href="#agenda">Agendar por WhatsApp</a>
+          <a class="btn btn-main" data-m="destello" href="#agenda" data-fill="whatsapp">Agendar por WhatsApp</a>
           <a class="btn btn-ghost" href="#ubicacion">Ver horario</a>
         </div>
       </div>
@@ -390,15 +390,16 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
     </div>
     <div class="loc">
       <div class="box" data-m="enfoque">
-        <h3>Barbería Navaja (ejemplo)</h3>
-        <span style="color:var(--muted)">Dirección de ejemplo, Mexicali, Baja California</span>
-        <div class="hours"><span>Lunes a viernes</span><span>10:00 a. m. – 8:00 p. m.</span><span>Sábado</span><span>9:00 a. m. – 6:00 p. m.</span><span>Domingo</span><span>Cerrado</span></div>
+        <h3 data-fill="name">Barbería Navaja (ejemplo)</h3>
+        <span style="color:var(--muted)"><span data-fill="address">Dirección de ejemplo</span>, <span data-fill="city">Mexicali</span>, Baja California</span>
+        <span style="color:var(--muted)" data-fill="phone" hidden></span>
+        <div class="hours" data-fill="hours"><span>Lunes a viernes</span><span>10:00 a. m. – 8:00 p. m.</span><span>Sábado</span><span>9:00 a. m. – 6:00 p. m.</span><span>Domingo</span><span>Cerrado</span></div>
         <span style="color:var(--muted);font-size:14px">Estacionamiento en la calle · Citas por WhatsApp</span>
       </div>
-      <div class="map" data-m="enfoque">
+      <div class="map" data-m="enfoque" data-fill="map">
         <svg width="36" height="46" viewBox="0 0 24 32" aria-hidden="true"><path d="M12 0C5.4 0 0 5.2 0 11.7 0 20.4 12 32 12 32s12-11.6 12-20.3C24 5.2 18.6 0 12 0z" fill="#D7263D"/><circle cx="12" cy="11.5" r="4.5" fill="#0B0B0C"/></svg>
         <strong>Aquí va tu mapa</strong>
-        <a class="btn btn-bone" href="#">Cómo llegar en Google Maps</a>
+        <a class="btn btn-bone" href="#" data-fill="maplink">Cómo llegar en Google Maps</a>
       </div>
     </div>
   </div>
@@ -427,7 +428,7 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
       <h2>Tu silla<br><span class="out">te</span> <span class="red">espera.</span></h2>
       <div class="cierre-row">
         <p>Escríbenos por WhatsApp, elige tu hora y llega directo a la silla.</p>
-        <a class="btn btn-main" data-m="destello" href="#agenda">Agendar por WhatsApp</a>
+        <a class="btn btn-main" data-m="destello" href="#agenda" data-fill="whatsapp">Agendar por WhatsApp</a>
       </div>
     </div>
   </div>
@@ -436,13 +437,13 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
 
 <footer>
   <div class="wrap">
-    <span>Barbería Navaja (ejemplo) · Mexicali, Baja California</span>
+    <span><span data-fill="name">Barbería Navaja (ejemplo)</span> · <span data-fill="city">Mexicali</span>, Baja California</span>
     <span class="legal">Aviso de privacidad · Precios y duración de servicios: datos del cliente · Fotos de clientes publicadas con su permiso.</span>
     <span class="legal">Página de ejemplo hecha por TuWebPronto.</span>
   </div>
 </footer>
 
-<a class="wa" href="#agenda" aria-label="Agendar por WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></a>
+<a class="wa" href="#agenda" aria-label="Agendar por WhatsApp" data-fill="whatsapp"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></a>
 
 <button class="xbtn" id="xbtn" type="button" aria-expanded="false" aria-controls="panel"><i></i>¿Qué tiene esta página?</button>
 <div class="panel" id="panel" hidden>

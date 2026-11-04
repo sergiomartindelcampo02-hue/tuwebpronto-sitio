@@ -265,11 +265,11 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
 </head>
 <body>
 
-<div class="ejemplo">Página de ejemplo de TuWebPronto para empresas de transporte y logística. Negocio, cifras y reseñas son ilustrativos. <a href="../index.html">← Volver a TuWebPronto</a></div>
+<div class="ejemplo" data-fill="banner">Página de ejemplo de TuWebPronto para empresas de transporte y logística. Negocio, cifras y reseñas son ilustrativos. <a href="../index.html">← Volver a TuWebPronto</a></div>
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#inicio"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" fill="#C6F432"/><path d="M6 22V10h12v12M18 14h5l3 4v4h-8" fill="none" stroke="#0D1B2A" stroke-width="2.2" stroke-linejoin="round"/><circle cx="11" cy="23" r="2.2" fill="#0D1B2A"/><circle cx="22" cy="23" r="2.2" fill="#0D1B2A"/></svg>Ruta Norte</a>
+    <a class="brand" href="#inicio" data-fill="logo name"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" fill="#C6F432"/><path d="M6 22V10h12v12M18 14h5l3 4v4h-8" fill="none" stroke="#0D1B2A" stroke-width="2.2" stroke-linejoin="round"/><circle cx="11" cy="23" r="2.2" fill="#0D1B2A"/><circle cx="22" cy="23" r="2.2" fill="#0D1B2A"/></svg>Ruta Norte</a>
     <ul><li><a href="#servicios">Servicios</a></li><li><a href="#flota">Flota</a></li><li><a href="#cobertura">Cobertura</a></li><li><a href="#permisos">Permisos</a></li><li><a href="#preguntas">Preguntas</a></li></ul>
     <a class="btn btn-main" data-m="destello" href="#cotizar">Cotizar</a>
     <div data-m="avance" aria-hidden="true"></div>
@@ -281,7 +281,7 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
   <div class="wrap hero-grid">
     <div class="hero-copy" data-x>
       <span class="xtag"><b>SEO local</b>El título dice qué haces y dónde: "Transporte de carga en Mexicali". Así buscan las empresas en Google.</span>
-      <span class="eyebrow">Transporte de carga en Mexicali</span>
+      <span class="eyebrow" data-fill="tagline">Transporte de carga en Mexicali</span>
       <h1>Tu carga, de Mexicali <span>al otro lado de la línea.</span></h1>
       <p class="lead">Carga completa, consolidada, cruce fronterizo y almacenaje para maquiladoras, agro y comercio en Baja California y el Valle Imperial.</p>
       <div class="ctas">
@@ -324,7 +324,7 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
         </g>
       </svg>
       <figcaption class="titleblock">
-        <div><span>Plano</span><b>Cobertura Ruta Norte</b></div>
+        <div><span>Plano</span><b>Cobertura <span data-fill="name">Ruta Norte</span></b></div>
         <div><span>Hoja</span><b>01 / 01</b></div>
         <div><span>Escala</span><b>Ilustrativa</b></div>
       </figcaption>
@@ -339,7 +339,7 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
       <span class="eyebrow" data-m="linea">Servicios</span>
       <h2 data-m="palabras">Lo que movemos y cómo lo movemos</h2>
     </div>
-    <div class="svcs" data-m="cascada">
+    <div class="svcs" data-m="cascada" data-fill="services">
       <article class="svc tick" data-m="enfoque"><span class="code">FTL</span><h3>Carga completa</h3><p>Una unidad dedicada solo a tu carga, de punto a punto.</p><ul><li>Caja seca y plataforma</li><li>Salida el mismo día, según disponibilidad</li></ul></article>
       <article class="svc tick" data-m="enfoque"><span class="code">LTL</span><h3>Carga consolidada</h3><p>Compartes la unidad y pagas solo el espacio que ocupas.</p><ul><li>Desde una tarima</li><li>Ideal para envíos frecuentes</li></ul></article>
       <article class="svc tick" data-m="enfoque"><span class="code">MX ⇄ US</span><h3>Cruce fronterizo</h3><p>Llevamos tu carga entre Mexicali y Calexico o El Centro.</p><ul><li>Coordinación con tu agente aduanal</li><li>Aviso en cada etapa del cruce</li></ul></article>
@@ -389,12 +389,13 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
         </table>
       </div>
       <div class="loc" data-m="enfoque">
-        <div class="ph mapph"><div><b>Mapa de Google</b><small>Ubicación de la bodega en Mexicali</small></div></div>
+        <div class="ph mapph" data-fill="map"><div><b>Mapa de Google</b><small>Ubicación de la bodega en Mexicali</small></div></div>
         <div style="display:flex;flex-direction:column;gap:10px">
-          <b>Transportes Ruta Norte (ejemplo)</b>
-          <span style="color:var(--ink-2)">Dirección de ejemplo, Mexicali, Baja California</span>
-          <div class="hours"><span>Lunes a viernes</span><span>7:00 a. m. – 7:00 p. m.</span><span>Sábado</span><span>8:00 a. m. – 2:00 p. m.</span></div>
-          <a class="btn btn-line" style="align-self:flex-start" href="#">Cómo llegar en Google Maps</a>
+          <b data-fill="name">Transportes Ruta Norte (ejemplo)</b>
+          <span style="color:var(--ink-2)"><span data-fill="address">Dirección de ejemplo</span>, <span data-fill="city">Mexicali</span>, Baja California</span>
+        <span style="color:var(--ink-2)" data-fill="phone" hidden></span>
+          <div class="hours" data-fill="hours"><span>Lunes a viernes</span><span>7:00 a. m. – 7:00 p. m.</span><span>Sábado</span><span>8:00 a. m. – 2:00 p. m.</span></div>
+          <a class="btn btn-line" style="align-self:flex-start" href="#" data-fill="maplink">Cómo llegar en Google Maps</a>
         </div>
       </div>
     </div>
@@ -499,13 +500,13 @@ footer .wrap{display:flex;flex-direction:column;gap:8px}
 
 <footer>
   <div class="wrap">
-    <span>Transportes Ruta Norte (ejemplo) · Mexicali, Baja California</span>
+    <span><span data-fill="name">Transportes Ruta Norte (ejemplo)</span> · <span data-fill="city">Mexicali</span>, Baja California</span>
     <span class="legal">Razón social, RFC y números de permiso: datos del cliente · Aviso de privacidad · Términos del servicio</span>
     <span class="legal">Página de ejemplo hecha por TuWebPronto.</span>
   </div>
 </footer>
 
-<a class="wa" href="#cotizar" aria-label="Cotizar por WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></a>
+<a class="wa" href="#cotizar" aria-label="Cotizar por WhatsApp" data-fill="whatsapp"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></a>
 
 <button class="xbtn" id="xbtn" type="button" aria-expanded="false" aria-controls="panel"><i></i>¿Qué tiene esta página?</button>
 <div class="panel" id="panel" hidden>

@@ -222,11 +222,11 @@ footer .brand{font-size:22px}
 </head>
 <body>
 
-<div class="ejemplo">Página de ejemplo de TuWebPronto para restaurantes. Negocio, carta, precios y reseñas son ilustrativos. <a href="../index.html">← Volver a TuWebPronto</a></div>
+<div class="ejemplo" data-fill="banner">Página de ejemplo de TuWebPronto para restaurantes. Negocio, carta, precios y reseñas son ilustrativos. <a href="../index.html">← Volver a TuWebPronto</a></div>
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#inicio">Brasa <i>&amp;</i> Sal</a>
+    <a class="brand" href="#inicio" data-fill="logo name">Brasa <i data-fill-part="name">&amp;</i> Sal</a>
     <ul><li><a href="#carta">Carta</a></li><li><a href="#experiencia">Experiencia</a></li><li><a href="#eventos">Eventos</a></li><li><a href="#ubicacion">Horario</a></li><li><a href="#preguntas">Preguntas</a></li></ul>
     <a class="btn btn-main" href="#reservar">Reservar</a>
     <div data-m="avance" aria-hidden="true"></div>
@@ -268,7 +268,7 @@ footer .brand{font-size:22px}
       </div>
       <div class="hero-copy" data-x>
         <span class="xtag"><b>SEO local</b>El título dice qué eres y dónde: "Restaurante en Mexicali". Es justo lo que la gente escribe en Google cuando busca dónde cenar.</span>
-        <h1><span class="h1s">Restaurante a la brasa en Mexicali</span>Cenar <em>sin prisa,</em> al calor del fuego.</h1>
+        <h1><span class="h1s" data-fill="tagline">Restaurante a la brasa en Mexicali</span>Cenar <em>sin prisa,</em> al calor del fuego.</h1>
         <p class="lead">Cortes a la leña, pesca del día y cocteles de la casa en un salón tranquilo para platicar. Reserva tu mesa en un mensaje.</p>
         <div class="ctas">
           <a class="btn btn-main" data-m="destello" href="#reservar">Reserva tu mesa</a>
@@ -293,7 +293,7 @@ footer .brand{font-size:22px}
         <h2>La carta</h2>
         <p>Una carta corta que cambia con la temporada. Pregunta por la pesca del día.</p>
       </div>
-      <div class="tabs" role="tablist" aria-label="Secciones de la carta">
+      <div class="tabs" role="tablist" data-fill="services-hide" aria-label="Secciones de la carta">
         <button role="tab" id="t-entradas" aria-controls="p-entradas" aria-selected="true">Entradas</button>
         <button role="tab" id="t-fuertes" aria-controls="p-fuertes" aria-selected="false" tabindex="-1">Fuertes</button>
         <button role="tab" id="t-postres" aria-controls="p-postres" aria-selected="false" tabindex="-1">Postres</button>
@@ -301,14 +301,14 @@ footer .brand{font-size:22px}
       </div>
       <div class="panels">
         <div class="tabpanel on" role="tabpanel" id="p-entradas" aria-labelledby="t-entradas">
-          <ul class="items">
+          <ul class="items" data-fill="services">
             <li class="it"><div class="it-row"><h3 class="it-name">Tuétano a la brasa</h3><span class="dots"></span><span class="pr">precio de ejemplo</span></div><p>Con tortillas de harina hechas al momento y salsa de chiltepín.</p></li>
             <li class="it"><div class="it-row"><h3 class="it-name">Tostada de atún sellado</h3><span class="dots"></span><span class="pr">precio de ejemplo</span></div><p>Atún, aguacate, cebolla morada y aceite de chile seco.</p></li>
             <li class="it"><div class="it-row"><h3 class="it-name">Queso fundido</h3><span class="dots"></span><span class="pr">precio de ejemplo</span></div><p>Con chorizo de la casa y hongos al carbón.</p></li>
             <li class="it"><div class="it-row"><h3 class="it-name">Betabel tatemado <span class="tag">Veg</span></h3><span class="dots"></span><span class="pr">precio de ejemplo</span></div><p>Requesón, nuez garapiñada y vinagreta de naranja.</p></li>
           </ul>
         </div>
-        <div class="tabpanel" role="tabpanel" id="p-fuertes" aria-labelledby="t-fuertes" aria-hidden="true" inert>
+        <div class="tabpanel" role="tabpanel" id="p-fuertes" data-fill="services-hide" aria-labelledby="t-fuertes" aria-hidden="true" inert>
           <ul class="items">
             <li class="it"><div class="it-row"><h3 class="it-name">Rib eye a la leña</h3><span class="dots"></span><span class="pr">precio de ejemplo</span></div><p>Corte madurado, papa al rescoldo y chimichurri de cilantro.</p></li>
             <li class="it"><div class="it-row"><h3 class="it-name">Pesca del día zarandeada</h3><span class="dots"></span><span class="pr">precio de ejemplo</span></div><p>Pescado entero al carbón, para compartir entre dos o tres.</p></li>
@@ -316,7 +316,7 @@ footer .brand{font-size:22px}
             <li class="it"><div class="it-row"><h3 class="it-name">Risotto de elote <span class="tag">Veg</span></h3><span class="dots"></span><span class="pr">precio de ejemplo</span></div><p>Elote asado, huitlacoche y queso añejo.</p></li>
           </ul>
         </div>
-        <div class="tabpanel" role="tabpanel" id="p-postres" aria-labelledby="t-postres" aria-hidden="true" inert>
+        <div class="tabpanel" role="tabpanel" id="p-postres" data-fill="services-hide" aria-labelledby="t-postres" aria-hidden="true" inert>
           <ul class="items">
             <li class="it"><div class="it-row"><h3 class="it-name">Pastel de elote</h3><span class="dots"></span><span class="pr">precio de ejemplo</span></div><p>Tibio, con helado de queso y miel de piloncillo.</p></li>
             <li class="it"><div class="it-row"><h3 class="it-name">Churros con cajeta</h3><span class="dots"></span><span class="pr">precio de ejemplo</span></div><p>Cajeta quemada y azúcar de canela.</p></li>
@@ -324,7 +324,7 @@ footer .brand{font-size:22px}
             <li class="it"><div class="it-row"><h3 class="it-name">Higos al fuego</h3><span class="dots"></span><span class="pr">precio de ejemplo</span></div><p>Higos asados, crema de vainilla y galleta de mantequilla.</p></li>
           </ul>
         </div>
-        <div class="tabpanel" role="tabpanel" id="p-bebidas" aria-labelledby="t-bebidas" aria-hidden="true" inert>
+        <div class="tabpanel" role="tabpanel" id="p-bebidas" data-fill="services-hide" aria-labelledby="t-bebidas" aria-hidden="true" inert>
           <ul class="items">
             <li class="it"><div class="it-row"><h3 class="it-name">Carajillo de la casa</h3><span class="dots"></span><span class="pr">precio de ejemplo</span></div><p>Espresso, licor de vainilla y un toque de canela.</p></li>
             <li class="it"><div class="it-row"><h3 class="it-name">Coctel de temporada</h3><span class="dots"></span><span class="pr">precio de ejemplo</span></div><p>Pregunta a tu mesero por el de esta semana.</p></li>
@@ -403,20 +403,21 @@ footer .brand{font-size:22px}
     </div>
     <div class="loc">
       <div class="box" data-m="enfoque">
-        <h3>Restaurante Brasa &amp; Sal (ejemplo)</h3>
-        <span style="color:var(--muted)">Dirección de ejemplo, Mexicali, Baja California</span>
+        <h3 data-fill="name">Restaurante Brasa &amp; Sal (ejemplo)</h3>
+        <span style="color:var(--muted)"><span data-fill="address">Dirección de ejemplo</span>, <span data-fill="city">Mexicali</span>, Baja California</span>
+        <span style="color:var(--muted)" data-fill="phone" hidden></span>
         <hr class="rule">
-        <div class="hours"><span>Lunes</span><span>Cerrado</span><span>Martes a jueves</span><span>1:00 p. m. – 11:00 p. m.</span><span>Viernes y sábado</span><span>1:00 p. m. – 12:00 a. m.</span><span>Domingo</span><span>1:00 p. m. – 8:00 p. m.</span></div>
+        <div class="hours" data-fill="hours"><span>Lunes</span><span>Cerrado</span><span>Martes a jueves</span><span>1:00 p. m. – 11:00 p. m.</span><span>Viernes y sábado</span><span>1:00 p. m. – 12:00 a. m.</span><span>Domingo</span><span>1:00 p. m. – 8:00 p. m.</span></div>
         <hr class="rule">
         <span style="color:var(--muted);font-size:14px">Estacionamiento para clientes · Reservaciones por WhatsApp</span>
       </div>
-      <div class="map" data-m="enfoque">
+      <div class="map" data-m="enfoque" data-fill="map">
         <svg class="streets" viewBox="0 0 600 360" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true">
           <g stroke="#C9A35B" stroke-opacity=".16" stroke-width="10"><path d="M-20 120L620 80M-20 260L620 300M140 -20L180 380M420 -20L380 380"/></g>
           <g stroke="#F1E9DA" stroke-opacity=".07" stroke-width="3"><path d="M-20 190L620 190M60 -20L80 380M280 -20L300 380M520 -20L500 380M-20 40L620 20M-20 330L620 350"/></g>
         </svg>
         <div class="pin"><svg width="34" height="44" viewBox="0 0 24 32" aria-hidden="true"><path d="M12 0C5.4 0 0 5.2 0 11.7 0 20.4 12 32 12 32s12-11.6 12-20.3C24 5.2 18.6 0 12 0z" fill="#C9A35B"/><circle cx="12" cy="11.5" r="4.5" fill="#0E241D"/></svg><span>Aquí va tu mapa</span></div>
-        <a class="btn btn-line" href="#">Cómo llegar en Google Maps</a>
+        <a class="btn btn-line" href="#" data-fill="maplink">Cómo llegar en Google Maps</a>
       </div>
     </div>
   </div>
@@ -446,7 +447,7 @@ footer .brand{font-size:22px}
       <div class="orn" style="width:min(260px,70%)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A35B" stroke-width="1.5" aria-hidden="true"><path d="M12 3c2 4 6 6 6 11a6 6 0 0 1-12 0c0-3 2-4 2-7 2 1 3 3 3 5 1-3 1-6 1-9z"/></svg></div>
       <h2 data-m="palabras">Tu mesa, <em>esta noche</em></h2>
       <p>Escríbenos por WhatsApp con el día, la hora y cuántas personas son. Te confirmamos en minutos.</p>
-      <a class="btn btn-main" data-m="destello" href="#reservar">Reservar por WhatsApp</a>
+      <a class="btn btn-main" data-m="destello" href="#reservar" data-fill="whatsapp">Reservar por WhatsApp</a>
     </div>
   </div>
 </section>
@@ -454,14 +455,14 @@ footer .brand{font-size:22px}
 
 <footer>
   <div class="wrap">
-    <span class="brand">Brasa <i>&amp;</i> Sal</span>
-    <span>Restaurante Brasa &amp; Sal (ejemplo) · Mexicali, Baja California</span>
+    <span class="brand" data-fill="name">Brasa <i data-fill-part="name">&amp;</i> Sal</span>
+    <span><span data-fill="name">Restaurante Brasa &amp; Sal (ejemplo)</span> · <span data-fill="city">Mexicali</span>, Baja California</span>
     <span class="legal">Aviso de privacidad · Precios en pesos mexicanos con IVA incluido: datos del cliente · El consumo de alcohol es solo para mayores de 18 años.</span>
     <span class="legal">Página de ejemplo hecha por TuWebPronto.</span>
   </div>
 </footer>
 
-<a class="wa" href="#reservar" aria-label="Reservar por WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></a>
+<a class="wa" href="#reservar" aria-label="Reservar por WhatsApp" data-fill="whatsapp"><svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></a>
 
 <button class="xbtn" id="xbtn" type="button" aria-expanded="false" aria-controls="panel"><i></i>¿Qué tiene esta página?</button>
 <div class="panel" id="panel" hidden>
