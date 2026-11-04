@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ve tu página antes de pagar | TuWebPronto</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#060B18;--panel:#0F172A;--line:rgba(148,163,184,.22);--fg:#F8FAFC;--muted:#94A3B8;--blue:#2563EB;--green:#22C55E;--display:"Bricolage Grotesque",system-ui,sans-serif;--body:"Figtree",system-ui,sans-serif;color-scheme:dark}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 var(--body)}
+.g{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.w{max-width:1240px;margin:0 auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+.banner{background:#FFE9A8;color:#4A3500;text-align:center;font:600 13px/1.4 var(--body);padding-block:8px}
+header{padding-block:18px;border-bottom:1px solid var(--line)}
+header .w{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;font:800 20px var(--display);text-decoration:none}
+.logo span{color:var(--green)}
+.layout{display:grid;grid-template-columns:380px minmax(0,1fr);gap:28px;padding-block:28px 60px}
+h1{font:800 clamp(28px,3.4vw,40px)/1.05 var(--display);margin:0 0 8px;text-wrap:balance}
+.lead{color:var(--muted);margin:0 0 22px}
+form{display:flex;flex-direction:column;gap:14px}
+label.f{display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:14px}
+input,select{font:inherit;color:var(--fg);background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px;width:100%}
+.drop{border:2px dashed rgba(148,163,184,.4);border-radius:16px;padding:22px;text-align:center;cursor:pointer;transition:border-color .2s,background .2s;display:flex;flex-direction:column;align-items:center;gap:8px}
+.drop.on{border-color:var(--green);background:rgba(34,197,94,.08)}
+.drop img{max-height:90px;max-width:80%;object-fit:contain}
+.drop small{color:var(--muted)}
+.sw{display:flex;gap:8px;align-items:center;font-size:13px;color:var(--muted)}
+.sw i{width:26px;height:26px;border-radius:8px;border:1px solid var(--line);display:inline-block}
+.go{background:var(--green);color:#052E16;border:0;border-radius:999px;padding:14px 20px;font:700 16px var(--body);cursor:pointer}
+.go:disabled{opacity:.5;cursor:not-allowed}
+.fine{font-size:13px;color:var(--muted)}
+.stage{display:flex;flex-direction:column;gap:12px;min-width:0}
+.tools{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.seg{display:flex;border:1px solid var(--line);border-radius:999px;padding:3px}
+.seg button{background:none;border:0;color:var(--muted);font:600 13px var(--body);padding:7px 14px;border-radius:999px;cursor:pointer}
+.seg button[aria-pressed=true]{background:rgba(148,163,184,.2);color:var(--fg)}
+.frame{background:#1E293B;border:1px solid var(--line);border-radius:18px;padding:12px;display:flex;justify-content:center;min-height:640px}
+iframe{border:0;border-radius:10px;background:#fff;width:100%;height:760px;transition:width .3s}
+.frame.m iframe{width:390px;max-width:100%}
+.empty{display:grid;place-items:center;text-align:center;color:var(--muted);padding:40px}
+.empty b{display:block;color:var(--fg);font:700 20px var(--display);margin-bottom:6px}
+.after{display:none;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.after.show{display:flex}
+.after .go{text-decoration:none}
+.timer{font-variant-numeric:tabular-nums;color:var(--green);font-weight:700}
+@media (max-width:900px){.layout{grid-template-columns:1fr}.frame{min-height:0}iframe{height:640px}}
+</style>
+</head>
+<body>
+<div class="banner g">Prueba interna · nada se cobra ni se publica · tu logo no sale de tu navegador</div>
+<header class="g"><div class="w"><a class="logo" href="/"><svg width="28" height="28" viewBox="0 0 56 56" aria-hidden="true"><rect width="56" height="56" rx="16" fill="#2563EB"/><path d="M18 18l14 10-14 10" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M34 38h6" stroke="#22C55E" stroke-width="5" stroke-linecap="round"/></svg>tuweb<span>pronto</span></a><a href="/" style="font-size:14px;color:var(--muted)">← Volver</a></div></header>
+
+<main class="g"><div class="w layout">
+  <section>
+    <h1>Ve tu página antes de pagar</h1>
+    <p class="lead">Arrastra tu logo, llena 4 datos y en segundos ves una muestra con tus colores. Sin pagar nada.</p>
+    <form id="f" novalidate>
+      <div class="drop" id="drop" tabindex="0" role="button" aria-label="Sube tu logo">
+        <img id="lp" alt="" hidden>
+        <b id="dt">Arrastra tu logo aquí</b>
+        <small id="ds">o toca para elegirlo · PNG, JPG o SVG</small>
+        <input type="file" id="file" accept="image/png,image/jpeg,image/svg+xml,image/webp" hidden>
+      </div>
+      <div class="sw" id="sw" hidden>Colores detectados: <i id="c1"></i><i id="c2"></i><i id="c3"></i></div>
+      <label class="f">Nombre del negocio<input id="nom" placeholder="Ej. Clínica Dental Sonrisa" required></label>
+      <label class="f">Giro
+        <select id="giro">
+          <option value="salud">Salud (consultorio, clínica, dentista)</option>
+          <option value="taller">Taller o servicio técnico</option>
+          <option value="cafeteria">Cafetería</option>
+          <option value="restaurante">Restaurante</option>
+          <option value="barberia">Barbería o estética</option>
+          <option value="escuela">Escuela o academia</option>
+          <option value="producto">Marca de producto</option>
+          <option value="despacho">Despacho (contadores, abogados)</option>
+          <option value="industrial">Industrial o logística</option>
+        </select></label>
+      <label class="f">Ciudad<input id="ciudad" value="Mexicali"></label>
+      <label class="f">WhatsApp del negocio<input id="wa" inputmode="tel" placeholder="686 123 4567"></label>
+      <label class="f">Dirección <span style="font-weight:400;color:var(--muted)">(opcional)</span><input id="dir" placeholder="Calle, número, colonia"></label>
+      <button class="go" id="go" type="submit" disabled>Ver mi muestra</button>
+      <p class="fine">La muestra es una idea rápida con tus colores. Tu página final la diseñamos a tu medida y la revisa una persona antes de publicarse.</p>
+    </form>
+  </section>
+
+  <section class="stage" aria-live="polite">
+    <div class="tools"><b>Tu muestra <span class="timer" id="tm"></span></b>
+      <div class="seg" role="group" aria-label="Vista"><button type="button" id="vd" aria-pressed="true">Computadora</button><button type="button" id="vm" aria-pressed="false">Celular</button></div></div>
+    <div class="frame" id="fr"><div class="empty" id="em"><div><b>Aquí aparece tu página</b>Sube tu logo y escribe el nombre de tu negocio.</div></div><iframe id="pv" title="Muestra de tu página" hidden></iframe></div>
+    <div class="after" id="af"><span>¿Te gustó? Te hacemos la versión final, a tu medida, en 5 a 7 días hábiles.</span><a class="go" id="cta" target="_blank" rel="noopener" href="#">La quiero · WhatsApp</a></div>
+  </section>
+</div></main>
+
+<script>
+const $=id=>document.getElementById(id);
+let logo=null,pal=null,t0=0;
+const COPY={
+ salud:{tag:"Consultorio en {c}",h:"Atención que te da confianza desde la primera cita.",p:"Agenda tu consulta por WhatsApp. Te explicamos todo antes de empezar.",s:[["Consulta general","Valoración y diagnóstico con calma."],["Tratamientos","Te decimos opciones y costos por escrito."],["Seguimiento","Revisiones para ver cómo vas."]],cta:"Agendar cita",dark:false},
+ taller:{tag:"Taller en {c}",h:"Tu auto en buenas manos, con precio claro.",p:"Diagnóstico antes de reparar y fotos del avance por WhatsApp.",s:[["Diagnóstico","Te decimos qué tiene antes de cobrar."],["Mantenimiento","Afinación, frenos, suspensión."],["Garantía","Por escrito en cada trabajo."]],cta:"Cotizar por WhatsApp",dark:true},
+ cafeteria:{tag:"Cafetería en {c}",h:"El café de todos los días, hecho con calma.",p:"Café de especialidad, pan del día y un lugar para quedarte.",s:[["Café","Espresso, filtrados y fríos."],["Pan y brunch","Horneado cada mañana."],["Para llevar","Pide por WhatsApp y pasa por él."]],cta:"Pedir por WhatsApp",dark:true},
+ restaurante:{tag:"Restaurante en {c}",h:"Mesa lista para ti y los tuyos.",p:"Reserva por WhatsApp y ve el menú antes de llegar.",s:[["Menú","Platillos de la casa y del día."],["Reservaciones","Grupos y fechas especiales."],["Para llevar","Pide y recoge sin esperar."]],cta:"Reservar mesa",dark:true},
+ barberia:{tag:"Barbería en {c}",h:"Tu corte, a tu hora, sin esperar.",p:"Agenda tu lugar por WhatsApp y llega directo a la silla.",s:[["Cortes","Clásicos, fade y diseño."],["Barba","Perfilado y toalla caliente."],["Paquetes","Corte más barba con mejor precio."]],cta:"Agendar corte",dark:true},
+ escuela:{tag:"Escuela en {c}",h:"Una escuela que conoces antes de inscribir.",p:"Agenda una visita y conoce instalaciones, niveles y maestros.",s:[["Niveles","Desde preescolar hasta secundaria."],["Programas","Inglés, deporte y talleres."],["Inscripciones","Fechas, requisitos y costos."]],cta:"Agendar visita",dark:false},
+ producto:{tag:"Hecho en {c}",h:"Un producto que se antoja desde la foto.",p:"Conoce las presentaciones, dónde comprar y haz tu pedido por WhatsApp.",s:[["Presentaciones","Tamaños y sabores."],["Dónde comprar","Tiendas y puntos de venta."],["Mayoreo","Precios para negocios."]],cta:"Hacer pedido",dark:false},
+ despacho:{tag:"Despacho en {c}",h:"Tus asuntos en orden y por escrito.",p:"Agenda una asesoría y recibe una propuesta clara antes de empezar.",s:[["Contabilidad","Declaraciones y nómina."],["Asesoría legal","Contratos y trámites."],["Empresas","Constitución y cumplimiento."]],cta:"Agendar asesoría",dark:false},
+ industrial:{tag:"Empresa en {c}",h:"Cumplimos tiempos, con permisos al día.",p:"Pide una cotización y recibe respuesta el mismo día hábil.",s:[["Servicios","Lo que hacemos y para quién."],["Certificaciones","Permisos y normas a la vista."],["Cobertura","Rutas y zonas que atendemos."]],cta:"Pedir cotización",dark:true}
+};
+function hex(r,g,b){return"#"+[r,g,b].map(v=>v.toString(16).padStart(2,"0")).join("")}
+function lum(h){const v=[1,3,5].map(i=>{let c=parseInt(h.substr(i,2),16)/255;return c<=.03928?c/12.92:Math.pow((c+.055)/1.055,2.4)});return .2126*v[0]+.7152*v[1]+.0722*v[2]}
+function sat(r,g,b){const mx=Math.max(r,g,b),mn=Math.min(r,g,b);return mx===0?0:(mx-mn)/mx}
+function mix(h,w,t){const a=[1,3,5].map(i=>parseInt(h.substr(i,2),16)),b=[1,3,5].map(i=>parseInt(w.substr(i,2),16));return hex(...a.map((v,i)=>Math.round(v+(b[i]-v)*t)))}
+function palette(img){
+  const c=document.createElement("canvas"),s=64;c.width=c.height=s;const x=c.getContext("2d");x.drawImage(img,0,0,s,s);
+  const d=x.getImageData(0,0,s,s).data,bins={};
+  for(let i=0;i<d.length;i+=4){if(d[i+3]<128)continue;const r=d[i]>>4<<4,g=d[i+1]>>4<<4,b=d[i+2]>>4<<4;const k=r+","+g+","+b;bins[k]=(bins[k]||0)+1}
+  const cols=Object.entries(bins).map(([k,n])=>{const[r,g,b]=k.split(",").map(Number);return{h:hex(r,g,b),n,s:sat(r,g,b),l:(r+g+b)/3}}).sort((a,b)=>b.n-a.n);
+  const vivid=cols.filter(c=>c.s>.25&&c.l>25&&c.l<235).sort((a,b)=>(b.n*(.5+b.s))-(a.n*(.5+a.s)));
+  const dark=cols.filter(c=>c.l<70).sort((a,b)=>b.n-a.n)[0];
+  let p=vivid[0]?vivid[0].h:"#2563EB";
+  let q=vivid.find(c=>Math.abs(parseInt(c.h.substr(1,2),16)-parseInt(p.substr(1,2),16))+Math.abs(parseInt(c.h.substr(3,2),16)-parseInt(p.substr(3,2),16))+Math.abs(parseInt(c.h.substr(5,2),16)-parseInt(p.substr(5,2),16))>90);
+  q=q?q.h:mix(p,"#ffffff",.55);
+  let dk=dark&&dark.n>40?dark.h:mix(p,"#000000",.78);
+  if(lum(dk)>.06)dk=mix(dk,"#000000",.6);
+  return{p,q,dk};
+}
+function load(file){
+  if(!file||!/^image\//.test(file.type)){$("ds").textContent="Ese archivo no es una imagen. Prueba con PNG, JPG o SVG.";return}
+  t0=performance.now();
+  const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{logo=r.result;try{pal=palette(im)}catch(e){pal={p:"#2563EB",q:"#93C5FD",dk:"#0F172A"}}
+    $("lp").src=logo;$("lp").hidden=false;$("dt").textContent="Logo listo";$("ds").textContent="Toca para cambiarlo";
+    ["c1","c2","c3"].forEach((id,i)=>$(id).style.background=[pal.p,pal.q,pal.dk][i]);$("sw").hidden=false;check()};im.src=r.result};r.readAsDataURL(file)}
+function check(){$("go").disabled=!(logo&&$("nom").value.trim())}
+const dr=$("drop");
+dr.addEventListener("click",()=>$("file").click());
+dr.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();$("file").click()}});
+$("file").addEventListener("change",e=>load(e.target.files[0]));
+["dragenter","dragover"].forEach(ev=>dr.addEventListener(ev,e=>{e.preventDefault();dr.classList.add("on")}));
+["dragleave","drop"].forEach(ev=>dr.addEventListener(ev,e=>{e.preventDefault();dr.classList.remove("on")}));
+dr.addEventListener("drop",e=>load(e.dataTransfer.files[0]));
+$("nom").addEventListener("input",check);
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+function build(){
+  const g=$("giro").value,C=COPY[g],nom=esc($("nom").value.trim()),city=esc($("ciudad").value.trim()||"tu ciudad"),dir=esc($("dir").value.trim()),wa=$("wa").value.replace(/\D/g,"");
+  const waNum=wa.length===10?"52"+wa:wa,waLink=waNum?"https://wa.me/"+waNum:"#";
+  const {q,dk}=pal,p=lum(pal.p)<=lum(pal.q)?pal.p:pal.q,onP=lum(p)>.45?"#0B1220":"#FFFFFF",heroBg=C.dark?dk:mix(q,"#ffffff",.82),heroFg=C.dark?"#F8FAFC":"#0B1220",acc=C.dark?q:p;
+  const svc=C.s.map(s=>`<div class="c"><h3>${s[0]}</h3><p>${s[1]}</p></div>`).join("");
+  return `<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Figtree:wght@400;600&display=swap"><style>
+*{box-sizing:border-box}body{margin:0;font:17px/1.6 Figtree,system-ui,sans-serif;color:#0B1220;background:#fff}
+.tag{background:#FFE9A8;color:#4A3500;text-align:center;font:600 12px/1.4 Figtree;padding:7px 12px}
+.w{max-width:1080px;margin:0 auto;padding:0 20px}
+nav{background:${heroBg};color:${heroFg}}nav .w{display:flex;justify-content:space-between;align-items:center;padding-block:14px;gap:12px}
+nav img{height:44px;max-width:160px;object-fit:contain}nav b{font:700 16px 'Bricolage Grotesque',system-ui,sans-serif}
+.b{display:inline-block;background:${p};color:${onP};text-decoration:none;font:700 15px Figtree;padding:12px 20px;border-radius:999px;white-space:nowrap}
+.hero{background:${heroBg};color:${heroFg};padding:56px 0 72px}.hero .w{display:grid;grid-template-columns:1.2fr .8fr;gap:36px;align-items:center}
+.k{font:600 12px Figtree;letter-spacing:.18em;text-transform:uppercase;color:${acc}}
+h1{font:800 clamp(32px,5vw,54px)/1.05 'Bricolage Grotesque',system-ui,sans-serif;margin:14px 0 16px;text-wrap:balance}
+.hero p{opacity:.85;margin:0 0 24px;max-width:32em}
+.ph{aspect-ratio:4/5;border-radius:22px;background:repeating-linear-gradient(135deg,${mix(q,"#ffffff",.5)} 0 12px,${mix(q,"#ffffff",.7)} 12px 24px);display:grid;place-items:center;color:#334155;font:600 14px Figtree;text-align:center;padding:20px}
+section{padding:64px 0}h2{font:800 32px/1.1 'Bricolage Grotesque',system-ui,sans-serif;margin:0 0 24px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.c{border:1px solid #E2E8F0;border-radius:16px;padding:22px;border-top:4px solid ${p}}.c h3{margin:0 0 6px;font:700 19px 'Bricolage Grotesque',system-ui,sans-serif}.c p{margin:0;color:#475569;font-size:15.5px}
+.v{background:${dk};color:#F8FAFC}.v .w{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}.v p{margin:6px 0 0;opacity:.8}
+footer{padding:22px 0;color:#64748B;font-size:14px}
+@media(max-width:720px){.hero .w,.g3{grid-template-columns:1fr}.ph{aspect-ratio:16/10}nav b{display:none}}
+</style></head><body>
+<div class="tag">Muestra de TuWebPronto · sin publicar · las fotos son de ejemplo</div>
+<nav><div class="w"><img src="${logo}" alt="${nom}"><b>${nom}</b><a class="b" href="${waLink}" target="_blank">${C.cta}</a></div></nav>
+<div class="hero"><div class="w"><div><div class="k">${C.tag.replace("{c}",city)}</div><h1>${C.h}</h1><p>${C.p}</p><a class="b" href="${waLink}" target="_blank">${C.cta}</a></div><div class="ph">Tu foto va aquí</div></div></div>
+<section><div class="w"><h2>Lo que hacemos</h2><div class="g3">${svc}</div></div></section>
+<div class="v"><section style="padding:48px 0"><div class="w"><div><h2 style="margin:0">Visítanos</h2><p>${dir?dir+", ":""}${city}</p></div><a class="b" href="${waLink}" target="_blank">${C.cta}</a></div></section></div>
+<footer><div class="w">© ${nom} · Página hecha por TuWebPronto</div></footer></body></html>`;
+}
+$("f").addEventListener("submit",e=>{e.preventDefault();if($("go").disabled)return;
+  const html=build();$("pv").srcdoc=html;$("pv").hidden=false;$("em").hidden=true;
+  const secs=((performance.now()-t0)/1000).toFixed(0);$("tm").textContent="· lista en "+secs+" s";
+  const msg="Hola, hice mi muestra en TuWebPronto y me gustó. Negocio: "+$("nom").value.trim()+". Giro: "+$("giro").selectedOptions[0].text+". Ciudad: "+($("ciudad").value.trim()||"-")+". Te mando mi logo por aquí.";
+  $("cta").href="https://wa.me/16194533137?text="+encodeURIComponent(msg);$("af").classList.add("show");
+  if(window.innerWidth<900)$("fr").scrollIntoView({behavior:"smooth"});
+});
+function view(m){$("fr").classList.toggle("m",m);$("vm").setAttribute("aria-pressed",m);$("vd").setAttribute("aria-pressed",!m)}
+$("vd").onclick=()=>view(false);$("vm").onclick=()=>view(true);
+</script>
+</body>
+</html>
