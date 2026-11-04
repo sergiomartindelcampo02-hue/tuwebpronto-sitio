@@ -265,14 +265,25 @@ async function build(){
   // ciudad: la plantilla habla de Mexicali en muchos textos
   if(D.city!=="Mexicali")replaceText(body,"Mexicali",D.city);
 
+  // Variación SEO: cada negocio recibe su propia combinación de título, encabezado y descripción.
+  const seed=[...(D.name+"|"+(D.esp||"")+"|"+$("giro").value+"|"+D.city)].reduce((h,c)=>(h*31+c.charCodeAt(0))>>>0,7);
+  const pick=(arr,salt)=>{const ok=arr.filter(Boolean);return ok[(seed+salt*2654435761>>>0)%ok.length]};
+  const K=D.esp||C.l,k=K.charAt(0).toLowerCase()+K.slice(1),Z=((D.dir.match(/Col(?:onia|\.)\s*([^,]+)/i)||[])[1]||"").trim();
+  const S1=D.svc[0],S2=D.svc[1];
+  const V={
+    tag:pick([`${K} en ${D.city}`,Z&&`${K} en la colonia ${Z}`,!D.esp&&`Tu ${k} de confianza en ${D.city}`,S1&&S2&&`${S1} y ${S2.toLowerCase()} en ${D.city}`,`${K} en ${D.city}, cerca de ti`],1),
+    em:pick(["con atención cercana.","explicado paso a paso.","con citas a tiempo.","sin vueltas.","con seguimiento real."],2),
+    title:pick([`${D.name} · ${K} en ${D.city}`,`${K} en ${Z?"Col. "+Z+", ":""}${D.city} | ${D.name}`,S1&&`${S1}${S2?", "+S2.toLowerCase():""} y más en ${D.city} | ${D.name}`,`${K} en ${D.city} con cita por WhatsApp | ${D.name}`,`${D.name}: ${k} en ${Z?"Col. "+Z+", "+D.city:D.city}`],3),
+    desc:pick([`${D.name}: ${k} en ${D.city}.${D.svc.length?" "+D.svc.join(", ")+".":""}${D.wa?" Escríbenos por WhatsApp.":""}`,`¿Buscas ${k} en ${D.city}? En ${D.name} atendemos ${D.svc.length?D.svc.slice(0,4).join(", ").toLowerCase():"con cita"}${Z?" en la colonia "+Z:""}. Agenda por WhatsApp.`,`${K} en ${D.city}${Z?" ("+Z+")":""}. ${D.name} te explica todo antes de empezar.${D.svc.length?" Servicios: "+D.svc.slice(0,5).join(", ")+".":""}`],4)
+  };
   const fill=(k,fn)=>all(d,`[data-fill~="${k}"]`).forEach(fn);
   fill("banner",el=>{el.textContent="Muestra de TuWebPronto · sin publicar · fotos de ejemplo"});
   fill("city",el=>{el.textContent=D.city});
-  fill("tagline",el=>{el.textContent=D.esp?`${D.esp} en ${D.city}`:el.textContent});
+  fill("tagline",el=>{el.textContent=V.tag});
   fill("logo",el=>{all(el,":scope > svg, :scope > img").forEach(n=>n.remove());const im=d.createElement("img");im.className="tw-logo";im.src=logo;im.alt="";el.prepend(im)});
   fill("name",el=>setName(el,D.name));
   if(D.esp)fill("kind",el=>{el.textContent=D.esp});
-  if(D.esp){fill("lead",el=>{el.textContent=(D.svc.length?D.svc.slice(0,4).join(", ")+" y más":D.esp)+", con un equipo que te explica todo antes de empezar."});fill("tagline-em",el=>{el.textContent="con atención cercana."})}
+  if(D.esp){fill("lead",el=>{el.textContent=(D.svc.length?D.svc.slice(0,4).join(", ")+" y más":D.esp)+", con un equipo que te explica todo antes de empezar."});fill("tagline-em",el=>{el.textContent=V.em})}
   fill("address",el=>{el.textContent=D.dir||"Dirección por confirmar";if(D.dir)el.hidden=false});
   fill("phone",el=>{if(!D.wa)return;el.textContent="WhatsApp "+fmtPhone(D.wa);el.hidden=false});
   fill("hours",el=>{const kids=[...el.children];if(kids.length<2)return;const lab=kids[0].cloneNode(false),val=kids[1].cloneNode(false);el.replaceChildren();
@@ -309,9 +320,9 @@ async function build(){
   fakeList.filter(f=>!D.name.includes(f)).forEach(f=>replaceText(body,f,D.name));
 
   // <head>: título, descripción, datos estructurados
-  d.title=`${D.name} · ${kind} en ${D.city}`;
+  d.title=V.title;
   const md=d.querySelector('meta[name="description"]');
-  if(md)md.setAttribute("content",`${D.name}: ${kind} en ${D.city}.${D.svc.length?" "+D.svc.join(", ")+".":""}${D.wa?" Escríbenos por WhatsApp.":""}`);
+  if(md)md.setAttribute("content",V.desc);
   const spec=D.h.map(([k,v],i)=>{const t=times(v);if(!t)return null;return{"@type":"OpeningHoursSpecification","dayOfWeek":[["Monday","Tuesday","Wednesday","Thursday","Friday"],"Saturday","Sunday"][i],"opens":t[0],"closes":t[1]}}).filter(Boolean);
   const deep=v=>typeof v==="string"?fakeList.filter(f=>!D.name.includes(f)).reduce((s,f)=>s.split(f).join(D.name),D.city!=="Mexicali"?v.split("Mexicali").join(D.city):v).replace(/\s*\(ejemplo\)/g,"").replace(/ de ejemplo/g,""):Array.isArray(v)?v.map(deep):v&&typeof v==="object"?Object.fromEntries(Object.entries(v).map(([k,x])=>[k,deep(x)])):v;
   lds.forEach(s=>{try{let j=deep(JSON.parse(s.textContent));
