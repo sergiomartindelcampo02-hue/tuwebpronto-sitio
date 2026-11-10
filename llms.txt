@@ -1,0 +1,34 @@
+# Grupo Ortopédico de Mexicali
+
+> Grupo Ortopédico de Mexicali ofrece atención de traumatología y ortopedia en Av. Francisco I. Madero 1616, Col. Nueva, 21100 Mexicali, B.C., México. Atendemos rodilla, cadera, hombro, columna, lesiones deportivas y fracturas.
+
+## Datos del negocio
+- Nombre: Grupo Ortopédico de Mexicali
+- Especialidad: Traumatología y Ortopedia (Orthopedics and Traumatology)
+- Dirección: Av. Francisco I. Madero 1616, Col. Nueva, 21100 Mexicali, B.C., México
+- Teléfono y WhatsApp: +52 686 355 9793
+- Horario: Lunes a viernes: 10:00 a 20:00 h; Sábado: 9:00 a 13:00 h; Domingo: Cerrado
+- Idiomas del sitio: español e inglés
+
+
+## Qué atendemos
+- [Rodilla](https://grupo-ortopedico-mexicali.netlify.app/rodilla/): Valoramos el dolor, la inflamación y la sensación de inestabilidad en la rodilla, ya sea por una lesión reciente o por desgaste.
+- [Cadera](https://grupo-ortopedico-mexicali.netlify.app/cadera/): Atendemos el dolor de cadera e ingle, la rigidez y la dificultad para caminar, sentarte o ponerte los zapatos.
+- [Hombro](https://grupo-ortopedico-mexicali.netlify.app/hombro/): Revisamos el dolor de hombro, la pérdida de fuerza y la dificultad para levantar el brazo o dormir de ese lado.
+- [Columna](https://grupo-ortopedico-mexicali.netlify.app/columna/): Valoramos el dolor de cuello y de espalda baja, la rigidez y el dolor que se extiende hacia brazos o piernas.
+- [Lesiones deportivas](https://grupo-ortopedico-mexicali.netlify.app/lesiones-deportivas/): Atendemos esguinces, desgarros, tendinitis y lesiones de ligamentos en personas activas, con un plan de regreso gradual a la actividad.
+- [Fracturas](https://grupo-ortopedico-mexicali.netlify.app/fracturas/): Valoramos y tratamos fracturas y sospechas de fractura, y damos seguimiento durante la consolidación del hueso y la recuperación de la movilidad.
+
+## Preguntas frecuentes
+- **¿Qué hace un traumatólogo y ortopedista?** Es el médico especialista en huesos, articulaciones, músculos, ligamentos y tendones. Diagnostica y trata lesiones como fracturas, esguinces y desgarros, y padecimientos como el desgaste articular o el dolor de columna, con tratamiento conservador o con cirugía según cada caso.
+- **¿Dónde está Grupo Ortopédico de Mexicali?** Estamos en Av. Francisco I. Madero 1616, Col. Nueva, 21100 Mexicali, B.C. Antes de tu visita puedes abrir la ubicación en Google Maps desde esta página para trazar tu ruta.
+- **¿Cuál es el horario de atención?** Atendemos lunes a viernes de 10:00 a 20:00 h; sábado de 9:00 a 13:00 h y el domingo cerramos. Para asegurar tu lugar, agenda tu cita antes de acudir.
+- **¿Cómo agendo una cita?** Escríbenos por WhatsApp al 686 355 9793, llámanos en horario de atención o deja tus datos en el formulario de esta página y te contactamos para confirmar tu cita.
+- **¿Qué debo llevar a mi consulta?** Una identificación, los estudios que ya tengas —radiografías, resonancias y sus interpretaciones—, la lista de medicamentos que tomas y, si aplica, notas de otros médicos. Usa ropa cómoda que permita revisar la zona.
+- **¿Todas las lesiones de hueso o articulación requieren cirugía?** No. Muchas se tratan sin cirugía, con reposo relativo, medicamentos, inmovilización o rehabilitación. La cirugía se considera cuando el diagnóstico lo indica; en la consulta te explicamos las opciones para tu caso.
+- **¿Qué padecimientos atienden?** Atendemos problemas de rodilla, cadera, hombro, columna, lesiones deportivas y fracturas: dolor, lesiones, desgaste articular y seguimiento después de un tratamiento.
+
+## Páginas
+- [Inicio (español)](https://grupo-ortopedico-mexicali.netlify.app/)
+- [Home (English)](https://grupo-ortopedico-mexicali.netlify.app/en/)
+- [Aviso de Privacidad](https://grupo-ortopedico-mexicali.netlify.app/aviso-de-privacidad/)

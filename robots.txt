@@ -1,3 +1,6 @@
 User-agent: *
-Allow: /posts/
-Disallow: /
+Allow: /
+Disallow: /gracias/
+Disallow: /en/thank-you/
+
+Sitemap: https://grupo-ortopedico-mexicali.netlify.app/sitemap.xml

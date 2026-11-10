@@ -1,9 +1,0 @@
-# Nunca subir claves ni tokens
-.env
-*.env
-env*
-*.key
-*.pem
-credentials*.json
-client_secret*.json
-.DS_Store
