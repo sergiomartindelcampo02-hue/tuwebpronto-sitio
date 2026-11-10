@@ -1,0 +1,15 @@
+{
+ "name": "Grupo Ortopédico de Mexicali",
+ "short_name": "Grupo Ortopédico",
+ "start_url": "/",
+ "display": "browser",
+ "background_color": "#F4F2ED",
+ "theme_color": "#0B1F3B",
+ "icons": [
+  {
+   "src": "/assets/img/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  }
+ ]
+}

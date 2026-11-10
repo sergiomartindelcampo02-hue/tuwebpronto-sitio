@@ -2,798 +2,189 @@
 <html lang="es-MX">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Páginas web en Mexicali en 5 a 7 días | TuWebPronto</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Páginas web para negocios de Mexicali y la región. Desde $7,499 + IVA, pago único. Lista en 5 a 7 días hábiles.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
-<style>
-/* Layout: navy hero with real client mockups, then alternating light bands; one green accent for every "act" moment. */
-:root{
-  --navy:#0F172A; --navy-2:#1E293B; --blue:#2563EB; --green:#22C55E; --green-ink:#052E16;
-  --bg:#060B18; --surface:rgba(15,23,42,.62); --fg:#E2E8F0; --muted:#94A3B8; --line:rgba(148,163,184,.18); --tint:rgba(37,99,235,.12); --link:#93C5FD; color-scheme:dark;
-  --on-navy:#F8FAFC; --on-navy-muted:#CBD5E1;
-  --display:"Bricolage Grotesque", "Arial Black", system-ui, sans-serif;
-  --body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
-}
-*{box-sizing:border-box}
-body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.55}
-h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.02;letter-spacing:-.02em;margin:0;text-wrap:balance}
-p{margin:0}
-a{color:var(--link)}
-.wrap{max-width:1160px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.band{padding-block:88px}
-.eyebrow{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
-.lead{font-size:19px;color:var(--muted);max-width:60ch}
-.sec-head{display:flex;flex-direction:column;gap:14px;margin-bottom:44px}
-.sec-head h2{font-size:clamp(34px,5vw,54px)}
-.btn{display:inline-flex;align-items:center;gap:10px;white-space:nowrap;border-radius:999px;padding:16px 26px;font-weight:700;font-size:17px;text-decoration:none;border:2px solid transparent;transition:transform .15s ease}
-.btn:hover{transform:translateY(-2px)}
-.btn:focus-visible,button:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
-.btn-go{background:var(--green);color:var(--green-ink)}
-.btn-ghost{border-color:rgba(148,163,184,.35);color:var(--on-navy)}
-.wa-ico{width:20px;height:20px;flex:none}
-
-/* header */
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--navy)}
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:rgba(6,11,24,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);color:var(--on-navy);border-bottom:1px solid var(--navy-2)}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;height:68px}
-.logo{font-family:var(--display);font-weight:800;font-size:24px;letter-spacing:-.01em;color:var(--on-navy);text-decoration:none;display:flex;align-items:center;gap:10px}
-.logo span{color:var(--green)}
-.nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
-.nav ul a{color:var(--on-navy-muted);text-decoration:none;font-weight:600;font-size:15px;white-space:nowrap}
-@media (max-width:1100px){.nav ul{gap:16px}.nav ul a{font-size:14px}}
-.nav ul a:hover{color:var(--on-navy)}
-.nav .btn{padding:10px 18px;font-size:15px}
-@media (max-width:860px){.nav ul{display:none}}
-
-/* hero */
-.hero{color:var(--on-navy);padding-block:72px 96px;overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center}
-.hero-copy{display:flex;flex-direction:column;gap:24px;min-width:0}
-.badge{align-self:flex-start;background:rgba(34,197,94,.14);color:#86EFAC;border:1px solid rgba(34,197,94,.4);border-radius:999px;padding:7px 14px;font-size:14px;font-weight:700}
-.hero h1{font-size:clamp(46px,7vw,84px)}
-.hero h1 em{font-style:normal;color:var(--green)}
-.hero .lead{color:var(--on-navy-muted)}
-.price-line{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
-.price-line b{font-family:var(--display);font-size:46px;letter-spacing:-.02em;color:var(--on-navy)}
-.price-line small{color:var(--on-navy-muted);font-size:16px}
-.ctas{display:flex;gap:12px;flex-wrap:wrap}
-.mock{position:relative;aspect-ratio:1.18;max-width:100%}
-.laptop{position:absolute;left:0;top:8%;width:84%;border:10px solid var(--navy-2);border-radius:18px;background:#fff;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.45)}
-.laptop .bar{height:26px;background:#F1F5F9;display:flex;gap:6px;align-items:center;padding:0 12px}
-.laptop .bar i{width:9px;height:9px;border-radius:50%;background:#CBD5E1}
-.laptop img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:left top}
-.phone{position:absolute;right:0;top:0;width:34%;border:9px solid var(--navy-2);border-radius:32px;overflow:hidden;background:var(--navy-2);box-shadow:0 30px 60px rgba(0,0,0,.5)}
-.phone img{display:block;width:100%;aspect-ratio:390/844;object-fit:cover;object-position:top}
-.mock-cap{position:absolute;left:0;bottom:0;font-size:14px;color:var(--on-navy-muted)}
-@media (max-width:860px){.hero-grid{grid-template-columns:1fr}.hero{padding-block:48px 64px}}
-
-/* portfolio */
-.work{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
-.card{background:var(--surface);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
-.card img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:left top;border-bottom:1px solid var(--line)}
-.card div{padding:16px 18px 20px;display:flex;flex-direction:column;gap:6px;min-width:0}
-.card h3{font-size:21px}
-.card .giro{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
-.card p{font-size:15px;color:var(--muted)}
-@media (max-width:1000px){.work{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:520px){.work{grid-template-columns:1fr}}
-
-/* incluye */
-.alt{border-block:1px solid var(--line)}
-.inc-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:start}
-.checks{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 28px}
-.checks li{display:flex;gap:12px;align-items:flex-start;font-weight:600;min-width:0}
-.checks svg{flex:none;margin-top:2px}
-.checks span small{display:block;font-weight:400;color:var(--muted);font-size:15px}
-.pricecard{background:#0B1326;color:var(--on-navy);border-radius:24px;padding:34px;display:flex;flex-direction:column;gap:16px}
-.pricecard .amt{font-family:var(--display);font-weight:800;font-size:64px;line-height:.95;letter-spacing:-.03em;color:var(--green)}
-.pricecard p{color:var(--on-navy-muted)}
-.pricecard hr{border:0;border-top:1px solid #334155;margin:4px 0}
-.extras{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
-.extras li{display:flex;justify-content:space-between;gap:16px;font-size:15px}
-.extras li span:last-child{color:var(--on-navy-muted);white-space:nowrap}
-@media (max-width:900px){.inc-grid{grid-template-columns:1fr}}
-@media (max-width:560px){.checks{grid-template-columns:1fr}}
-
-/* pasos */
-.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;counter-reset:s;list-style:none;margin:0;padding:0}
-.steps li{display:flex;flex-direction:column;gap:10px;min-width:0;padding-top:20px;border-top:3px solid var(--fg)}
-.steps .n{font-family:var(--display);font-weight:800;font-size:44px;line-height:1;color:var(--blue)}
-.steps h3{font-size:22px}
-.steps p{color:var(--muted);font-size:15px}
-@media (max-width:900px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:480px){.steps{grid-template-columns:1fr}}
-.rules{margin-top:44px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.rule{background:var(--tint);border-radius:16px;padding:20px 22px;display:flex;flex-direction:column;gap:6px;min-width:0}
-.rule b{font-size:16px}
-.rule p{font-size:15px;color:var(--muted)}
-@media (max-width:900px){.rules{grid-template-columns:1fr}}
-
-/* después */
-.after{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
-.opt{border:2px solid var(--line);border-radius:22px;padding:30px;display:flex;flex-direction:column;gap:12px;background:var(--surface);min-width:0}
-.opt .tag{align-self:flex-start;font-size:13px;font-weight:700;border-radius:999px;padding:6px 12px;background:var(--tint);color:var(--link)}
-.opt h3{font-size:30px}
-.opt p{color:var(--muted)}
-@media (max-width:700px){.after{grid-template-columns:1fr}}
-
-/* faq */
-.faq{display:flex;flex-direction:column;border-top:1px solid var(--line);max-width:820px}
-.faq details{border-bottom:1px solid var(--line);padding:20px 0}
-.faq summary{cursor:pointer;font-weight:700;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:16px}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";font-family:var(--display);font-size:24px;line-height:1;color:var(--blue)}
-.faq details[open] summary::after{content:"–"}
-.faq details p{margin-top:12px;color:var(--muted);max-width:65ch}
-
-/* cierre */
-.close{color:var(--on-navy)}
-.close-grid{display:flex;flex-direction:column;gap:22px;align-items:flex-start}
-.close h2{font-size:clamp(40px,6vw,72px)}
-.close h2 em{font-style:normal;color:var(--green)}
-.close .lead{color:var(--on-navy-muted)}
-.phone-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;color:var(--on-navy-muted)}
-.phone-row code{font-family:var(--body);font-weight:700;font-size:20px;color:var(--on-navy);user-select:all}
-.copy{background:transparent;border:1px solid #334155;color:var(--on-navy);border-radius:999px;padding:7px 14px;font:600 14px var(--body);cursor:pointer}
-footer{background:rgba(6,11,24,.8);color:var(--on-navy-muted);border-top:1px solid var(--navy-2);font-size:14px}
-footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:26px}
-.preview-note{background:#FEF3C7;color:#713F12;font-size:13px;font-weight:600;text-align:center;padding:8px 16px}
-
-/* fondo: lámpara de lava azul/verde bajo grano de película (fijo, sin filtros, solo transform) */
-.lava{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;background:var(--bg)}
-.lava i{position:absolute;border-radius:50%;will-change:transform}
-.lava .l1{width:70vmax;height:70vmax;left:-15vmax;top:-20vmax;background:radial-gradient(circle,rgba(37,99,235,.55),rgba(37,99,235,0) 62%);animation:la 28s ease-in-out infinite alternate}
-.lava .l2{width:60vmax;height:60vmax;right:-20vmax;top:10vh;background:radial-gradient(circle,rgba(30,58,138,.75),rgba(30,58,138,0) 62%);animation:lb 34s ease-in-out infinite alternate}
-.lava .l3{width:50vmax;height:50vmax;left:20vw;bottom:-25vmax;background:radial-gradient(circle,rgba(34,197,94,.32),rgba(34,197,94,0) 62%);animation:lc 24s ease-in-out infinite alternate}
-.lava .l4{width:38vmax;height:38vmax;right:10vw;bottom:5vh;background:radial-gradient(circle,rgba(14,165,233,.28),rgba(14,165,233,0) 62%);animation:ld 30s ease-in-out infinite alternate}
-.lava .l5{width:30vmax;height:30vmax;left:5vw;top:40vh;background:radial-gradient(circle,rgba(34,197,94,.22),rgba(34,197,94,0) 62%);animation:la 22s ease-in-out infinite alternate-reverse}
-@keyframes la{to{transform:translate(18vw,22vh) scale(1.15)}}
-@keyframes lb{to{transform:translate(-22vw,30vh) scale(.85)}}
-@keyframes lc{to{transform:translate(-14vw,-35vh) scale(1.25)}}
-@keyframes ld{to{transform:translate(-30vw,-20vh) scale(1.1)}}
-.grain{position:fixed;inset:-50%;z-index:1;pointer-events:none;opacity:.09;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");animation:grain 1.2s steps(5) infinite}
-@keyframes grain{20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-4%)}60%{transform:translate(-4%,-2%)}80%{transform:translate(3%,4%)}}
-main,footer,.preview-note{position:relative;z-index:2}
-header{z-index:9}
-
-/* estilos de ejemplo y SEO/AIO */
-.styles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.style{background:var(--surface);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:22px;padding:24px;display:flex;flex-direction:column;gap:12px;min-width:0;text-decoration:none;color:var(--fg)}
-.style .sw{height:120px;border-radius:14px;position:relative;overflow:hidden}
-.style h3{font-size:22px}
-.style p{color:var(--muted);font-size:15px}
-.style .go{margin-top:auto;font-weight:700;color:var(--green)}
-.style.soon{opacity:.55}
-.style.soon .go{color:var(--muted)}
-a.style:hover{border-color:var(--green);box-shadow:0 18px 50px rgba(34,197,94,.18)}
-@media (max-width:900px){.styles{grid-template-columns:1fr}}
-.seo{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-.seo div{position:relative;isolation:isolate;overflow:hidden;background:rgba(15,23,42,.66);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:22px;padding:26px 24px;display:flex;flex-direction:column;gap:10px;min-width:0;transition:border-color .3s ease,transform .3s ease}
-.seo div::before{content:"";position:absolute;width:220px;height:220px;right:-80px;top:-90px;z-index:-1;border-radius:50%;background:radial-gradient(circle,var(--glow,rgba(37,99,235,.45)),transparent 65%);transition:transform .6s ease}
-.seo div:hover{border-color:rgba(34,197,94,.5);transform:translateY(-3px)}
-.seo div:hover::before{transform:scale(1.25)}
-.seo div:nth-child(even){--glow:rgba(34,197,94,.32)}
-.seo .ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:rgba(37,99,235,.18);border:1px solid rgba(147,197,253,.25)}
-.seo div:nth-child(even) .ic{background:rgba(34,197,94,.14);border-color:rgba(134,239,172,.25)}
-.seo b{font-family:var(--display);font-size:22px;letter-spacing:-.01em}
-.seo b span{color:var(--green)}
-.seo p{color:var(--fg);opacity:.85;font-size:15px}
-.seo small{color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:10px;margin-top:auto}
-.seo .sec-card{grid-column:1/-1;--glow:rgba(34,197,94,.4);border-color:rgba(34,197,94,.35)}
-.seo .sec-card .ic{background:rgba(34,197,94,.14);border-color:rgba(134,239,172,.3)}
-@media (max-width:900px){.seo{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:560px){.seo{grid-template-columns:1fr}}
-
-/* hecha a la medida */
-#medida{overflow-x:clip}
-.medida{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:center}
-.fan{position:relative;height:360px;max-width:100%}
-.mini{position:absolute;top:30px;width:200px;height:290px;border-radius:18px;border:1px solid var(--line);overflow:hidden;box-shadow:0 24px 50px rgba(0,0,0,.4);transition:transform .8s cubic-bezier(.2,.7,.2,1);display:flex;flex-direction:column;gap:8px;padding:12px}
-.mini i{display:block;border-radius:6px}
-.mini .h{height:12px;width:60%}
-.mini .t1{height:26px;width:85%}.mini .t2{height:26px;width:60%}
-.mini .im{flex:1;border-radius:10px}
-.mini .b{height:22px;width:50%;border-radius:999px}
-.m1{left:2%;transform:rotate(-9deg);background:#F6FBFA}
-.m1 .h,.m1 .t1,.m1 .t2{background:#0B2A33}.m1 .im{background:linear-gradient(150deg,#DDF3EF,#CDE8F3)}.m1 .b{background:#0E9F94}
-.m2{left:32%;top:10px;z-index:2;background:#14161A}
-.m2 .h,.m2 .t1,.m2 .t2{background:#F5A524}.m2 .t2{background:#E5E7EB}.m2 .im{background:repeating-linear-gradient(45deg,#24272E 0 10px,#1C1F25 10px 20px)}.m2 .b{background:#F5A524}
-.m3{left:62%;transform:rotate(9deg);background:#0E241D}
-.m3 .h,.m3 .t1,.m3 .t2{background:#C9A35B}.m3 .im{background:radial-gradient(circle at 50% 50%,#1C3B31 0 34%,#0E241D 35% 40%,#1C3B31 41%)}.m3 .b{background:#C9A35B}
-.m2{animation:float 6s ease-in-out infinite}
-.fan:hover .m1{transform:rotate(-14deg) translateX(-14px)}.fan:hover .m3{transform:rotate(14deg) translateX(14px)}
-.pers{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
-.pers li{display:flex;gap:14px;align-items:flex-start;min-width:0}
-.pers li span{min-width:0}
-.pers small{display:block;color:var(--muted);font-size:15px}
-.pers svg{flex:none;margin-top:2px}
-.promise{margin-top:22px;border:1px solid rgba(34,197,94,.4);background:rgba(34,197,94,.08);border-radius:16px;padding:16px 18px;font-weight:600}
-@media (max-width:900px){.medida{grid-template-columns:1fr}.fan{height:330px;max-width:420px;width:100%;margin-inline:auto}.mini{width:44%;height:260px}}
-
-/* formulario de contacto */
-.contact{display:grid;grid-template-columns:1fr 1.25fr;gap:44px;align-items:start}
-.form{background:rgba(15,23,42,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:24px;padding:28px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-.field{display:flex;flex-direction:column;gap:6px;min-width:0}
-.field.full{grid-column:1/-1}
-.field label{font-size:14px;font-weight:600;color:var(--fg)}
-.field label small{color:var(--muted);font-weight:400}
-.field input,.field select,.field textarea{width:100%;font:16px var(--body);color:var(--fg);background:rgba(6,11,24,.7);border:1px solid rgba(148,163,184,.3);border-radius:12px;padding:12px 14px}
-.field textarea{min-height:110px;resize:vertical}
-.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--green);outline-offset:1px;border-color:transparent}
-.field [aria-invalid="true"]{border-color:#F87171}
-.err{color:#FCA5A5;font-size:13px;min-height:0}
-.motivos{display:flex;flex-wrap:wrap;gap:8px}
-.motivos label{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(148,163,184,.3);border-radius:999px;padding:9px 14px;cursor:pointer;font-size:15px;font-weight:600}
-.motivos input{accent-color:#22C55E;width:auto;padding:0;margin:0;border:0;background:none}
-.motivos label{white-space:nowrap}
-.motivos label:has(input:checked){border-color:var(--green);background:rgba(34,197,94,.12)}
-.check{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--muted)}
-.check input{margin-top:4px;accent-color:#22C55E;flex:none}
-.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-.form .btn{justify-self:start;border:0;cursor:pointer;font-family:var(--body)}
-.sent{grid-column:1/-1;border:1px solid rgba(34,197,94,.45);background:rgba(34,197,94,.1);border-radius:16px;padding:16px 18px;display:flex;flex-direction:column;gap:10px}
-.fine{grid-column:1/-1;font-size:13px;color:var(--muted)}
-@media (max-width:900px){.contact{grid-template-columns:1fr}}
-@media (max-width:560px){.form{grid-template-columns:1fr;padding:20px}}
-/* banner de cookies */
-.ck[hidden],.sent[hidden],.ck fieldset[hidden]{display:none}
-.ck{position:fixed;z-index:40;left:max(16px,env(safe-area-inset-left,0px));right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));max-width:560px;margin-inline:auto;background:#0B1326;border:1px solid rgba(148,163,184,.3);border-radius:20px;padding:18px 20px;box-shadow:0 24px 60px rgba(0,0,0,.5);display:flex;flex-direction:column;gap:12px;font-size:15px;color:var(--fg)}
-.ck p{color:var(--on-navy-muted)}
-.ck .row{display:flex;gap:10px;flex-wrap:wrap}
-.ck button{font:700 14px var(--body);border-radius:999px;padding:10px 16px;cursor:pointer;border:1px solid rgba(148,163,184,.35);background:transparent;color:var(--fg)}
-.ck button.ok{background:var(--green);color:var(--green-ink);border-color:transparent}
-.ck fieldset{border:0;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
-.ck fieldset label{display:flex;gap:10px;align-items:flex-start;color:var(--on-navy-muted)}
-.ck fieldset input{accent-color:#22C55E;margin-top:4px}
-footer nav{display:flex;gap:16px;flex-wrap:wrap}
-footer nav a,footer nav button{color:var(--on-navy-muted);font:14px var(--body);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
-/* ---------- motion: una línea de luz que recorre toda la página + revelados (CSS + JS ligero, sin librerías) ---------- */
-@property --a{syntax:"<angle>";inherits:false;initial-value:0deg}
-/* barra de avance en el encabezado */
-.progress{position:absolute;left:0;bottom:-1px;height:2px;width:100%;transform-origin:0 50%;transform:scaleX(var(--p,0));background:linear-gradient(90deg,var(--blue),var(--green));box-shadow:0 0 12px rgba(34,197,94,.7)}
-/* línea de luz de toda la página */
-/* portada */
-.hero{position:relative;isolation:isolate}
-@keyframes drift{to{transform:translate(-4%,3%) scale(1.08)}}
-.hero::after{content:"";position:absolute;inset:0;z-index:-2;background-image:linear-gradient(rgba(148,163,184,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(148,163,184,.07) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(70% 70% at 60% 40%,#000,transparent);animation:grid 20s linear infinite}
-@keyframes grid{to{background-position:56px 56px}}
-.stream{position:absolute;inset:0;z-index:-1;width:100%;height:100%;pointer-events:none}
-.stream .rail{fill:none;stroke:rgba(37,99,235,.22);stroke-width:1.5}
-.stream .beam{fill:none;stroke:url(#beamGrad);stroke-width:3;stroke-linecap:round;stroke-dasharray:180 1400;animation:beam 6s cubic-bezier(.6,0,.3,1) infinite;filter:drop-shadow(0 0 6px rgba(34,197,94,.9))}
-.stream .beam.b2{animation-delay:3s;stroke-width:2;opacity:.7}
-@keyframes beam{from{stroke-dashoffset:1580}to{stroke-dashoffset:0}}
-.badge,.hero .lead,.price-line,.ctas{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
-.hero .lead{animation-delay:.45s}.price-line{animation-delay:.55s}.ctas{animation-delay:.65s}
-@keyframes rise{from{transform:translateY(18px);filter:blur(6px)}to{transform:none;filter:none}}
-.mock{perspective:1400px;animation:mockin 1.2s cubic-bezier(.2,.7,.2,1) .2s both}
-@keyframes mockin{from{transform:translateY(40px) rotateX(18deg);filter:blur(10px)}to{transform:none;filter:none}}
-.tilt{position:absolute;inset:0;transform-style:preserve-3d;transform:rotateY(var(--ry,-8deg)) rotateX(var(--rx,4deg));transition:transform .5s cubic-bezier(.2,.7,.2,1)}
-.phone{animation:float 6s ease-in-out infinite}
-@keyframes float{50%{translate:0 -12px}}
-.laptop::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.18) 50%,transparent 65%);background-size:250% 100%;animation:glint 7s ease-in-out infinite}
-@keyframes glint{0%,60%{background-position:120% 0}100%{background-position:-60% 0}}
-/* palabras que suben desde una máscara */
-.w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.1em;margin-bottom:-.1em}
-.w>span{display:inline-block;transition:transform 1s cubic-bezier(.16,.84,.24,1),filter 1s ease;transition-delay:calc(var(--wd,0s) + var(--d,0s))}
-.split.pre .w>span{transform:translateY(110%) rotate(4deg);filter:blur(4px)}
-.hero h1 .w>span{animation:wordup 1.1s cubic-bezier(.16,.84,.24,1) both;animation-delay:var(--wd)}
-@keyframes wordup{from{transform:translateY(110%) rotate(4deg)}to{transform:none}}
-/* eyebrow: línea que se dibuja */
-.eyebrow{display:inline-flex;align-items:center;gap:10px}
-.eyebrow::before{content:"";width:28px;height:2px;background:currentColor;transform-origin:0 50%;transition:transform .8s cubic-bezier(.2,.7,.2,1) .1s}
-.sec-head.pre .eyebrow::before{transform:scaleX(0)}
-.pricecard .eyebrow::before{display:none}
-/* bloques: llegan desenfocados y se acomodan (solo lo que está fuera de pantalla al cargar) */
-.reveal{transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1),filter .9s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
-.reveal.pre:not(.split){opacity:.15;transform:translateY(36px) scale(.97);filter:blur(10px)}
-.sec-head.reveal.pre{opacity:1;transform:none;filter:none}
-.lead.reveal.pre{transform:translateY(16px);opacity:.1}
-/* cinta de clientes */
-.marquee{background:rgba(6,11,24,.55);color:var(--on-navy-muted);border-block:1px solid var(--navy-2);overflow:hidden;padding-block:18px;font-family:var(--display);font-weight:600;font-size:20px;white-space:nowrap}
-.marquee .track{display:inline-flex;gap:40px;padding-right:40px;animation:marq 32s linear infinite}
-.marquee span{display:inline-flex;align-items:center;gap:40px}
-.marquee span::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green)}
-@keyframes marq{to{transform:translateX(-50%)}}
-/* portafolio */
-.card{transition:transform .9s cubic-bezier(.2,.7,.2,1) var(--d,0s),opacity .9s var(--d,0s),filter .9s var(--d,0s),box-shadow .3s ease,border-color .3s ease;will-change:translate}
-.card img{transition:object-position 2.4s ease,transform .6s ease}
-.card:hover img{object-position:left 30%;transform:scale(1.03)}
-.card:hover{box-shadow:0 18px 50px rgba(37,99,235,.25);border-color:var(--blue)}
-/* lista de incluye: la palomita se dibuja */
-.checks path{stroke-dasharray:20;stroke-dashoffset:0;transition:stroke-dashoffset .6s ease calc(var(--d,0s) + .35s)}
-.checks li.pre path{stroke-dashoffset:20}
-/* tarjeta de precio: anillo de luz que gira */
-.pricecard{position:relative;isolation:isolate}
-.pricecard::before{content:"";position:absolute;inset:-2px;border-radius:26px;z-index:-1;background:conic-gradient(from var(--a),transparent 0 55%,var(--blue) 70%,var(--green) 80%,transparent 92%);animation:spin 5s linear infinite}
-.pricecard::after{content:"";position:absolute;inset:0;border-radius:24px;z-index:-1;background:#0B1326}
-@keyframes spin{to{--a:360deg}}
-.amt{font-variant-numeric:tabular-nums}
-/* pasos */
-.steps li{position:relative}
-.steps li::before{content:"";position:absolute;left:0;top:-3px;height:3px;width:100%;background:var(--green);box-shadow:0 0 10px rgba(34,197,94,.6);transform-origin:0 50%;transform:scaleX(0);transition:transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--sd,0s)}
-.steps.on li::before{transform:scaleX(1)}
-.steps .n{display:inline-block;transition:transform .8s cubic-bezier(.2,.7,.2,1) var(--sd,0s),color .8s var(--sd,0s)}
-.steps:not(.on) .n{transform:translateY(20px) scale(.7);color:var(--line)}
-/* opciones */
-.opt{transition:transform .5s ease var(--d,0s),border-color .3s ease,opacity .9s var(--d,0s),filter .9s var(--d,0s)}
-.opt:hover{transform:translateY(-4px);border-color:var(--green)}
-/* fondo de bandas claras: puntos que se mueven lento */
-.alt{position:relative;isolation:isolate;overflow:hidden}
-
-/* cierre */
-.close{position:relative;isolation:isolate;overflow:hidden}
-.close h2 em{background:linear-gradient(90deg,var(--green),#86EFAC,var(--green));background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sheen 4s linear infinite}
-@keyframes sheen{to{background-position:-200% 0}}
-.btn-go{position:relative;overflow:hidden}
-.btn-go::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.45) 50%,transparent 70%);transform:translateX(-120%);animation:btnshine 4.5s ease-in-out infinite}
-@keyframes btnshine{0%,70%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;transition:none!important}
-  .tilt{transform:none}
-  .reveal.pre,.split.pre .w>span{opacity:1!important;transform:none!important;filter:none!important}
-  .steps li::before{transform:scaleX(1)}.steps:not(.on) .n{transform:none;color:var(--blue)}
-  .lava i,.grain{animation:none!important}
-}
-.nav-end{display:flex;align-items:center;gap:14px;flex:none}
-.lang{display:flex;align-items:center;gap:2px;border:1px solid rgba(148,163,184,.3);border-radius:999px;padding:3px}
-.lang a{color:var(--on-navy-muted);text-decoration:none;font-weight:700;font-size:13px;letter-spacing:.04em;line-height:1;padding:6px 9px;border-radius:999px}
-.lang a:hover{color:var(--on-navy)}
-.lang a[aria-current]{background:rgba(148,163,184,.2);color:var(--on-navy)}
-@media (max-width:420px){.nav{gap:10px}.nav-end{gap:8px}.lang{padding:2px}.lang a{font-size:12px;padding:6px 6px}.nav .btn{padding:10px 14px}}
-@media (max-width:400px){.logo{font-size:21px;gap:8px}}
-@media (max-width:370px){.lang a[aria-current]{display:none}}
-@media (max-width:340px){.nav{gap:8px}.logo{font-size:18px;gap:6px}.logo svg{width:26px;height:26px}.nav .btn{padding:10px 12px}}
-@media (max-width:420px){.nav .btn{font-size:14px;padding:10px 12px}}
-@media (max-width:340px){.nav .btn{font-size:13px;padding:9px 10px}}
-</style>
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="/favicon-32.png" sizes="32x32">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="canonical" href="https://tuwebpronto.com/">
-<link rel="alternate" hreflang="es-MX" href="https://tuwebpronto.com/">
-<link rel="alternate" hreflang="en-US" href="https://tuwebpronto.com/en/">
-<link rel="alternate" hreflang="x-default" href="https://tuwebpronto.com/">
-<meta name="robots" content="noindex, nofollow"><!-- VISTA PREVIA: quitar esta línea al publicar -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Traumatólogo en Col. Nueva, Mexicali | Grupo Ortopédico</title>
+<meta name="description" content="Ortopedista y traumatólogo en Mexicali (Col. Nueva). Lesiones deportivas, fracturas y dolor de rodilla, cadera, hombro o columna. Agenda tu cita.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://grupo-ortopedico-mexicali.netlify.app/">
+<link rel="alternate" hreflang="es-MX" href="https://grupo-ortopedico-mexicali.netlify.app/">
+<link rel="alternate" hreflang="en" href="https://grupo-ortopedico-mexicali.netlify.app/en/">
+<link rel="alternate" hreflang="x-default" href="https://grupo-ortopedico-mexicali.netlify.app/">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="TuWebPronto">
-<meta property="og:title" content="TuWebPronto · Tu página web en 5 a 7 días">
-<meta property="og:description" content="Páginas web para negocios de Mexicali y la región. Desde $7,499 + IVA, pago único.">
-<meta property="og:url" content="https://tuwebpronto.com/">
-<meta property="og:image" content="https://tuwebpronto.com/og-image.jpg">
-<meta name="theme-color" content="#0F172A">
-<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<meta property="og:site_name" content="Grupo Ortopédico de Mexicali">
+<meta property="og:locale" content="es_MX">
+<meta property="og:title" content="Traumatólogo en Col. Nueva, Mexicali | Grupo Ortopédico">
+<meta property="og:description" content="Ortopedista y traumatólogo en Mexicali (Col. Nueva). Lesiones deportivas, fracturas y dolor de rodilla, cadera, hombro o columna. Agenda tu cita.">
+<meta property="og:url" content="https://grupo-ortopedico-mexicali.netlify.app/">
+<meta property="og:image" content="https://grupo-ortopedico-mexicali.netlify.app/assets/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Grupo Ortopédico de Mexicali">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="geo.region" content="MX-BCN">
+<meta name="geo.placename" content="Mexicali">
+<meta name="theme-color" content="#0B1F3B">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/assets/fuentes/montserrat-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fuentes/montserrat-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="/assets/img/foto-marca.webp" fetchpriority="high">
+<link rel="stylesheet" href="/assets/css/site.css?v=2d45cbf3">
+<script src="/assets/js/boot.js?v=2d45cbf3"></script>
+<script src="/assets/js/consent.js?v=2d45cbf3" data-ga="" data-clarity="" data-pixel="" data-policy="/politica-de-cookies/" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"MedicalClinic","@id":"https://grupo-ortopedico-mexicali.netlify.app/#negocio","name":"Grupo Ortopédico de Mexicali","url":"https://grupo-ortopedico-mexicali.netlify.app/","description":"Ortopedista y traumatólogo en Mexicali (Col. Nueva). Lesiones deportivas, fracturas y dolor de rodilla, cadera, hombro o columna. Agenda tu cita.","telephone":"+526863559793","address":{"@type":"PostalAddress","streetAddress":"Av. Francisco I. Madero 1616, Col. Nueva","addressLocality":"Mexicali","addressRegion":"Baja California","postalCode":"21100","addressCountry":"MX"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"10:00","closes":"20:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday"],"opens":"09:00","closes":"13:00"}],"areaServed":[{"@type":"City","name":"Mexicali"}],"hasMap":"https://www.google.com/maps/search/?api=1&query=Grupo%20Ortop%C3%A9dico%20de%20Mexicali%2C%20Av.%20Francisco%20I.%20Madero%201616%2C%20Col.%20Nueva%2C%2021100%20Mexicali%2C%20B.C.","knowsLanguage":["es","en"],"availableLanguage":["es","en"],"logo":"https://grupo-ortopedico-mexicali.netlify.app/assets/img/simbolo.webp","image":"https://grupo-ortopedico-mexicali.netlify.app/assets/img/og-image.jpg","medicalSpecialty":["https://schema.org/Musculoskeletal"],"availableService":[{"@type":"MedicalTherapy","name":"Traumatología y Ortopedia: Rodilla","url":"https://grupo-ortopedico-mexicali.netlify.app/rodilla/"},{"@type":"MedicalTherapy","name":"Traumatología y Ortopedia: Cadera","url":"https://grupo-ortopedico-mexicali.netlify.app/cadera/"},{"@type":"MedicalTherapy","name":"Traumatología y Ortopedia: Hombro","url":"https://grupo-ortopedico-mexicali.netlify.app/hombro/"},{"@type":"MedicalTherapy","name":"Traumatología y Ortopedia: Columna","url":"https://grupo-ortopedico-mexicali.netlify.app/columna/"},{"@type":"MedicalTherapy","name":"Traumatología y Ortopedia: Lesiones deportivas","url":"https://grupo-ortopedico-mexicali.netlify.app/lesiones-deportivas/"},{"@type":"MedicalTherapy","name":"Traumatología y Ortopedia: Fracturas","url":"https://grupo-ortopedico-mexicali.netlify.app/fracturas/"}]},{"@type":"WebSite","@id":"https://grupo-ortopedico-mexicali.netlify.app/#sitio","url":"https://grupo-ortopedico-mexicali.netlify.app/","name":"Grupo Ortopédico de Mexicali","inLanguage":["es-MX","en"],"publisher":{"@id":"https://grupo-ortopedico-mexicali.netlify.app/#negocio"}},{"@type":"WebPage","@id":"https://grupo-ortopedico-mexicali.netlify.app/#pagina","url":"https://grupo-ortopedico-mexicali.netlify.app/","name":"Traumatólogo en Col. Nueva, Mexicali | Grupo Ortopédico","description":"Ortopedista y traumatólogo en Mexicali (Col. Nueva). Lesiones deportivas, fracturas y dolor de rodilla, cadera, hombro o columna. Agenda tu cita.","inLanguage":"es-MX","isPartOf":{"@id":"https://grupo-ortopedico-mexicali.netlify.app/#sitio"},"about":{"@id":"https://grupo-ortopedico-mexicali.netlify.app/#negocio"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué hace un traumatólogo y ortopedista?","acceptedAnswer":{"@type":"Answer","text":"Es el médico especialista en huesos, articulaciones, músculos, ligamentos y tendones. Diagnostica y trata lesiones como fracturas, esguinces y desgarros, y padecimientos como el desgaste articular o el dolor de columna, con tratamiento conservador o con cirugía según cada caso."}},{"@type":"Question","name":"¿Dónde está Grupo Ortopédico de Mexicali?","acceptedAnswer":{"@type":"Answer","text":"Estamos en Av. Francisco I. Madero 1616, Col. Nueva, 21100 Mexicali, B.C. Antes de tu visita puedes abrir la ubicación en Google Maps desde esta página para trazar tu ruta."}},{"@type":"Question","name":"¿Cuál es el horario de atención?","acceptedAnswer":{"@type":"Answer","text":"Atendemos lunes a viernes de 10:00 a 20:00 h; sábado de 9:00 a 13:00 h y el domingo cerramos. Para asegurar tu lugar, agenda tu cita antes de acudir."}},{"@type":"Question","name":"¿Cómo agendo una cita?","acceptedAnswer":{"@type":"Answer","text":"Escríbenos por WhatsApp al 686 355 9793, llámanos en horario de atención o deja tus datos en el formulario de esta página y te contactamos para confirmar tu cita."}},{"@type":"Question","name":"¿Qué debo llevar a mi consulta?","acceptedAnswer":{"@type":"Answer","text":"Una identificación, los estudios que ya tengas —radiografías, resonancias y sus interpretaciones—, la lista de medicamentos que tomas y, si aplica, notas de otros médicos. Usa ropa cómoda que permita revisar la zona."}},{"@type":"Question","name":"¿Todas las lesiones de hueso o articulación requieren cirugía?","acceptedAnswer":{"@type":"Answer","text":"No. Muchas se tratan sin cirugía, con reposo relativo, medicamentos, inmovilización o rehabilitación. La cirugía se considera cuando el diagnóstico lo indica; en la consulta te explicamos las opciones para tu caso."}},{"@type":"Question","name":"¿Qué padecimientos atienden?","acceptedAnswer":{"@type":"Answer","text":"Atendemos problemas de rodilla, cadera, hombro, columna, lesiones deportivas y fracturas: dolor, lesiones, desgaste articular y seguimiento después de un tratamiento."}}]}]}</script>
 </head>
-<body>
-
-
-<div class="lava" aria-hidden="true"><i class="l1"></i><i class="l2"></i><i class="l3"></i><i class="l4"></i><i class="l5"></i></div>
-<div class="grain" aria-hidden="true"></div>
-<div class="preview-note">Vista previa privada · todavía no está publicada</div>
-
-<header>
-  <div class="wrap nav">
-    <a class="logo" href="#inicio" aria-label="TuWebPronto, inicio">
-      <svg width="30" height="30" viewBox="0 0 56 56" aria-hidden="true"><rect width="56" height="56" rx="16" fill="#2563EB"/><path d="M18 18l14 10-14 10" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M34 38h6" stroke="#22C55E" stroke-width="5" stroke-linecap="round"/></svg>
-      tuweb<span>pronto</span>
-    </a>
-    <ul>
-      <li><a href="#trabajos">Trabajos</a></li>
-      <li><a href="#estilos">Ejemplos</a></li>
-      <li><a href="#incluye">Qué incluye</a></li>
-      <li><a href="#como">Cómo funciona</a></li>
-      <li><a href="#preguntas">Preguntas</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-    <div class="nav-end">
-      <div class="lang" role="group" aria-label="Idioma"><a href="/" hreflang="es" aria-current="page" aria-label="Español">ES</a><a href="/en/" hreflang="en" lang="en" aria-label="English">EN</a></div>
-      <a class="btn btn-go" href="https://wa.me/16194533137?text=Hola%2C%20quiero%20mi%20p%C3%A1gina%20web%20con%20TuWebPronto" target="_blank" rel="noopener">Escríbenos</a>
+<body class="hero-foto svc-tarjetas page-home">
+<a class="skip" href="#main">Saltar al contenido</a>
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a class="brand" href="/"><img src="/assets/img/simbolo-96.webp" alt="" width="44" height="44" class="brand-mark"><span class="brand-word"><span class="bw-top">Grupo</span><span class="bw-mid">Ortopédico</span><span class="bw-bot">de Mexicali</span></span></a>
+    <nav class="main-nav" aria-label="Menú"><ul><li><a href="#servicios">Qué atendemos</a></li><li><a href="#nosotros">Quiénes somos</a></li><li><a href="#preguntas">Preguntas</a></li><li><a href="#ubicacion">Ubicación y horario</a></li><li><a href="#contacto">Contacto</a></li></ul></nav>
+    <div class="header-actions">
+      <a class="header-phone" href="tel:+526863559793" data-zona="header"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z" fill="currentColor" stroke="none"/></svg><span>686 355 9793</span></a>
+      <nav class="lang" aria-label="Idioma"><a href="/" hreflang="es" lang="es" class="on" aria-current="true">ES</a><a href="/en/" hreflang="en" lang="en">EN</a></nav>
+      <a class="btn btn-accent btn-sm header-cta" href="#contacto">Agendar cita</a>
+      <button class="menu-toggle" type="button" aria-label="Menú" aria-expanded="false" aria-controls="site-menu"><span></span><span></span><span></span></button>
     </div>
   </div>
-  <div class="progress" id="progress" aria-hidden="true"></div>
 </header>
+<div class="site-menu" id="site-menu" hidden>
+  <ul><li><a href="#servicios">Qué atendemos</a></li><li><a href="#nosotros">Quiénes somos</a></li><li><a href="#preguntas">Preguntas</a></li><li><a href="#ubicacion">Ubicación y horario</a></li><li><a href="#contacto">Contacto</a></li></ul>
+  <a class="btn btn-accent" href="https://wa.me/526863559793?text=Hola%2C%20quisiera%20agendar%20una%20valoraci%C3%B3n%20en%20Grupo%20Ortop%C3%A9dico%20de%20Mexicali." target="_blank" rel="noopener" data-zona="menu"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z" fill="currentColor" stroke="none"/></svg><span>Agendar cita</span></a>
+</div>
+<main id="main">
 
-<main id="inicio">
-<section class="hero">
-  <svg class="stream" viewBox="0 0 1440 720" preserveAspectRatio="none" aria-hidden="true">
-    <defs><linearGradient id="beamGrad" x1="0" x2="1"><stop offset="0" stop-color="#2563EB" stop-opacity="0"/><stop offset=".5" stop-color="#2563EB"/><stop offset="1" stop-color="#22C55E"/></linearGradient></defs>
-    <path class="rail" d="M-20 610 C 260 600, 420 420, 700 450 S 1100 640, 1460 180"/>
-    <path class="beam" d="M-20 610 C 260 600, 420 420, 700 450 S 1100 640, 1460 180"/>
-    <path class="rail" d="M-20 680 C 300 690, 520 560, 820 590 S 1200 700, 1460 420"/>
-    <path class="beam b2" d="M-20 680 C 300 690, 520 560, 820 590 S 1200 700, 1460 420"/>
-  </svg>
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <div class="badge">Precio de lanzamiento · primeros 20 negocios</div>
-      <h1>Tu página web, lista en <em>5 a 7 días.</em></h1>
-      <p class="lead">Para negocios de Mexicali y la región. Precio fijo, sin juntas eternas y con tu botón de WhatsApp desde el primer día.</p>
-      <div class="price-line"><b>$7,499</b><small>+ IVA · total $8,698.84 MXN · pago único</small></div>
-      <div class="ctas">
-        <a class="btn btn-go" href="https://wa.me/16194533137?text=Hola%2C%20quiero%20mi%20p%C3%A1gina%20web%20con%20TuWebPronto" target="_blank" rel="noopener">
-          <svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
-          Quiero mi página
-        </a>
-        <a class="btn btn-ghost" href="#trabajos">Ver trabajos</a>
-      </div>
-    </div>
-    <figure class="mock" id="mock" style="margin:0">
-      <div class="tilt" id="tilt">
-        <div class="laptop"><div class="bar"><i></i><i></i><i></i></div><img src="img/oros-d.jpg" alt="Página de Oros Servicio Automotriz en computadora"></div>
-        <div class="phone"><img src="img/carballo-m.jpg" alt="Página del Dr. Daniel Carballo en celular"></div>
-      </div>
-      <figcaption class="mock-cap">Páginas reales: Oros Servicio Automotriz y Dr. Carballo</figcaption>
-    </figure>
+<section class="hero" id="inicio"><div class="hero-glow" aria-hidden="true"></div><div class="container hero-grid"><div class="hero-text"><p class="hero-kicker">Traumatología y Ortopedia · Mexicali</p><h1 class="hero-h1">Ortopedista y traumatólogo en Mexicali</h1><p class="hero-sub">Atendemos rodilla, cadera, hombro, columna, lesiones deportivas y fracturas en la Col. Nueva de Mexicali. Te explicamos qué está pasando y cuáles son tus opciones antes de decidir un tratamiento.</p><div class="hero-buttons"><a class="btn btn-accent" href="https://wa.me/526863559793?text=Hola%2C%20quisiera%20agendar%20una%20valoraci%C3%B3n%20en%20Grupo%20Ortop%C3%A9dico%20de%20Mexicali." target="_blank" rel="noopener" data-zona="hero"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z" fill="currentColor" stroke="none"/></svg><span>Agendar cita por WhatsApp</span></a><a class="btn btn-light" href="tel:+526863559793" data-zona="hero"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z" fill="currentColor" stroke="none"/></svg><span>Llamar 686 355 9793</span></a></div><ul class="hero-facts"><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.6"/></svg><span>Col. Nueva, Mexicali</span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg><span>Lunes a viernes: 10:00 a 20:00 h · Sábado: 9:00 a 13:00 h</span></li><li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z" fill="currentColor" stroke="none"/></svg><a href="tel:+526863559793" data-zona="hero">+52 686 355 9793</a></li></ul></div><div class="hero-visual"><figure class="hero-photo"><img src="/assets/img/foto-marca.webp" alt="Paisaje de montañas en tonos azules con el arco de la marca Grupo Ortopédico de Mexicali" width="354" height="446" fetchpriority="high" decoding="async"></figure><img class="hero-badge" src="/assets/img/simbolo.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><div class="hero-card"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg><div><strong data-hoy-label>Horario</strong><span data-hoy-horas>Lunes a viernes: 10:00 a 20:00 h</span></div></div></div></div></section>
+<section class="section section-paper" id="servicios" aria-labelledby="h-servicios">
+  <div class="container">
+    <div class="section-head"><p class="eyebrow">Servicios</p><h2 class="title" id="h-servicios"><span>¿Qué atendemos</span> <strong>en Grupo Ortopédico?</strong></h2><p class="lead">Valoración, diagnóstico y tratamiento de lesiones y dolor en huesos, articulaciones, músculos y ligamentos.</p></div>
+    <div class="svc-grid"><article class="svc-card"><svg class="svc-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.5 2.5 10.6 9.8"/><path d="M12.9 14.2 12 21.5"/><circle cx="11.7" cy="11.9" r="2.5"/><path d="M14.6 9.9c1.5.6 2.3 1.8 2.2 3.3"/><path d="M9.5 21.5h5"/></svg><h3>Rodilla</h3><p>Valoramos el dolor, la inflamación y la sensación de inestabilidad en la rodilla, ya sea por una lesión reciente o por desgaste.</p><p class="svc-mt">Motivos frecuentes de consulta</p><ul class="svc-chips"><li>Dolor al subir escaleras o al levantarte</li><li>Lesión de menisco o de ligamentos</li><li>Desgaste articular (artrosis)</li><li>Inflamación después de una torcedura</li></ul><a class="svc-link" href="/rodilla/">Más sobre rodilla<svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article><article class="svc-card"><svg class="svc-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 6c2 3 5 4 8 4s6-1 8-4"/><path d="M5 7c0 5 2 8 5 9M19 7c0 5-2 8-5 9"/><circle cx="9.5" cy="16.5" r="1.8"/><circle cx="14.5" cy="16.5" r="1.8"/><path d="M9 18.5 8 22M15 18.5l1 3.5"/></svg><h3>Cadera</h3><p>Atendemos el dolor de cadera e ingle, la rigidez y la dificultad para caminar, sentarte o ponerte los zapatos.</p><p class="svc-mt">Motivos frecuentes de consulta</p><ul class="svc-chips"><li>Dolor en la ingle o a un costado de la cadera</li><li>Rigidez al caminar o al levantarte</li><li>Desgaste de la articulación</li><li>Inflamación de tendones o bursas</li></ul><a class="svc-link" href="/cadera/">Más sobre cadera<svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article><article class="svc-card"><svg class="svc-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="8" cy="5" r="2.5"/><path d="M8 7.5v6M8 9.5c3 0 6 .5 8.5 2.5l3 4"/><path d="M8 13.5 6 21M8 13.5l3 7.5"/><circle cx="12" cy="9.8" r="1.6"/></svg><h3>Hombro</h3><p>Revisamos el dolor de hombro, la pérdida de fuerza y la dificultad para levantar el brazo o dormir de ese lado.</p><p class="svc-mt">Motivos frecuentes de consulta</p><ul class="svc-chips"><li>Lesión del manguito rotador</li><li>Tendinitis y bursitis</li><li>Hombro rígido o congelado</li><li>Luxación o inestabilidad</li></ul><a class="svc-link" href="/hombro/">Más sobre hombro<svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article><article class="svc-card"><svg class="svc-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="9" y="2.5" width="6" height="3" rx="1.2"/><rect x="9" y="7" width="6" height="3" rx="1.2"/><rect x="9" y="11.5" width="6" height="3" rx="1.2"/><rect x="9" y="16" width="6" height="3" rx="1.2"/><path d="M7 4v16M17 4v16"/></svg><h3>Columna</h3><p>Valoramos el dolor de cuello y de espalda baja, la rigidez y el dolor que se extiende hacia brazos o piernas.</p><p class="svc-mt">Motivos frecuentes de consulta</p><ul class="svc-chips"><li>Dolor de espalda baja (lumbalgia)</li><li>Dolor de cuello (cervicalgia)</li><li>Hernia de disco</li><li>Dolor que baja a la pierna (ciática)</li></ul><a class="svc-link" href="/columna/">Más sobre columna<svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article><article class="svc-card"><svg class="svc-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="14.5" cy="4" r="2"/><path d="M8 21l3-6 3 2v5M6 11l4-3 4 1 3 4 3 1M10 8l1 5"/></svg><h3>Lesiones deportivas</h3><p>Atendemos esguinces, desgarros, tendinitis y lesiones de ligamentos en personas activas, con un plan de regreso gradual a la actividad.</p><p class="svc-mt">Motivos frecuentes de consulta</p><ul class="svc-chips"><li>Esguince de tobillo o de rodilla</li><li>Desgarros musculares</li><li>Tendinitis por sobreuso</li><li>Lesiones de ligamentos</li></ul><a class="svc-link" href="/lesiones-deportivas/">Más sobre lesiones deportivas<svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article><article class="svc-card"><svg class="svc-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5.5 4.5a2 2 0 1 1 3 2.5l2.5 2.5-1.5 2 2 1.5-1.5 2 2.5 2.5a2 2 0 1 1-2.5 3 2 2 0 1 1-3-2.5l1.6-1.6-1.6-1.4 1.5-2-1.5-1.5-1.5-1.5a2 2 0 1 1-2.5-3z"/><path d="M14 5l5 5M16 3l1 1"/></svg><h3>Fracturas</h3><p>Valoramos y tratamos fracturas y sospechas de fractura, y damos seguimiento durante la consolidación del hueso y la recuperación de la movilidad.</p><p class="svc-mt">Motivos frecuentes de consulta</p><ul class="svc-chips"><li>Fracturas de muñeca, tobillo y otros huesos</li><li>Seguimiento con yeso o férula</li><li>Fracturas por caídas</li><li>Revisión de fracturas que no consolidan</li></ul><a class="svc-link" href="/fracturas/">Más sobre fracturas<svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article></div>
   </div>
 </section>
-
-<div class="marquee" aria-label="Clientes: Dr. Daniel Carballo, Dr. Antonio García, Oros Servicio Automotriz, Colegio CMCS, Vidátil, MP Hidro Logistics, Good Moves, Silverback Media"><div class="track" aria-hidden="true"><span>Dr. Daniel Carballo</span><span>Dr. Antonio García</span><span>Oros Servicio Automotriz</span><span>Colegio CMCS</span><span>Vidátil</span><span>MP Hidro Logistics</span><span>Good Moves</span><span>Silverback Media</span><span>Dr. Daniel Carballo</span><span>Dr. Antonio García</span><span>Oros Servicio Automotriz</span><span>Colegio CMCS</span><span>Vidátil</span><span>MP Hidro Logistics</span><span>Good Moves</span><span>Silverback Media</span></div></div>
-
-<section class="band" id="trabajos">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">Clientes que confían en nosotros</div>
-      <h2>Páginas que ya están trabajando</h2>
-      <p class="lead">Médicos, escuelas, talleres, marcas de producto y empresas de servicio de Mexicali y del otro lado.</p>
-    </div>
-    <div class="work">
-      <article class="card"><img src="img/carballo-d.jpg" alt="Página del Dr. Daniel Carballo" loading="lazy"><div><span class="giro">Ortopedista · Mexicali</span><h3>Dr. Daniel Carballo</h3><p>Una página para cada lesión, con blog y versión en inglés.</p></div></article>
-      <article class="card"><img src="img/antonio-d.jpg" alt="Página del Dr. Antonio García" loading="lazy"><div><span class="giro">Cirujano bariatra · Mexicali</span><h3>Dr. Antonio García</h3><p>Pacientes de México y EE. UU. agendan en su idioma.</p></div></article>
-      <article class="card"><img src="img/oros-d.jpg" alt="Página de Oros Servicio Automotriz" loading="lazy"><div><span class="giro">Taller multimarca · Mexicali</span><h3>Oros Servicio Automotriz</h3><p>Citas por WhatsApp y reseñas de Google al frente.</p></div></article>
-      <article class="card"><img src="img/cmcs-d.jpg" alt="Página del Colegio CMCS" loading="lazy"><div><span class="giro">Escuela bilingüe · Mexicali</span><h3>Colegio CMCS</h3><p>Los papás conocen la escuela y agendan su visita.</p></div></article>
-      <article class="card"><img src="img/vidatil-d.jpg" alt="Página de Vidátil" loading="lazy"><div><span class="giro">Dátiles · Baja California</span><h3>Vidátil</h3><p>Presentaciones, origen y recetas de una marca local.</p></div></article>
-      <article class="card"><img src="img/mphidro-d.jpg" alt="Página de MP Hidro Logistics" loading="lazy"><div><span class="giro">Transporte de combustible</span><h3>MP Hidro Logistics</h3><p>Permisos y certificaciones a la vista para cerrar con empresas.</p></div></article>
-      <article class="card"><img src="img/goodmoves-d.jpg" alt="Página de Good Moves" loading="lazy"><div><span class="giro">Mudanzas · Imperial Valley, CA</span><h3>Good Moves</h3><p>Cotizador en dos pasos, en inglés y español.</p></div></article>
-      <article class="card"><img src="img/silverback-d.jpg" alt="Página de Silverback Media" loading="lazy"><div><span class="giro">Agencia creativa · Mexicali</span><h3>Silverback Media</h3><p>Video, campañas y tecnología, con animación de marca.</p></div></article>
-    </div>
+<section class="section section-dark" id="cuando" aria-labelledby="h-cuando">
+  <div class="container two-col">
+    <div><p class="eyebrow">Orientación</p><h2 class="title" id="h-cuando"><span>¿Cuándo acudir</span> <strong>con un ortopedista?</strong></h2><p>Conviene una valoración si tienes alguno de estos síntomas:</p>
+      <ul class="checklist"><li>Dolor que lleva más de unos días y no mejora con reposo relativo.</li><li>Inflamación después de un golpe, una torcedura o un mal paso.</li><li>Dificultad para mover una articulación o para apoyar.</li><li>Sensación de que la rodilla, el tobillo o el hombro se salen o fallan.</li><li>Hormigueo, adormecimiento o dolor que baja por un brazo o una pierna.</li><li>Una lesión ya tratada que sigue dando molestias.</li></ul><aside class="callout" role="note"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3 2 20h20L12 3z"/><path d="M12 10v4M12 17.2v.1"/></svg><div><p class="callout-t">Cuándo no esperar una cita</p><p>Si hay deformidad evidente, hueso expuesto, no puedes apoyar después de una caída, la extremidad se pone fría o pálida, o pierdes fuerza o control de la orina, acude a un servicio de urgencias o llama al 911.</p></div></aside></div>
+    <div id="proceso"><p class="eyebrow">Tu primera visita</p><h2 class="title"><span>¿Cómo es</span> <strong>tu primera valoración?</strong></h2><ol class="steps"><li><span class="step-n">1</span><div><h3>Escríbenos o llámanos</h3><p>Cuéntanos brevemente qué te pasa. No necesitas enviar detalles clínicos por mensaje.</p></div></li><li><span class="step-n">2</span><div><h3>Agendamos tu valoración</h3><p>Te proponemos un horario y te decimos qué estudios llevar si ya los tienes.</p></div></li><li><span class="step-n">3</span><div><h3>Valoración</h3><p>Revisamos tu historia, exploramos la zona y, si hace falta, solicitamos estudios.</p></div></li><li><span class="step-n">4</span><div><h3>Plan contigo</h3><p>Te explicamos el diagnóstico probable y las opciones, con y sin cirugía, para decidir juntos.</p></div></li></ol>
+      <div class="hero-buttons"><a class="btn btn-accent" href="https://wa.me/526863559793?text=Hola%2C%20quisiera%20agendar%20una%20valoraci%C3%B3n%20en%20Grupo%20Ortop%C3%A9dico%20de%20Mexicali." target="_blank" rel="noopener" data-zona="proceso"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z" fill="currentColor" stroke="none"/></svg><span>Agendar cita</span></a></div></div>
   </div>
 </section>
-
-<section class="band" id="estilos">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">Elige tu estilo</div>
-      <h2>Mira cómo se vería la página de tu negocio</h2>
-      <p class="lead">Elige tu giro, sube tu logo y ve tu página con tus colores en segundos, sin pagar nada. Es el punto de partida: la tuya se diseña a tu medida.</p>
-    </div>
-    <div class="styles">
-      <a class="style" href="muestra/?giro=salud"><div class="sw" style="background:linear-gradient(150deg,#E7F8F5,#CDE8F3)"><span style="position:absolute;left:16px;bottom:14px;right:16px;font-family:var(--display);font-weight:800;font-size:22px;line-height:1.05;color:#0B2A33">Tu dentista en Mexicali</span></div><h3>Sector salud</h3><p>Dentistas, médicos y clínicas.</p><span class="go">Ver con mi logo →</span></a>
-      <a class="style" href="muestra/?giro=taller"><div class="sw" style="background:linear-gradient(150deg,#14161A,#2A2D33)"><span style="position:absolute;left:16px;bottom:14px;right:16px;font-family:var(--display);font-weight:800;font-size:22px;line-height:1.05;color:#F5A524">TALLER MECÁNICO</span></div><h3>Talleres y servicios</h3><p>Mecánicos, contratistas, técnicos.</p><span class="go">Ver con mi logo →</span></a>
-      <a class="style" href="muestra/?giro=cafeteria"><div class="sw" style="background:linear-gradient(150deg,#22140E,#3A2418)"><span style="position:absolute;left:16px;bottom:14px;right:16px;font-family:var(--display);font-weight:800;font-size:22px;line-height:1.05;color:#EFE6DA">Café con calma</span></div><h3>Cafetería</h3><p>Café, panadería, brunch.</p><span class="go">Ver con mi logo →</span></a>
-      <a class="style" href="muestra/?giro=restaurante"><div class="sw" style="background:linear-gradient(150deg,#0E241D,#173A2F)"><span style="position:absolute;left:16px;bottom:14px;right:16px;font-family:var(--display);font-weight:800;font-size:22px;line-height:1.05;color:#C9A35B">Cenar sin prisa</span></div><h3>Restaurante</h3><p>Cocina, mariscos, parrilla.</p><span class="go">Ver con mi logo →</span></a>
-      <a class="style" href="muestra/?giro=barberia"><div class="sw" style="background:linear-gradient(150deg,#0B0B0C,#1D1D20)"><span style="position:absolute;left:16px;bottom:14px;right:16px;font-family:var(--display);font-weight:800;font-size:22px;line-height:1.05;color:#EDE7DD">CORTE LIMPIO</span></div><h3>Barbería y belleza</h3><p>Barberías, estéticas, spas.</p><span class="go">Ver con mi logo →</span></a>
-      <a class="style" href="muestra/?giro=escuela"><div class="sw" style="background:linear-gradient(150deg,#EAF4FF,#FFFFFF)"><span style="position:absolute;left:16px;bottom:14px;right:16px;font-family:var(--display);font-weight:800;font-size:22px;line-height:1.05;color:#13306B">Aprender aquí</span></div><h3>Escuelas</h3><p>Colegios, academias, cursos.</p><span class="go">Ver con mi logo →</span></a>
-      <a class="style" href="muestra/?giro=producto"><div class="sw" style="background:linear-gradient(150deg,#E23D28,#FF8A1F)"><span style="position:absolute;left:16px;bottom:14px;right:16px;font-family:var(--display);font-weight:800;font-size:22px;line-height:1.05;color:#FFFFFF">Crujen fuerte.</span></div><h3>Marca de producto</h3><p>Alimentos, bebidas, productos locales.</p><span class="go">Ver con mi logo →</span></a>
-      <a class="style" href="muestra/?giro=industrial"><div class="sw" style="background:linear-gradient(150deg,#0D1B2A,#16283B)"><span style="position:absolute;left:16px;bottom:14px;right:16px;font-family:var(--display);font-weight:800;font-size:22px;line-height:1.05;color:#C6F432">TU CARGA</span></div><h3>Industrial y logística</h3><p>Transporte, maquila, B2B.</p><span class="go">Ver con mi logo →</span></a>
-      <a class="style" href="muestra/?giro=despacho"><div class="sw" style="background:linear-gradient(150deg,#F3F1EE,#E6E2DC)"><span style="position:absolute;left:16px;bottom:14px;right:16px;font-family:var(--display);font-weight:800;font-size:22px;line-height:1.05;color:#7A1F2B">En orden y por escrito</span></div><h3>Despachos</h3><p>Contadores, abogados, inmobiliarias.</p><span class="go">Ver con mi logo →</span></a>
-    </div>
+<section class="section section-white" id="nosotros" aria-labelledby="h-nosotros">
+  <div class="container about about-solo">
+    <div class="about-text"><p class="eyebrow">Quiénes somos</p><h2 class="title" id="h-nosotros"><span>¿Quiénes</span> <strong>somos?</strong></h2>
+      <p class="lead">Grupo Ortopédico de Mexicali ofrece atención de traumatología y ortopedia en la Col. Nueva de Mexicali, B.C. Atendemos problemas de rodilla, cadera, hombro, columna, lesiones deportivas y fracturas, desde la primera valoración hasta el seguimiento del tratamiento.</p><dl class="facts"><div><dt>Nombre</dt><dd>Grupo Ortopédico de Mexicali</dd></div><div><dt>Especialidad</dt><dd>Traumatología y Ortopedia</dd></div><div><dt>Ubicación</dt><dd>Av. Francisco I. Madero 1616, Col. Nueva, 21100 Mexicali, B.C.</dd></div><div><dt>Atendemos</dt><dd>Rodilla, cadera, hombro, columna, lesiones deportivas y fracturas</dd></div><div><dt>Horario</dt><dd>lunes a viernes de 10:00 a 20:00 h; sábado de 9:00 a 13:00 h y el domingo cerramos</dd></div><div><dt>Teléfono y WhatsApp</dt><dd><a href="tel:+526863559793" data-zona="nosotros">+52 686 355 9793</a></dd></div></dl></div>
+    
   </div>
+  <div class="container"><h3 class="pilares-t">Así trabajamos</h3><ul class="pilares"><li class="pilar"><svg class="pilar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3 2 8l10 5 10-5-10-5z"/><path d="m2 12 10 5 10-5M2 16l10 5 10-5"/></svg><h3>Especialistas en equipo</h3><p>Revisamos cada caso con una mirada de equipo para definir el plan que mejor se ajusta a ti.</p></li><li class="pilar"><svg class="pilar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="15" cy="4" r="2"/><path d="M5 20l4-5 3 2 1 4M7 11l3-3 4 1 2 4 4 1M10 8l1 6"/></svg><h3>Movimiento y función</h3><p>Nuestro objetivo es que vuelvas a moverte y a hacer tus actividades de todos los días.</p></li><li class="pilar"><svg class="pilar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l7 3v6c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg><h3>Prevención y tratamiento</h3><p>Además de tratar la lesión, te orientamos para cuidar tus articulaciones y evitar recaídas.</p></li><li class="pilar"><svg class="pilar-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="7" r="2.6"/><circle cx="5.5" cy="9" r="2"/><circle cx="18.5" cy="9" r="2"/><path d="M7.5 20v-1.5a4.5 4.5 0 0 1 9 0V20M2 19v-1a3.5 3.5 0 0 1 4.5-3.3M22 19v-1a3.5 3.5 0 0 0-4.5-3.3"/></svg><h3>Atención personalizada</h3><p>Te escuchamos, te explicamos con calma y resolvemos tus dudas antes de cualquier decisión.</p></li></ul></div>
 </section>
 
-<section class="band" id="medida">
-  <div class="wrap medida">
-    <div class="fan" aria-hidden="true">
-      <div class="mini m1"><i class="h"></i><i class="t1"></i><i class="t2"></i><i class="im"></i><i class="b"></i></div>
-      <div class="mini m2"><i class="h"></i><i class="t1"></i><i class="t2"></i><i class="im"></i><i class="b"></i></div>
-      <div class="mini m3"><i class="h"></i><i class="t1"></i><i class="t2"></i><i class="im"></i><i class="b"></i></div>
-    </div>
-    <div style="min-width:0">
-      <div class="sec-head" style="margin-bottom:28px">
-        <div class="eyebrow">Hecha a tu medida</div>
-        <h2>Tu página es tuya. No es una copia de la de otro negocio.</h2>
-        <p class="lead">Los ejemplos son un punto de partida. Tu página se diseña con tu marca:</p>
-      </div>
-      <ul class="pers"><li><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#DCFCE7"/><path d="M7 12l3.5 3.5L17 9" fill="none" stroke="#15803D" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Tus colores</b><small>Salen de tu logo, no de una plantilla.</small></span></li><li><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#DCFCE7"/><path d="M7 12l3.5 3.5L17 9" fill="none" stroke="#15803D" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Tu portada</b><small>Elegimos la composición que mejor cuenta lo que haces.</small></span></li><li><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#DCFCE7"/><path d="M7 12l3.5 3.5L17 9" fill="none" stroke="#15803D" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Tu tipografía y tu movimiento</b><small>Letras y animaciones pensadas para tu giro.</small></span></li><li><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#DCFCE7"/><path d="M7 12l3.5 3.5L17 9" fill="none" stroke="#15803D" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Tus fotos y tus textos</b><small>Lo que muestra la página es tu negocio, no fotos de banco.</small></span></li><li><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#DCFCE7"/><path d="M7 12l3.5 3.5L17 9" fill="none" stroke="#15803D" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Tus secciones</b><small>Solo lo que tu cliente necesita ver, en el orden que vende.</small></span></li></ul>
-      <p class="promise">Llevamos un registro de cada página que entregamos para no repetir el mismo diseño entre negocios del mismo giro en tu ciudad.</p>
-    </div>
-  </div>
-</section>
 
-<section class="band" id="google">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">Para que te encuentren</div>
-      <h2>Tu página trabaja en Google y en la inteligencia artificial</h2>
-      <p class="lead">Cada página sale preparada para el giro de tu negocio. Esto es lo que trae y para qué sirve, sin palabras raras.</p>
-    </div>
-    <div class="seo">
-      <div><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#93C5FD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14zM20 20l-4-4"/></svg></span><b><span>SEO</span> local</b><p>Que te encuentren en Google cuando buscan lo que vendes en tu ciudad, por ejemplo "dentista en Mexicali".</p><small>Títulos, descripciones y textos con lo que la gente realmente escribe.</small></div>
-      <div><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#86EFAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 15.4 7.2 17.9l.9-5.4L4.2 8.7l5.4-.8z"/></svg></span><b><span>AIO</span> · para la IA</b><p>Que ChatGPT, Gemini y las respuestas con IA de Google puedan entender tu negocio y recomendarlo.</p><small>Preguntas frecuentes con respuestas claras y datos bien ordenados.</small></div>
-      <div><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#93C5FD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4H5v16h3M16 4h3v16h-3M9 9h6M9 12h6M9 15h4"/></svg></span><b>Datos <span>estructurados</span></b><p>Una ficha invisible que le dice a Google qué eres, tus servicios, horario y ubicación.</p><small>Ayuda a salir con más información en los resultados.</small></div>
-      <div><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#86EFAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><b>Perfil de <span>Google</span></b><p>Tu página y tu perfil de Google Maps se conectan, y tus reseñas reales trabajan a tu favor.</p><small>Mismo nombre, dirección y teléfono en todos lados.</small></div>
-      <div><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#93C5FD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 3L5 14h6l-1 7 8-11h-6z"/></svg></span><b><span>Velocidad</span></b><p>Carga rápido en cualquier celular. Google premia las páginas rápidas y la gente no espera.</p><small>Revisamos cada página en celular antes de entregarla.</small></div>
-      <div><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#86EFAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><b><span>Medición</span></b><p>Sabes cuántas personas te escribieron por WhatsApp desde tu página.</p><small>Con Google Analytics, si lo quieres activar.</small></div>
-      <div class="sec-card"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#86EFAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span><b>Segura <span>desde el día uno</span></b><p>Candado HTTPS, protección contra ataques y formularios protegidos contra spam. Sin bases de datos expuestas ni plugins que hackear.</p><small>Lo que suele fallar en WordPress o Wix, aquí no existe.</small></div>
-    </div>
-    <p class="lead" style="margin-top:28px;font-size:16px">Nadie puede garantizar el primer lugar en Google. Lo que sí hacemos es dejar todo bien armado para que tengas la mejor base posible.</p>
-  </div>
+<section class="section section-paper" id="preguntas" aria-labelledby="h-preguntas">
+  <div class="container narrow"><p class="eyebrow center">Preguntas frecuentes</p><h2 class="title center" id="h-preguntas"><span>Resolvemos</span> <strong>tus dudas</strong></h2>
+  <div class="faq"><details class="faq-item" open><summary><h3>¿Qué hace un traumatólogo y ortopedista?</h3></summary><p>Es el médico especialista en huesos, articulaciones, músculos, ligamentos y tendones. Diagnostica y trata lesiones como fracturas, esguinces y desgarros, y padecimientos como el desgaste articular o el dolor de columna, con tratamiento conservador o con cirugía según cada caso.</p></details><details class="faq-item"><summary><h3>¿Dónde está Grupo Ortopédico de Mexicali?</h3></summary><p>Estamos en Av. Francisco I. Madero 1616, Col. Nueva, 21100 Mexicali, B.C. Antes de tu visita puedes abrir la ubicación en Google Maps desde esta página para trazar tu ruta.</p></details><details class="faq-item"><summary><h3>¿Cuál es el horario de atención?</h3></summary><p>Atendemos lunes a viernes de 10:00 a 20:00 h; sábado de 9:00 a 13:00 h y el domingo cerramos. Para asegurar tu lugar, agenda tu cita antes de acudir.</p></details><details class="faq-item"><summary><h3>¿Cómo agendo una cita?</h3></summary><p>Escríbenos por WhatsApp al 686 355 9793, llámanos en horario de atención o deja tus datos en el formulario de esta página y te contactamos para confirmar tu cita.</p></details><details class="faq-item"><summary><h3>¿Qué debo llevar a mi consulta?</h3></summary><p>Una identificación, los estudios que ya tengas —radiografías, resonancias y sus interpretaciones—, la lista de medicamentos que tomas y, si aplica, notas de otros médicos. Usa ropa cómoda que permita revisar la zona.</p></details><details class="faq-item"><summary><h3>¿Todas las lesiones de hueso o articulación requieren cirugía?</h3></summary><p>No. Muchas se tratan sin cirugía, con reposo relativo, medicamentos, inmovilización o rehabilitación. La cirugía se considera cuando el diagnóstico lo indica; en la consulta te explicamos las opciones para tu caso.</p></details><details class="faq-item"><summary><h3>¿Qué padecimientos atienden?</h3></summary><p>Atendemos problemas de rodilla, cadera, hombro, columna, lesiones deportivas y fracturas: dolor, lesiones, desgaste articular y seguimiento después de un tratamiento.</p></details></div></div>
 </section>
-
-<section class="band alt" id="incluye">
-  <div class="wrap inc-grid">
-    <div>
-      <div class="sec-head">
-        <div class="eyebrow">Paquete base</div>
-        <h2>Todo lo que necesitas para que te encuentren y te escriban</h2>
-      </div>
-      <ul class="checks">
-        <li><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#DCFCE7"/><path d="M7 12l3.5 3.5L17 9" fill="none" stroke="#15803D" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Diseño para celular y computadora<small>Se ve bien donde te busquen.</small></span></li>
-        <li><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#DCFCE7"/><path d="M7 12l3.5 3.5L17 9" fill="none" stroke="#15803D" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Dominio .com o .mx a tu nombre<small>El primer año va incluido.</small></span></li>
-        <li><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#DCFCE7"/><path d="M7 12l3.5 3.5L17 9" fill="none" stroke="#15803D" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Botón directo a tu WhatsApp<small>Te escriben con un toque.</small></span></li>
-        <li><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#DCFCE7"/><path d="M7 12l3.5 3.5L17 9" fill="none" stroke="#15803D" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Lista para Google<small>Títulos, descripción, mapa y datos de tu negocio bien puestos.</small></span></li>
-        <li><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#DCFCE7"/><path d="M7 12l3.5 3.5L17 9" fill="none" stroke="#15803D" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Tus colores, tomados de tu logo<small>Se siente tuya, no de plantilla.</small></span></li>
-        <li><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#DCFCE7"/><path d="M7 12l3.5 3.5L17 9" fill="none" stroke="#15803D" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Tus Reels de Instagram en la página<small>Lo que ya publicas, trabajando para ti.</small></span></li>
-        <li><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#DCFCE7"/><path d="M7 12l3.5 3.5L17 9" fill="none" stroke="#15803D" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Aviso de privacidad<small>Lo básico legal para operar en México.</small></span></li>
-        <li><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#DCFCE7"/><path d="M7 12l3.5 3.5L17 9" fill="none" stroke="#15803D" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Una ronda de cambios<small>Revisas y ajustamos antes de publicar.</small></span></li>
+<section class="section section-dark" id="ubicacion" aria-labelledby="h-ubicacion">
+  <div class="container office">
+    <div class="office-info"><p class="eyebrow">Ubicación y horario</p><h2 class="title" id="h-ubicacion"><span>¿Dónde estamos</span> <strong>y en qué horario?</strong></h2>
+      <ul class="info-list">
+        <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.6"/></svg><div><h3>Dirección</h3><p>Grupo Ortopédico de Mexicali<br>Av. Francisco I. Madero 1616, Col. Nueva, 21100 Mexicali, B.C.</p></div></li>
+        <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg><div><h3>Horario</h3><table class="horas"><caption class="sr-only">Horario</caption><tbody><tr data-dias="lu ma mi ju vi"><th scope="row">Lunes a viernes</th><td>10:00 a 20:00 h</td></tr><tr data-dias="sa"><th scope="row">Sábado</th><td>9:00 a 13:00 h</td></tr><tr data-dias="do"><th scope="row">Domingo</th><td>Cerrado</td></tr></tbody></table></div></li>
+        <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z" fill="currentColor" stroke="none"/></svg><div><h3>Teléfono y WhatsApp</h3><p><a href="tel:+526863559793" data-zona="ubicacion">+52 686 355 9793</a></p></div></li>
       </ul>
+      <div class="hero-buttons"><a class="btn btn-accent" href="https://www.google.com/maps/dir/?api=1&amp;destination=Grupo%20Ortop%C3%A9dico%20de%20Mexicali%2C%20Av.%20Francisco%20I.%20Madero%201616%2C%20Col.%20Nueva%2C%2021100%20Mexicali%2C%20B.C." target="_blank" rel="noopener" data-zona="ubicacion"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg><span>Cómo llegar</span></a>
+      <a class="btn btn-light" href="https://wa.me/526863559793?text=Hola%2C%20quisiera%20agendar%20una%20valoraci%C3%B3n%20en%20Grupo%20Ortop%C3%A9dico%20de%20Mexicali." target="_blank" rel="noopener" data-zona="ubicacion"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z" fill="currentColor" stroke="none"/></svg><span>WhatsApp</span></a></div>
     </div>
-    <aside class="pricecard" aria-label="Precio">
-      <div class="eyebrow" style="color:#86EFAC">Desde</div>
-      <div class="amt">$7,499</div>
-      <p>MXN + IVA. Total a pagar: <b>$8,698.84 MXN</b>, pago único. Tarjeta o transferencia. Facturamos.</p>
-      <hr>
-      <b>Extras que puedes agregar</b>
-      <ul class="extras">
-        <li><span>Versión en inglés</span><span>Pregunta</span></li>
-        <li><span>Galería de fotos</span><span>Pregunta</span></li>
-        <li><span>Textos escritos por nosotros</span><span>Pregunta</span></li>
-        <li><span>Entrega express en 72 h</span><span>Pregunta</span></li>
-        <li><span>Fotos y video (solo Mexicali)</span><span>A cotización</span></li>
-      </ul>
-      <a class="btn btn-go" style="justify-content:center;margin-top:8px" href="https://wa.me/16194533137?text=Hola%2C%20quiero%20cotizar%20mi%20p%C3%A1gina%20con%20extras" target="_blank" rel="noopener">Cotiza tu paquete</a>
-    </aside>
-  </div>
-</section>
-
-<section class="band" id="como">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">Cómo funciona</div>
-      <h2>Cuatro pasos y tienes página</h2>
-    </div>
-    <ol class="steps">
-      <li><span class="n">1</span><h3>Arma tu paquete</h3><p>Elige el paquete base y agrega solo lo que tu negocio necesita.</p></li>
-      <li><span class="n">2</span><h3>Paga seguro</h3><p>Un solo pago, con tarjeta o transferencia. Si necesitas factura, te la damos.</p></li>
-      <li><span class="n">3</span><h3>Mándanos tu información</h3><p>Logo, fotos, servicios, horario, ubicación y WhatsApp, en un formulario de unos 10 minutos.</p></li>
-      <li><span class="n">4</span><h3>Recibe tu página</h3><p>En 5 a 7 días hábiles, revisada por nuestro equipo antes de publicarse.</p></li>
-    </ol>
-    <div class="rules">
-      <div class="rule"><b>El tiempo corre desde tu información completa</b><p>Los 5 a 7 días hábiles empiezan cuando tenemos logo, fotos y datos. ¿No tienes fotos o textos? Te decimos qué necesitas, o los hacemos por ti como extra.</p></div>
-      <div class="rule"><b>Cambios claros</b><p>Una ronda de cambios incluida. Si no recibimos respuesta en 3 días hábiles, la página se da por aprobada.</p></div>
-      <div class="rule"><b>Cupos por semana</b><p>Tomamos pocos proyectos a la vez para cumplir los tiempos. Aparta tu lugar por WhatsApp.</p></div>
+    <div class="map" data-map-src="https://www.google.com/maps?q=Grupo%20Ortop%C3%A9dico%20de%20Mexicali%2C%20Av.%20Francisco%20I.%20Madero%201616%2C%20Col.%20Nueva%2C%2021100%20Mexicali%2C%20B.C.&amp;z=16&amp;output=embed" data-map-title="Grupo Ortopédico de Mexicali — Google Maps">
+      <div class="map-gate"><svg class="map-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg><p>El mapa se carga desde Google Maps solo si lo pides.</p>
+      <button type="button" class="btn btn-light btn-sm" data-map-load>Ver mapa</button></div>
     </div>
   </div>
 </section>
-
-<section class="band alt">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">Después de la entrega</div>
-      <h2>Tú decides cómo seguir</h2>
+<section class="final-cta" id="contacto" aria-labelledby="h-contacto">
+  <div class="container final-grid">
+    <div class="final-copy"><p class="eyebrow">Agenda tu cita</p><h2 class="title" id="h-contacto"><span>¿Listo para</span> <strong>tu valoración?</strong></h2>
+      <p>Déjanos tus datos y te contactamos para confirmar tu cita. Si prefieres, escríbenos o llámanos directamente.</p><p class="final-or">¿Prefieres hablar directamente?</p>
+      <div class="hero-buttons"><a class="btn btn-accent" href="https://wa.me/526863559793?text=Hola%2C%20quisiera%20agendar%20una%20valoraci%C3%B3n%20en%20Grupo%20Ortop%C3%A9dico%20de%20Mexicali." target="_blank" rel="noopener" data-zona="contacto"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z" fill="currentColor" stroke="none"/></svg><span>WhatsApp 686 355 9793</span></a><a class="btn btn-light" href="tel:+526863559793" data-zona="contacto"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z" fill="currentColor" stroke="none"/></svg><span>Llamar 686 355 9793</span></a></div></div>
+    <div class="appt-card">
+  <form class="appt-form" name="contacto" method="POST" action="/gracias/" data-netlify="true" netlify-honeypot="bot-field" novalidate
+        data-err-red="No pudimos enviar tu solicitud. Inténtalo de nuevo o llámanos al" data-enviando="Enviando…" data-tel="+526863559793" data-tel-txt="+52 686 355 9793">
+    <input type="hidden" name="form-name" value="contacto">
+    <input type="hidden" name="idioma" value="es">
+    <input type="hidden" name="version_aviso" value="2026-11-10">
+    <input type="hidden" name="pagina_origen" value="/">
+    <p class="hp" aria-hidden="true"><label>No llenar / Do not fill <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+    <h3 class="appt-t">Solicita tu cita</h3>
+    <p class="appt-sub">No necesitas compartir detalles clínicos: solo lo necesario para contactarte.</p>
+    <div class="field">
+      <label for="f-nombre-es">Nombre completo</label>
+      <input id="f-nombre-es" name="nombre" type="text" autocomplete="name" required maxlength="80" aria-describedby="e-nombre-es">
+      <span class="field-error" id="e-nombre-es">Escribe tu nombre.</span>
     </div>
-    <div class="after">
-      <div class="opt"><span class="tag">Incluido</span><h3>Es tuya</h3><p>Te entregamos tu página completa con una guía paso a paso para que la manejes tú mismo.</p></div>
-      <div class="opt"><span class="tag">A cotización</span><h3>Nosotros nos encargamos</h3><p>Una mensualidad a la medida. Platicamos en una llamada, vemos qué necesitas y te damos una propuesta.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="band" id="preguntas">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">Preguntas frecuentes</div>
-      <h2>Lo que nos preguntan antes de empezar</h2>
-    </div>
-    <div class="faq">
-      <details><summary>Ya tengo Instagram, ¿para qué quiero página?</summary><p>Quien busca tu servicio en Google encuentra páginas, no perfiles. Además, si cambia el algoritmo o te cierran la cuenta, tu página sigue siendo tuya.</p></details>
-      <details><summary>¿Me garantizan salir primero en Google?</summary><p>No, y desconfía de quien lo prometa. Lo que sí hacemos es dejar tu página bien armada para Google: títulos, descripciones, mapa y datos de tu negocio. Eso es la base para que te encuentren.</p></details>
-      <details><summary>¿Mi página se va a ver igual que la de otro negocio?</summary><p>No. Cada página se diseña con tus colores, tu logo, tus fotos y tus textos, y llevamos un registro para no repetir el mismo diseño entre negocios del mismo giro en tu ciudad.</p></details>
-      <details><summary>¿Y si no tengo fotos ni textos?</summary><p>Te decimos exactamente qué necesitas. Si prefieres, escribimos los textos por ti como extra, y si estás en Mexicali hacemos una sesión de fotos y video a cotización.</p></details>
-      <details><summary>¿El dominio queda a mi nombre?</summary><p>Sí. Lo registramos a tu nombre desde el primer día, en una cuenta tuya. El primer año lo pagamos nosotros y después lo renuevas tú. Nunca tienes que pedirnos una transferencia.</p></details>
-      <details><summary>¿Tengo que pagar mensualidad?</summary><p>No. El paquete es un pago único de $7,499 + IVA ($8,698.84 en total). Si prefieres que nosotros la mantengamos, lo platicamos y te damos una propuesta.</p></details>
-      <details><summary>¿Necesito la entrega más rápido?</summary><p>Tenemos entrega express en 72 horas como extra. Pregúntanos por WhatsApp si hay cupo esta semana.</p></details>
-    </div>
-  </div>
-</section>
-
-<section class="band" id="contacto">
-  <div class="wrap contact">
-    <div class="sec-head" style="margin:0">
-      <div class="eyebrow">Escríbenos</div>
-      <h2>Cuéntanos de tu negocio</h2>
-      <p class="lead">Déjanos tus datos y te respondemos por WhatsApp. Si prefieres, agendamos una llamada para platicar qué necesitas.</p>
-    </div>
-    <form class="form" id="contactForm" novalidate>
-      <div class="field full"><span style="font-size:14px;font-weight:600">¿Qué te gustaría?</span>
-        <div class="motivos" role="radiogroup" aria-label="Motivo">
-          <label><input type="radio" name="motivo" value="Quiero cotizar mi página" checked> Cotizar mi página</label>
-          <label><input type="radio" name="motivo" value="Quiero platicar en una llamada"> Platicar en una llamada</label>
-          <label><input type="radio" name="motivo" value="Tengo una duda"> Tengo una duda</label>
-        </div>
+    <div class="field-row">
+      <div class="field">
+        <label for="f-tel-es">Teléfono / WhatsApp</label>
+        <input id="f-tel-es" name="telefono" type="tel" autocomplete="tel" inputmode="tel" required pattern="[0-9+()\-\s]{10,20}" maxlength="20" aria-describedby="e-tel-es">
+        <span class="field-error" id="e-tel-es">Escribe un teléfono válido (10 dígitos).</span>
       </div>
-      <div class="field"><label for="f-nombre">Tu nombre</label><input id="f-nombre" name="nombre" autocomplete="name" required maxlength="80"><span class="err" id="e-nombre"></span></div>
-      <div class="field"><label for="f-negocio">Nombre del negocio</label><input id="f-negocio" name="negocio" autocomplete="organization" required maxlength="80"><span class="err" id="e-negocio"></span></div>
-      <div class="field"><label for="f-giro">Giro</label><select id="f-giro" name="giro" required><option value="">Elige uno</option><option>Salud (médico, dentista, clínica)</option><option>Taller o servicios técnicos</option><option>Cafetería o restaurante</option><option>Barbería, estética o spa</option><option>Escuela o academia</option><option>Marca de producto</option><option>Industrial o logística</option><option>Despacho (contable, legal, inmobiliaria)</option><option>Otro</option></select><span class="err" id="e-giro"></span></div>
-      <div class="field"><label for="f-ciudad">Ciudad</label><input id="f-ciudad" name="ciudad" autocomplete="address-level2" value="Mexicali" maxlength="60"></div>
-      <div class="field"><label for="f-whats">WhatsApp</label><input id="f-whats" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" required maxlength="20" placeholder="686 123 4567"><span class="err" id="e-whats"></span></div>
-      <div class="field"><label for="f-correo">Correo <small>(opcional)</small></label><input id="f-correo" name="correo" type="email" autocomplete="email" maxlength="120"><span class="err" id="e-correo"></span></div>
-      <div class="field full"><label for="f-msg">Mensaje <small>(opcional)</small></label><textarea id="f-msg" name="mensaje" maxlength="800" placeholder="¿Ya tienes página? ¿Qué te gustaría que tuviera?"></textarea></div>
-      <div class="hp" aria-hidden="true"><label for="f-web">No llenar</label><input id="f-web" name="web" tabindex="-1" autocomplete="off"></div>
-      <label class="check full" style="grid-column:1/-1"><input type="checkbox" id="f-priv" required> <span>Leí el <a href="legal/aviso-de-privacidad.html">aviso de privacidad</a> y acepto que TuWebPronto use mis datos para responderme y cotizar.</span></label>
-      <span class="err" id="e-priv" style="grid-column:1/-1"></span>
-      <label class="check full" style="grid-column:1/-1"><input type="checkbox" id="f-promo"> <span>Quiero recibir promociones y novedades (opcional).</span></label>
-      <button class="btn btn-go" type="submit">Enviar</button>
-      <div class="sent" id="sent" hidden>
-        <b>Listo. Tu mensaje ya está escrito.</b>
-        <span style="color:var(--on-navy-muted);font-size:15px">Toca el botón para mandarlo por WhatsApp. Te respondemos lo antes posible.</span>
-        <a class="btn btn-go" id="waLink" href="#" target="_blank" rel="noopener" style="justify-self:start">Enviar por WhatsApp</a>
+      <div class="field">
+        <label for="f-correo-es">Correo electrónico <em>(opcional)</em></label>
+        <input id="f-correo-es" name="correo" type="email" autocomplete="email" maxlength="120" aria-describedby="e-correo-es">
+        <span class="field-error" id="e-correo-es">Revisa el formato del correo.</span>
       </div>
-      <p class="fine">Usamos tus datos solo para responderte y cotizar. No los vendemos ni compartimos para publicidad de terceros. Detalles en el <a href="legal/aviso-de-privacidad.html">aviso de privacidad</a>.</p>
-    </form>
+    </div>
+    <div class="field">
+      <label for="f-motivo-es">Zona o motivo de consulta <em>(opcional)</em></label>
+      <select id="f-motivo-es" name="motivo"><option value="">Elige una opción</option><option>Rodilla</option><option>Cadera</option><option>Hombro</option><option>Columna</option><option>Lesiones deportivas</option><option>Fracturas</option><option>Otro / no estoy seguro</option></select>
+    </div>
+    <div class="field">
+      <label for="f-msg-es">Mensaje <em>(opcional)</em></label>
+      <textarea id="f-msg-es" name="mensaje" rows="3" maxlength="600" aria-describedby="h-msg-es"></textarea>
+      <span class="field-hint" id="h-msg-es">Cuéntanos brevemente qué te pasa. Los detalles clínicos los revisamos en consulta.</span>
+    </div>
+    <div class="check-wrap">
+      <input id="f-acepta-es" type="checkbox" name="acepta_aviso" value="si" required aria-describedby="e-acepta-es">
+      <label for="f-acepta-es">He leído el <a href="/aviso-de-privacidad/">Aviso de Privacidad</a> y consiento el tratamiento de mis datos personales y, en su caso, de los datos de salud que comparta, para atender mi solicitud.</label>
+    </div>
+    <span class="field-error check-error" id="e-acepta-es">Necesitamos tu autorización para contactarte.</span>
+    <p class="form-urg">Si tienes una lesión con deformidad, hueso expuesto o no puedes apoyar, no uses este formulario: acude a urgencias o llama al 911.</p>
+    <button class="btn btn-accent appt-submit" type="submit"><span>Enviar solicitud</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    <p class="appt-status" role="status" aria-live="polite"></p>
+  </form>
+  <div class="appt-success" hidden tabindex="-1">
+    <span class="appt-check"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+    <p class="appt-ok-t">Recibimos tu solicitud</p>
+    <p>Te contactaremos en horario de atención para confirmar tu cita. Esto todavía no es una cita confirmada.</p>
+    <a class="btn btn-accent" href="https://wa.me/526863559793?text=Hola%2C%20quisiera%20agendar%20una%20valoraci%C3%B3n%20en%20Grupo%20Ortop%C3%A9dico%20de%20Mexicali." target="_blank" rel="noopener" data-zona="formulario-exito"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z" fill="currentColor" stroke="none"/></svg><span>Enviar también por WhatsApp</span></a>
   </div>
-</section>
-
-<section class="band close">
-  <svg class="stream" viewBox="0 0 1440 720" preserveAspectRatio="none" aria-hidden="true"><path class="rail" d="M-20 120 C 300 160, 520 360, 820 300 S 1200 120, 1460 560"/><path class="beam" d="M-20 120 C 300 160, 520 360, 820 300 S 1200 120, 1460 560"/></svg>
-  <div class="wrap close-grid">
-    <h2>Empieza <em>hoy.</em></h2>
-    <p class="lead">Escríbenos por WhatsApp, te decimos qué necesitas y apartamos tu lugar de esta semana.</p>
-    <a class="btn btn-go" href="https://wa.me/16194533137?text=Hola%2C%20quiero%20mi%20p%C3%A1gina%20web%20con%20TuWebPronto" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
-    <div class="phone-row">WhatsApp: <code id="tel">+1 619 453 3137</code><button class="copy" id="copyTel" type="button">Copiar</button></div>
+</div>
   </div>
 </section>
 </main>
-
-<footer>
-  <div class="wrap"><span>TuWebPronto · Mexicali, Baja California</span><nav aria-label="Legal"><a href="legal/aviso-de-privacidad.html">Aviso de privacidad</a><a href="legal/terminos.html">Términos y condiciones</a><a href="legal/cookies.html">Política de cookies</a><button type="button" id="ckOpen">Preferencias de cookies</button></nav><span>Precios en pesos mexicanos más IVA; mostramos el total a pagar junto a cada precio. Incluye el primer año de dominio. Promoción de lanzamiento sujeta a <a href="legal/terminos.html" style="color:inherit">condiciones</a>.</span></div>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand"><a class="brand" href="/"><img src="/assets/img/simbolo-96.webp" alt="" width="44" height="44" class="brand-mark" loading="lazy"><span class="brand-word"><span class="bw-top">Grupo</span><span class="bw-mid">Ortopédico</span><span class="bw-bot">de Mexicali</span></span></a>
+      <p>Traumatología y Ortopedia · Mexicali, B.C.</p></div>
+    <div><h2 class="footer-h">Servicios</h2><ul><li><a href="/rodilla/">Rodilla</a></li><li><a href="/cadera/">Cadera</a></li><li><a href="/hombro/">Hombro</a></li><li><a href="/columna/">Columna</a></li><li><a href="/lesiones-deportivas/">Lesiones deportivas</a></li><li><a href="/fracturas/">Fracturas</a></li></ul></div>
+    <div><h2 class="footer-h">Sitio</h2><ul><li><a href="#servicios">Qué atendemos</a></li><li><a href="#nosotros">Quiénes somos</a></li><li><a href="#preguntas">Preguntas</a></li><li><a href="#ubicacion">Ubicación y horario</a></li><li><a href="/aviso-de-privacidad/">Aviso de Privacidad</a></li><li><a href="/politica-de-cookies/">Política de Cookies</a></li><li><button type="button" class="link-btn" data-cookie-settings>Preferencias de cookies</button></li></ul></div>
+    <div><h2 class="footer-h">Contacto</h2>
+      <address><p>Grupo Ortopédico de Mexicali<br>Av. Francisco I. Madero 1616, Col. Nueva, 21100 Mexicali, B.C.</p>
+      <p><a href="tel:+526863559793" data-zona="footer">+52 686 355 9793</a><br>
+      <a href="https://wa.me/526863559793?text=Hola%2C%20quisiera%20agendar%20una%20valoraci%C3%B3n%20en%20Grupo%20Ortop%C3%A9dico%20de%20Mexicali." target="_blank" rel="noopener" data-zona="footer">WhatsApp 686 355 9793</a></p></address>
+      <p class="footer-horas">Lunes a viernes: 10:00 a 20:00 h<br>Sábado: 9:00 a 13:00 h<br>Domingo: Cerrado</p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 Grupo Ortopédico de Mexicali. Todos los derechos reservados.</span>
+    
+  </div>
 </footer>
-
-<div class="ck" id="ck" role="dialog" aria-labelledby="ckT" hidden>
-  <b id="ckT">Tu privacidad</b>
-  <p>Usamos solo lo necesario para que el sitio funcione. Con tu permiso, también usaríamos herramientas para medir visitas y anuncios. Puedes cambiar tu elección cuando quieras. <a href="legal/cookies.html">Más información</a></p>
-  <fieldset id="ckOpts" hidden>
-    <label><input type="checkbox" checked disabled> <span><b>Necesarias.</b> Recordar tu elección.</span></label>
-    <label><input type="checkbox" id="ckMed"> <span><b>Medición.</b> Contar visitas (Google Analytics).</span></label>
-    <label><input type="checkbox" id="ckPub"> <span><b>Publicidad.</b> Medir anuncios en Facebook e Instagram (Meta Pixel).</span></label>
-  </fieldset>
-  <div class="row"><button type="button" id="ckNo">Solo necesarias</button><button type="button" id="ckCfg">Configurar</button><button type="button" class="ok" id="ckYes">Aceptar todo</button></div>
+<div class="sticky-cta" data-zona="barra-movil">
+  <a class="btn btn-ghost-dark" href="tel:+526863559793"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z" fill="currentColor" stroke="none"/></svg><span>Llamar</span></a>
+  <a class="btn btn-accent" href="https://wa.me/526863559793?text=Hola%2C%20quisiera%20agendar%20una%20valoraci%C3%B3n%20en%20Grupo%20Ortop%C3%A9dico%20de%20Mexicali." target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z" fill="currentColor" stroke="none"/></svg><span>WhatsApp</span></a>
 </div>
-
-<script>
-(function(){
-  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var bar=document.getElementById('progress');
-  // partir títulos en palabras (para que suban desde una máscara)
-  function split(el){
-    var i=0,walk=document.createTreeWalker(el,NodeFilter.SHOW_TEXT),nodes=[];
-    while(walk.nextNode())nodes.push(walk.currentNode);
-    nodes.forEach(function(n){
-      var parts=n.textContent.split(/(\s+)/),frag=document.createDocumentFragment();
-      parts.forEach(function(p){
-        if(!p)return;
-        if(/^\s+$/.test(p)){frag.appendChild(document.createTextNode(p));return}
-        var o=document.createElement('span'),inner=document.createElement('span');o.className='w';inner.textContent=p;
-        inner.style.setProperty('--wd',(i++*0.06)+'s');o.appendChild(inner);frag.appendChild(o);
-      });
-      n.parentNode.replaceChild(frag,n);
-    });
-    el.classList.add('split');
-  }
-  if(!reduce)document.querySelectorAll('h1,h2').forEach(split);
-  var hero=document.querySelector('.hero h1');
-  if(hero)hero.querySelectorAll('.w>span').forEach(function(s,i){s.style.setProperty('--wd',(.1+i*.07)+'s')});
-
-  var flow=null,lit,head,len=0;
-  var ticking=false;
-  function onScroll(){
-    if(ticking)return;ticking=true;
-    requestAnimationFrame(function(){
-      ticking=false;
-      var docH=document.documentElement.scrollHeight,h=docH-innerHeight;
-      bar.style.setProperty('--p',h>0?Math.min(1,scrollY/h):0);
-      if(flow&&len){
-        var target=scrollY+innerHeight*0.62,lo=0,hi=len;
-        for(var k=0;k<18;k++){var m=(lo+hi)/2;if(lit.getPointAtLength(m).y<target)lo=m;else hi=m}
-        lit.style.strokeDashoffset=len-lo;var pt=lit.getPointAtLength(lo);head.setAttribute('cx',pt.x);head.setAttribute('cy',pt.y);
-      }
-      parallax();
-    });
-  }
-  // portafolio: columnas a distinta velocidad
-  var work=document.querySelector('.work'),cards=work?[].slice.call(work.children):[];
-  function parallax(){
-    if(reduce||!work||innerWidth<700)return;
-    var r=work.getBoundingClientRect(),c=(r.top+r.height/2-innerHeight/2)/innerHeight;
-    var cols=getComputedStyle(work).gridTemplateColumns.split(' ').length;
-    cards.forEach(function(el,i){var col=i%cols;el.style.translate='0 '+(c*(col%2?-36:24)).toFixed(1)+'px'});
-  }
-  addEventListener('scroll',onScroll,{passive:true});
-  if(reduce||!('IntersectionObserver' in window)){onScroll();return}
-
-  // revelados: solo lo que está fuera de pantalla al cargar
-  var targets=document.querySelectorAll('h2,.sec-head,.lead,.card,.style,.seo>div,.pers li,.promise,.checks li,.pricecard,.rule,.opt,.faq details,.close-grid>.btn,.phone-row');
-  var groups=new Map();
-  targets.forEach(function(el){
-    if(el.closest('.hero'))return;
-    var r=el.getBoundingClientRect();if(r.top<innerHeight)return;
-    var p=el.parentElement,i=groups.get(p)||0;groups.set(p,i+1);
-    el.style.setProperty('--d',Math.min(i,6)*0.08+'s');el.classList.add('reveal','pre');
-  });
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.remove('pre');io.unobserve(e.target)}})},{rootMargin:'0px 0px -10% 0px'});
-  document.querySelectorAll('.pre').forEach(function(el){io.observe(el)});
-  // pasos
-  var steps=document.querySelector('.steps');
-  steps.querySelectorAll('li').forEach(function(li,i){li.style.setProperty('--sd',i*0.22+'s')});
-  if(steps.getBoundingClientRect().top<innerHeight)steps.classList.add('on');
-  else new IntersectionObserver(function(es,o){if(es[0].isIntersecting){steps.classList.add('on');o.disconnect()}},{threshold:.4}).observe(steps);
-  // precio que cuenta
-  var amt=document.querySelector('.pricecard .amt');
-  if(amt.getBoundingClientRect().top>innerHeight){
-    new IntersectionObserver(function(es,o){if(!es[0].isIntersecting)return;o.disconnect();var t0=performance.now();
-      (function tick(t){var k=Math.min(1,(t-t0)/1200),v=Math.round(7499*(1-Math.pow(1-k,3)));amt.textContent='$'+v.toLocaleString('en-US');if(k<1)requestAnimationFrame(tick)})(t0)},{threshold:.6}).observe(amt);
-  }
-  // maqueta: se inclina con el mouse
-  var mock=document.getElementById('mock'),tilt=document.getElementById('tilt');
-  if(matchMedia('(hover: hover) and (pointer: fine)').matches){
-    mock.addEventListener('pointermove',function(e){var r=mock.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
-      tilt.style.setProperty('--ry',(x*14-4)+'deg');tilt.style.setProperty('--rx',(-y*10+3)+'deg')});
-    mock.addEventListener('pointerleave',function(){tilt.style.removeProperty('--ry');tilt.style.removeProperty('--rx')});
-  }
-  onScroll();
-})();
-document.getElementById('copyTel').addEventListener('click',function(){
-  var b=this,t=document.getElementById('tel').textContent;
-  function done(){b.textContent='Copiado';setTimeout(function(){b.textContent='Copiar'},1600)}
-  try{navigator.clipboard.writeText(t).then(done,function(){sel()})}catch(e){sel()}
-  function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('tel'));var s=getSelection();s.removeAllRanges();s.addRange(r)}
-});
-
-// ---------- formulario: valida y arma el mensaje de WhatsApp (no guarda nada) ----------
-(function(){
-  var f=document.getElementById('contactForm');if(!f)return;
-  function err(id,msg,el){document.getElementById('e-'+id).textContent=msg||'';if(el)el.setAttribute('aria-invalid',msg?'true':'false');return !msg}
-  f.addEventListener('submit',function(e){
-    e.preventDefault();
-    if(f.web.value)return; // trampa anti-spam
-    var ok=true,first=null;
-    function chk(id,el,cond,msg){var good=err(id,cond?'':msg,el);if(!good&&!first)first=el;ok=ok&&good}
-    chk('nombre',f.nombre,f.nombre.value.trim().length>1,'Escribe tu nombre.');
-    chk('negocio',f.negocio,f.negocio.value.trim().length>1,'Escribe el nombre de tu negocio.');
-    chk('giro',f.giro,!!f.giro.value,'Elige el giro de tu negocio.');
-    var tel=f.whatsapp.value.replace(/[^0-9+]/g,'');
-    chk('whats',f.whatsapp,tel.replace('+','').length>=10,'Escribe un WhatsApp de 10 dígitos.');
-    chk('correo',f.correo,!f.correo.value||/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.correo.value),'Revisa tu correo.');
-    var priv=document.getElementById('f-priv');
-    if(!priv.checked){document.getElementById('e-priv').textContent='Para enviarlo necesitamos que aceptes el aviso de privacidad.';ok=false;first=first||priv}else document.getElementById('e-priv').textContent='';
-    if(!ok){first.focus();return}
-    var m=f.querySelector('input[name=motivo]:checked').value;
-    var txt='Hola, '+m.charAt(0).toLowerCase()+m.slice(1)+'.\n\nNombre: '+f.nombre.value.trim()+'\nNegocio: '+f.negocio.value.trim()+'\nGiro: '+f.giro.value+'\nCiudad: '+(f.ciudad.value.trim()||'—')+'\nWhatsApp: '+f.whatsapp.value.trim()+(f.correo.value?'\nCorreo: '+f.correo.value.trim():'')+(f.mensaje.value.trim()?'\n\n'+f.mensaje.value.trim():'')+'\n\nAcepté el aviso de privacidad.'+(document.getElementById('f-promo').checked?' Sí quiero recibir promociones.':'');
-    document.getElementById('waLink').href='https://wa.me/16194533137?text='+encodeURIComponent(txt);
-    var s=document.getElementById('sent');s.hidden=false;document.getElementById('waLink').focus();
-  });
-})();
-// ---------- banner de cookies: nada de medición/publicidad sin permiso ----------
-(function(){
-  var KEY='twp-cookies-v1',ck=document.getElementById('ck'),opts=document.getElementById('ckOpts');
-  function read(){try{return JSON.parse(localStorage.getItem(KEY))}catch(e){return null}}
-  function save(v){try{localStorage.setItem(KEY,JSON.stringify(v))}catch(e){}apply(v);ck.hidden=true}
-  function apply(v){
-    if(!v)return;
-    // Cuando existan los IDs, cargar aquí:
-    // if(v.medicion) cargarGA4('G-XXXXXXX');
-    // if(v.publicidad) cargarMetaPixel('XXXXXXXXXX');
-  }
-  var v=read();if(v)apply(v);else ck.hidden=false;
-  document.getElementById('ckYes').onclick=function(){save({medicion:true,publicidad:true,fecha:new Date().toISOString()})};
-  document.getElementById('ckNo').onclick=function(){save({medicion:false,publicidad:false,fecha:new Date().toISOString()})};
-  document.getElementById('ckCfg').onclick=function(){
-    if(opts.hidden){opts.hidden=false;this.textContent='Guardar elección';var c=read()||{};document.getElementById('ckMed').checked=!!c.medicion;document.getElementById('ckPub').checked=!!c.publicidad}
-    else save({medicion:document.getElementById('ckMed').checked,publicidad:document.getElementById('ckPub').checked,fecha:new Date().toISOString()});
-  };
-  document.getElementById('ckOpen').onclick=function(){ck.hidden=false;opts.hidden=true;document.getElementById('ckCfg').textContent='Configurar';document.getElementById('ckCfg').focus()};
-})();
-</script>
-
+<a class="wa-float" href="https://wa.me/526863559793?text=Hola%2C%20quisiera%20agendar%20una%20valoraci%C3%B3n%20en%20Grupo%20Ortop%C3%A9dico%20de%20Mexicali." target="_blank" rel="noopener" aria-label="WhatsApp" data-zona="flotante"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z" fill="currentColor" stroke="none"/></svg></a>
+<script src="/assets/js/site.js?v=2d45cbf3" defer></script>
 </body>
 </html>
